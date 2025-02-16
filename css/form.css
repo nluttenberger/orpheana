@@ -1,0 +1,119 @@
+body {
+    max-width: 84%;
+    margin: auto;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;fi
+}
+
+fieldset {
+    margin: 1em;
+    background-color: lightblue;
+}
+
+legend {
+    display: inline;
+    background-color: aliceblue;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 150px 1fr 80px 0.6fr;
+    gap: 15px 10px;
+    max-width: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.cast-list-container {
+  display: grid;
+  grid-template-columns: 80px 0.5fr 80px 0.5fr 80px 0.5fr 0.1fr;
+  gap: 15px 10px;
+  max-width: auto;
+  margin: 4px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  label {
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .right-text {
+    grid-column: span 2;
+    margin: 4px;
+  }
+
+  .full-text {
+    grid-column: span 2;
+    margin: 4px;
+  }
+
+  textarea {
+    padding: 4px;
+    min-height: 120px;
+  }
+
+  input[type="button"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 120px;
+    height: 28px;
+    padding: 2px;
+    vertical-align: middle;
+  }
+
+.shortTextInput {
+    width: 160px;
+    height: 16px;
+    padding: 2px;
+    margin: 4px;
+    margin-left: 1em;
+    margin-right: 2em;
+    border: 0;
+    vertical-align: middle;
+}
+
+.generalTextField {
+    word-break: normal;
+    overflow-wrap: normal;
+    width: 560px;
+    height: 120px;
+    padding: 2px;
+    margin: 2px;
+    margin-right: 2em;
+    border: 0;
+    font-family: sans-serif;
+    font-size: small;
+    top: 0.2em;
+}
+
+.boxtainer {
+    box-sizing: border-box;
+    width: inherit;
+    display: grid;
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: flex-end;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.logoImage {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
