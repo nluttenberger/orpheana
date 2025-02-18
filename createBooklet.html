@@ -12,6 +12,19 @@
 	</head>
     <body onload="createBooklet()">
         <script>
+            const apiKey = localStorage.getItem('apiKey');
+            if (apiKey === null) {
+                alert("Bitte zuerst einloggen");
+                return
+            }
+            const hdrs = {
+                'Accept': 'application/vnd.github.v3+json',
+                'Authorization': apiKey
+            }
+            function utf8_to_b64(str) {
+                return window.btoa(unescape(encodeURIComponent(str)));
+            }
+
             function createBooklet() {
                 // show logo block 
                 const boxtainer = document.createElement("div");
@@ -104,12 +117,6 @@
                 //a.href = url;
                 //a.download = `${year}-${opera}-${composer}-${place}.xml`;
                 //a.click();
-
-                const apiKey = localStorage.getItem('apiKey');
-                const hdrs = {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': apiKey
-                }
  
                 const fn = `${year}-${opera}-${composer}-${place}.xml`;
                 const update = {
