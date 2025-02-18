@@ -12,19 +12,7 @@
 	</head>
     <body onload="createBooklet()">
         <script>
-            const apiKey = localStorage.getItem('apiKey');
-            if (apiKey === null) {
-                alert("Bitte zuerst einloggen");
-                return
-            }
-            const hdrs = {
-                'Accept': 'application/vnd.github.v3+json',
-                'Authorization': apiKey
-            }
-            function utf8_to_b64(str) {
-                return window.btoa(unescape(encodeURIComponent(str)));
-            }
-
+            
             function createBooklet() {
                 // show logo block 
                 const boxtainer = document.createElement("div");
@@ -77,6 +65,21 @@
             }
 
             function createOrph() {
+
+                function utf8_to_b64(str) {
+                    return window.btoa(unescape(encodeURIComponent(str)));
+                }
+
+                // check if API key is available
+                const apiKey = localStorage.getItem('apiKey');
+                if (apiKey === null) {
+                    alert("Bitte zuerst einloggen");
+                }
+                const hdrs = {
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Authorization': apiKey
+                }
+
                 // check if all text input is provided
                 const opera = document.querySelector("input[name='s-opera']").value;
                 const composer = document.querySelector("input[name='s-composer']").value;
@@ -108,9 +111,9 @@
                 booklet.appendChild(short);
 
                 // save booklet to GitHub repository
-                const xmlString = new XMLSerializer().serializeToString(xml);
-                
+                const xmlString = new XMLSerializer().serializeToString(xml);               
                 b64orph = utf8_to_b64(xmlString);
+
                 //const blob = new Blob([xmlString], { type: "text/xml" });
                 //const url = URL.createObjectURL(blob);
                 //const a = document.createElement("a");
