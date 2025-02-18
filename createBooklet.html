@@ -36,8 +36,8 @@
                 // show short block
                 section = 
                     { id: "short", legend: "Angaben für den Dateinamen", fields: [
-                        { label: "Oper", value: "", name: "s-opera", p: "Opera title for file name generation; preferably one word" },
-                        { label: "Komponist", value: "", name: "s-composer", p: "Composer name for file name generation; preferably one word" },
+                        { label: "Oper", value: "", name: "s-opera", p: "Opera title; preferably one word" },
+                        { label: "Komponist", value: "", name: "s-composer", p: "Composer name; preferably one word" },
                         { label: "Ort", value: "", name: "s-place", p: "Place of performance" },
                         { label: "Jahr", value: "", name: "s-year", p: "Publication of booklet" },
                     ] };
@@ -97,7 +97,7 @@
                 // save booklet to GitHub repository
                 const xmlString = new XMLSerializer().serializeToString(xml);
                 
-                //let b64Recipe = utf8_to_b64(xmlString);
+                b64orph = utf8_to_b64(xmlString);
                 //const blob = new Blob([xmlString], { type: "text/xml" });
                 //const url = URL.createObjectURL(blob);
                 //const a = document.createElement("a");
@@ -105,8 +105,8 @@
                 //a.download = `${year}-${opera}-${composer}-${place}.xml`;
                 //a.click();
 
-                apiKey = localStorage.getItem('apiKey');
-                hdrs = {
+                const apiKey = localStorage.getItem('apiKey');
+                const hdrs = {
                     'Accept': 'application/vnd.github.v3+json',
                     'Authorization': apiKey
                 }
@@ -114,7 +114,7 @@
                 const fn = `${year}-${opera}-${composer}-${place}.xml`;
                 const update = {
                     'message': 'just created',
-                    'content': xmlString
+                    'content': b64orph
                 }
                 const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${composer}/${opera}/${fn}`;
                 // upload and commit --------------------------------------------------
