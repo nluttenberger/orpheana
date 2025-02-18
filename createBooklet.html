@@ -91,7 +91,7 @@
                     <composer>${composer}</composer>
                     <place>${place}</place>
                     <year>${year}</year>
-                    <orphID>${opaID}</orphID>`;
+                    <orphID>${orphID}</orphID>`;
                 booklet.appendChild(short);
 
                 // save booklet to GitHub repository
@@ -104,6 +104,12 @@
                 //a.href = url;
                 //a.download = `${year}-${opera}-${composer}-${place}.xml`;
                 //a.click();
+
+                apiKey = localStorage.getItem('apiKey');
+                hdrs = {
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Authorization': apiKey
+                }
  
                 const fn = `${year}-${opera}-${composer}-${place}.xml`;
                 const update = {
