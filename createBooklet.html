@@ -56,14 +56,14 @@
 
                 // add save button
                 button = document.createElement("div")
-                button.innerHTML += `<input type="button" id="saveButton" value="Datei erzeugen" ></input>`
+                button.innerHTML += `<input type="button" id="saveButton" value="orph erzeugen" ></input>`
                 booklet.appendChild(button);
 
                 // add event handler to save button
-                document.getElementById("saveButton").addEventListener("click", createFile); 
+                document.getElementById("saveButton").addEventListener("click", createOrph); 
             }
 
-            function createFile() {
+            function createOrph() {
                 // check if all text input is provided
                 const opera = document.querySelector("input[name='s-opera']").value;
                 const composer = document.querySelector("input[name='s-composer']").value;
@@ -78,8 +78,8 @@
                 const hash = opera + composer + place + year;
                 const hashValue = CryptoJS.MD5(hash).toString();
 
-                // set opa-ID
-                const opaID = `opa-${hashValue}`;
+                // set orph-ID
+                const orphID = `orph-${hashValue}`;
 
                 // init XML parser and collect input into XML elements
                 const parser = new DOMParser();
@@ -91,20 +91,44 @@
                     <composer>${composer}</composer>
                     <place>${place}</place>
                     <year>${year}</year>
-                    <opaID>${opaID}</opaID>`;
+                    <orphID>${opaID}</orphID>`;
                 booklet.appendChild(short);
 
-                // save booklet file to download folder
+                // save booklet to GitHub repository
                 const xmlString = new XMLSerializer().serializeToString(xml);
-                const blob = new Blob([xmlString], { type: "text/xml" });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement("a");
-                a.href = url;
-                a.download = `${year}-${opera}-${composer}-${place}.xml`;
-                a.click();
-
-                // save booklet file to Github repository
-            }
+                
+                //let b64Recipe = utf8_to_b64(xmlString);
+                //const blob = new Blob([xmlString], { type: "text/xml" });
+                //const url = URL.createObjectURL(blob);
+                //const a = document.createElement("a");
+                //a.href = url;
+                //a.download = `${year}-${opera}-${composer}-${place}.xml`;
+                //a.click();
+ 
+                const fn = `${year}-${opera}-${composer}-${place}.xml`;
+                const update = {
+                    'message': 'just created',
+                    'content': xmlString
+                }
+                const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${composer}/${opera}/${fn}`;
+                // upload and commit --------------------------------------------------
+                fetch (urlStr,{
+                    method: 'PUT',
+                    body: JSON.stringify(update),
+                    headers: hdrs
+                })
+                    .then (resp => {
+                    if (resp.status === 201) {
+                        alert ('orph angelegt!')
+                    }
+                    return resp.json()
+                    })
+                    .then (data => {
+                    })
+                    .catch((error) => {
+                    console.error('Error while creating orph: ', error);
+                    })
+                }          
         </script>
     </body>
 </html>
