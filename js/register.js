@@ -1,9 +1,5 @@
 function register() {
 
-    function utf8_to_b64(str) {
-        return window.btoa(unescape(encodeURIComponent(str)));
-    }
-
     // check if API key is available
     const apiKey = localStorage.getItem('apiKey');
     if (apiKey === null) {
@@ -49,15 +45,15 @@ function register() {
     // serialize flat orph for GitHub repository
     const xmlString = new XMLSerializer().serializeToString(xml);       
     console.log(xmlString);        
-    b64orph = utf8_to_b64(xmlString);
+    b64orph = window.btoa(xmlString);
 
     // create file name for flat orph
-    const fn = `${encodeURIComponent(year)}-${encodeURIComponent(opera)}-${encodeURIComponent(composer)}-${encodeURIComponent(place)}.xml`;
+    const fn = `${year}-${opera}-${composer}-${place}.xml`;
     const update = {
         'message': 'just created',
         'content': b64orph
     }
-    const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${encodeURIComponent(composer)}/${encodeURIComponent(opera)}/${fn}`;
+    const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${composer}/${opera}/${fn}`;
     // upload and commit --------------------------------------------------
     fetch (urlStr,{
         method: 'PUT',
