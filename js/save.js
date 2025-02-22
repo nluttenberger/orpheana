@@ -1,4 +1,4 @@
-function save() {
+function register() {
 
     function utf8_to_b64(str) {
         return window.btoa(encodeURIComponent(str));
@@ -7,7 +7,7 @@ function save() {
     // check if API key is available
     const apiKey = localStorage.getItem('apiKey');
     if (apiKey === null) {
-        alert("Bitte zuerst einloggen");
+        alert("Bitte zuerst anmelden");
     }
     const hdrs = {
         'Accept': 'application/vnd.github.v3+json',
@@ -33,8 +33,8 @@ function save() {
 
     // init XML parser and collect input into XML elements
     const parser = new DOMParser();
-    const xml = parser.parseFromString(`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><booklet></booklet>`, "text/xml");
-    const booklet = xml.querySelector("booklet");
+    const xml = parser.parseFromString(`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><orph></orph>`, "text/xml");
+    const orph = xml.querySelector("orph");
     const short = xml.createElement("short");
     short.innerHTML = `
         <opera>${opera}</opera>
@@ -42,19 +42,15 @@ function save() {
         <place>${place}</place>
         <year>${year}</year>
         <orphID>${orphID}</orphID>`;
-    booklet.appendChild(short);
+    orph.appendChild(short);
 
-    // save booklet to GitHub repository
+    // introduce here full flat orph structure
+
+    // serialize flat orph for GitHub repository
     const xmlString = new XMLSerializer().serializeToString(xml);               
     b64orph = utf8_to_b64(xmlString);
 
-    //const blob = new Blob([xmlString], { type: "text/xml" });
-    //const url = URL.createObjectURL(blob);
-    //const a = document.createElement("a");
-    //a.href = url;
-    //a.download = `${year}-${opera}-${composer}-${place}.xml`;
-    //a.click();
-
+    // create file name for flat orph
     const fn = `${year}-${opera}-${composer}-${place}.xml`;
     const update = {
         'message': 'just created',

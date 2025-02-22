@@ -3,7 +3,7 @@ function register() {
     // check if API key is available
     const apiKey = localStorage.getItem('apiKey');
     if (apiKey === null) {
-        alert("Bitte zuerst anmelden");
+        alert("Bitte autorisieren!");
     }
     const hdrs = {
         'Accept': 'application/vnd.github.v3+json',
@@ -15,6 +15,7 @@ function register() {
     const composer = document.querySelector("input[name='s-composer']").value;
     const place = document.querySelector("input[name='s-place']").value;
     const year = document.querySelector("input[name='s-year']").value;
+    const fimtID = document.querySelector("input[name='s-fimtID']").value;
     if (opera === "" || composer === "" || place === "" || year === "") {
         alert("Bitte alle Angaben machen");
         return;
@@ -37,6 +38,7 @@ function register() {
         <composer>${composer}</composer>
         <place>${place}</place>
         <year>${year}</year>
+        <fimtID>${fimtID}</fimtID>
         <orphID>${orphID}</orphID>`;
     orph.appendChild(short);
 

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Create booklet</title>
+		<title>Register booklet</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans" >
 		<link rel="stylesheet" href="css/form.css">
@@ -42,7 +42,7 @@
                         { label: "Komponist", value: "", name: "s-composer", p: "Composer name; preferably one word" },
                         { label: "Ort", value: "", name: "s-place", p: "Place of performance" },
                         { label: "Jahr", value: "", name: "s-year", p: "Publication of booklet" },
-                        { label: "fimt-ID", value: "", name: "fimt-id", p: "ID given by fimt" }
+                        { label: "fimtID", value: "", name: "s-fimtID", p: "ID given by fimt" }
                     ] };
                 fieldset = document.createElement("fieldset");
                 fieldset.setAttribute("id", section.id);
@@ -59,7 +59,7 @@
 
                 // add register button
                 button = document.createElement("div")
-                button.innerHTML += `<input type="button" id="registerButton" value="orph anlegen" ></input>`
+                button.innerHTML += `<input type="button" id="registerButton" value="orph registrieren" ></input>`
                 booklet.appendChild(button);
 
                 // add event handler to register button
