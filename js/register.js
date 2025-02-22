@@ -52,12 +52,12 @@ function register() {
     b64orph = utf8_to_b64(xmlString);
 
     // create file name for flat orph
-    const fn = `${year}-${opera}-${composer}-${place}.xml`;
+    const fn = `${encodeURIComponent(year)}-${encodeURIComponent(opera)}-${encodeURIComponent(composer)}-${encodeURIComponent(place)}.xml`;
     const update = {
         'message': 'just created',
         'content': b64orph
     }
-    const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${composer}/${opera}/${fn}`;
+    const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${encodeURIComponent(composer)}/${encodeURIComponent(opera)}/${fn}`;
     // upload and commit --------------------------------------------------
     fetch (urlStr,{
         method: 'PUT',
