@@ -4,7 +4,15 @@ function register() {
         return window.btoa(unescape(encodeURIComponent(str)));
     }
 
-    
+    // check if API key is available
+    const apiKey = localStorage.getItem('apiKey');
+    if (apiKey === null) {
+        alert("Bitte zuerst anmelden");
+    }
+    const hdrs = {
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': apiKey
+    }
 
     // check if all text input is provided
     const opera = document.querySelector("input[name='s-opera']").value;
@@ -54,7 +62,7 @@ function register() {
     fetch (urlStr,{
         method: 'PUT',
         body: JSON.stringify(update),
-        //headers: hdrs
+        headers: hdrs
     })
         .then (resp => {
         if (resp.status === 201) {
