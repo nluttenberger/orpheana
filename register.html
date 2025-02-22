@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Create booklet</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans" >
+		<link rel="stylesheet" href="css/form.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+	</head>
+    <body onload="createForm()">
+        <script src="js/register.js"></script>
+        <script>
+            function createForm() {
+                // show logo block 
+                const boxtainer = document.createElement("div");
+                boxtainer.classList.add("boxtainer");
+                boxtainer.innerHTML = `
+                    <div class="logo">
+                        <div>
+                            <img class="logoImage" src="fruschtique%20Logo%20grau%20transparent.png" alt="Logo" title="fruschtique-Logo">
+                        </div>
+                    </div> `;
+                const body = document.getElementsByTagName("body")[0]
+                body.appendChild(boxtainer);
+
+                // create short block fieldset
+                const booklet = document.createElement("fieldset");
+                booklet.setAttribute("id", "booklet");
+                let section;
+                let fieldset;
+                let container;
+                let addNewText
+                
+                // show short block
+                section = 
+                    { id: "short", legend: "Registrierungsdaten", fields: [
+                        { label: "Oper", value: "", name: "s-opera", p: "Opera title; preferably one word" },
+                        { label: "Komponist", value: "", name: "s-composer", p: "Composer name; preferably one word" },
+                        { label: "Ort", value: "", name: "s-place", p: "Place of performance" },
+                        { label: "Jahr", value: "", name: "s-year", p: "Publication of booklet" },
+                        { label: "fimt-ID", value: "", name: "fimt-id", p: "ID given by fimt" }
+                    ] };
+                fieldset = document.createElement("fieldset");
+                fieldset.setAttribute("id", section.id);
+                fieldset.innerHTML = `<legend>${section.legend}</legend><div class="form-container"></div>`;
+                container = fieldset.querySelector(".form-container");
+                section.fields.forEach(field => {
+                    container.innerHTML += `
+                        <label>${field.label}</label>
+                        <input type="text" name="${field.name}" value="${field.value}"></input>
+                        <p class="right-text">${field.p}</p>`;
+                });
+                booklet.appendChild(fieldset);
+                body.appendChild(booklet);
+
+                // add register button
+                button = document.createElement("div")
+                button.innerHTML += `<input type="button" id="registerButton" value="orph anlegen" ></input>`
+                booklet.appendChild(button);
+
+                // add event handler to register button
+                document.getElementById("registerButton").addEventListener("click", register); 
+            }    
+        </script>
+    </body>
+</html>
