@@ -47,7 +47,8 @@ function register() {
     // introduce here full flat orph structure
 
     // serialize flat orph for GitHub repository
-    const xmlString = new XMLSerializer().serializeToString(xml);               
+    const xmlString = new XMLSerializer().serializeToString(xml);       
+    console.log(xmlString);        
     b64orph = utf8_to_b64(xmlString);
 
     // create file name for flat orph
