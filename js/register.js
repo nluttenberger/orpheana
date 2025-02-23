@@ -44,26 +44,69 @@ function register() {
         <orphID>${orphID}</orphID>`;
     orph.appendChild(short);
 
-    // performance section
     const performance = xml.createElement("performance");
+    const castList = xml.createElement("castList");
+    const stagingRelated = xml.createElement("stagingRelated");
+    const storyRelated = xml.createElement("storyRelated");
+    const musicRelated = xml.createElement("musicRelated");
+    const historic = xml.createElement("historic");
+
+    // performance section
     performance.innerHTML = `
-        <opera></opera>
-        <composer></composer>
-        <libretto></libretto>
+        <opera>
+            <operaTitle></operaTitle>
+            <operaGND></operaGND>
+        </opera>
+        <composer>
+            <composerName></composerName>
+            <composerGND></composerGND>
+        </composer>
+        <libretto>
+            <librettoName></librettoName>
+            <librettoGND></librettoGND>
+        </libretto>
         <firstPerformance></firstPerformance>
-        <production></production>
-        <stage></stage>
-        <place></place>
+        <production>
+            <productionName></productionName>
+            <productionGND></productionGND>
+        </production>
+        <stage>
+            <stageName></stageName>
+            <stageGND></stageGND>
+        </stage>
+        <place>
+            <placeName></placeName>
+            <placeGND></placeGND>
+        </place>
         <premiere></premiere>
-        <director></director>
-        <conductor></conductor>
-        <dramatist></dramatist>
-        <orchestra></orchestra>`;
+        <director>
+            <directorName></directorName>
+            <directorGND></directorGND>
+        </director>
+        <conductor>
+            <conductorName></conductorName>
+            <conductorGND></conductorGND>
+        </conductor>
+        <dramatist>
+            <dramatistName></dramatistName>
+            <dramatistGND></dramatistGND>
+        </dramatist>
+        <orchestra>
+            <orchestraName></orchestraName>
+            <orchestraGND></orchestraGND>    
+        </orchestra>`;
     orph.appendChild(performance);
 
-    // cast section
-    const cast = xml.createElement("cast");
-    orph.appendChild(cast);
+    // castList section
+    castList.innerHTML = `
+        <cast>
+            <role></role>
+            <artist></artist>   
+            <artistGND></artistGND>
+        </cast>`;
+    orph.appendChild(castList);
+
+    
     
 
 
