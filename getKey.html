@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Freischaltung</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans" >
+    <link rel="stylesheet" href="css/form.css">
+  </head>
+  <body>
+    <div class="boxtainer">
+      <div class="logo">
+        <div>
+          <img class="logoImage" src="fruschtique%20Logo%20grau%20transparent.png" alt="Logo" title="Kochbuch-Logo">
+        </div>
+      </div>
+    </div>
+    <fieldset>
+      <legend>Schlüssel freischalten</legend>
+      <div style="margin-top: 18px; margin-bottom: 36px; margin-left: 4em">
+        <label>Freischaltcode</label>
+          <input type="text" id="pwd" value="" style="margin-left: 2em" pattern=".{12,12}" required></input>
+        <br><br>
+        <input type="button" value="freischalten" id="pwdBtn" style="cursor: pointer"></input>
+      </div>
+      <br>
+    </fieldset>
+    <script src="js/sha384.js"></script>
+    <script src="js/getKey.js"></script>
+    <script>
+      document.getElementById("pwdBtn").addEventListener("click", getKey);
+    </script>
+  </body>
+</html>
