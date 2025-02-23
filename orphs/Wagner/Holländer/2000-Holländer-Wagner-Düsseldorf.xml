@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<orph><short>
+        <opera>Holländer</opera>
+        <composer>Wagner</composer>
+        <place>Düsseldorf</place>
+        <year>2000</year>
+        <fimtID>fimt-XX-BB-1234</fimtID>
+        <orphID>orph-8db3451dd9a162f30eba9bd19dbab90e</orphID></short><fieldset xmlns="http://www.w3.org/1999/xhtml" id="performance"><legend>Aufführung</legend><div class="form-container">
+        <label>Oper</label>
+        <input type="text" name="opera" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="operaGND" value="" />
+        <label>Komponist</label>
+        <input type="text" name="composer" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="composerGND" value="" />
+        <label>Librettist</label>
+        <input type="text" name="libretto" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="librettoGND" value="" />
+        <label>Uraufführung (Jahr)</label>
+        <input type="text" name="firstPerformance" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="firstPerformanceGND" value="" />
+        <label>Produktion</label>
+        <input type="text" name="production" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="productionGND" value="" />
+        <label>Bühne</label>
+        <input type="text" name="stage" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="stageGND" value="" />
+        <label>Ort</label>
+        <input type="text" name="place" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="placeGND" value="" />
+        <label>Premiere (Jahr)</label>
+        <input type="text" name="premiere" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="premiereGND" value="" />
+        <label>Inszenierung</label>
+        <input type="text" name="director" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="directorGND" value="" />
+        <label>Musikal. Leitung</label>
+        <input type="text" name="conductor" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="conductorGND" value="" />
+        <label>Dramaturgie</label>
+        <input type="text" name="dramatist" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="dramatistGND" value="" />
+        <label>Orchester</label>
+        <input type="text" name="orchestra" value="" />
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="orchestraGND" value="" /></div></fieldset></orph>
