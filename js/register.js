@@ -42,7 +42,37 @@ function register() {
         <orphID>${orphID}</orphID>`;
     orph.appendChild(short);
 
-    // introduce here full flat orph structure
+    // show performance block
+    section = 
+    { id: "performance", legend: "Aufführung", fields: [
+        { label: "Oper", value: "", name: "opera", gnd: "" },
+        { label: "Komponist", value: "", name: "composer", gnd: "" },
+        { label: "Librettist", value: "", name: "libretto", gnd: "" },
+        { label: "Uraufführung (Jahr)", value: "", name: "firstPerformance", gnd: "" },
+        { label: "Produktion", value: "", name: "production", gnd: "" },
+        { label: "Bühne", value: "", name: "stage", gnd: "" },
+        { label: "Ort", value: "", name: "place", gnd: "" },
+        { label: "Premiere (Jahr)", value: "", name: "premiere", p: "", gnd: "" },
+        { label: "Inszenierung", value: "", name: "director", gnd: ""},
+        { label: "Musikal. Leitung", value: "", name: "conductor", gnd: ""},
+        { label: "Dramaturgie", value: "", name: "dramatist", gnd: ""},
+        { label: "Orchester", value: "", name: "orchestra", gnd: ""}
+    ] };
+fieldset = document.createElement("fieldset");
+fieldset.setAttribute("id", section.id);
+fieldset.innerHTML = `<legend>${section.legend}</legend><div class="form-container"></div>`;
+container = fieldset.querySelector(".form-container");
+section.fields.forEach(field => {
+    container.innerHTML += `
+        <label>${field.label}</label>
+        <input type="text" name="${field.name}" value="${field.value}"></input>
+        <label class="GND-label">GND-ID</label>
+        <input type="text" name="${field.name}GND" value="${field.gnd}"></input>`;
+});
+//const opInput = fieldset.querySelector("input[name='opera']");
+//opInput.setAttribute("list", "operas");
+    orph.appendChild(fieldset);
+
 
     // serialize flat orph for GitHub repository
     const xmlString = new XMLSerializer().serializeToString(xml);           
