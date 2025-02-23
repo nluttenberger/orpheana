@@ -45,9 +45,13 @@ function register() {
     // introduce here full flat orph structure
 
     // serialize flat orph for GitHub repository
-    const xmlString = new XMLSerializer().serializeToString(xml);       
-    console.log(xmlString);        
-    b64orph = window.btoa(xmlString);
+    const xmlString = new XMLSerializer().serializeToString(xml);           
+    // Encode the XML string in UTF-8
+    const encoder = new TextEncoder();
+    const utf8Array = encoder.encode(xmlString);
+
+    // Convert the UTF-8 encoded array to a base64 string
+    const b64orph = btoa(String.fromCharCode.apply(null, utf8Array));
 
     // create file name for flat orph
     const fn = `${year}-${opera}-${composer}-${place}.xml`;
