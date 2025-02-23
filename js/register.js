@@ -32,6 +32,8 @@ function register() {
     const parser = new DOMParser();
     const xml = parser.parseFromString(`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><orph></orph>`, "text/xml");
     const orph = xml.querySelector("orph");
+
+    // short section
     const short = xml.createElement("short");
     short.innerHTML = `
         <opera>${opera}</opera>
@@ -42,36 +44,27 @@ function register() {
         <orphID>${orphID}</orphID>`;
     orph.appendChild(short);
 
-    // show performance block
-    section = 
-    { id: "performance", legend: "Aufführung", fields: [
-        { label: "Oper", value: "", name: "opera", gnd: "" },
-        { label: "Komponist", value: "", name: "composer", gnd: "" },
-        { label: "Librettist", value: "", name: "libretto", gnd: "" },
-        { label: "Uraufführung (Jahr)", value: "", name: "firstPerformance", gnd: "" },
-        { label: "Produktion", value: "", name: "production", gnd: "" },
-        { label: "Bühne", value: "", name: "stage", gnd: "" },
-        { label: "Ort", value: "", name: "place", gnd: "" },
-        { label: "Premiere (Jahr)", value: "", name: "premiere", p: "", gnd: "" },
-        { label: "Inszenierung", value: "", name: "director", gnd: ""},
-        { label: "Musikal. Leitung", value: "", name: "conductor", gnd: ""},
-        { label: "Dramaturgie", value: "", name: "dramatist", gnd: ""},
-        { label: "Orchester", value: "", name: "orchestra", gnd: ""}
-    ] };
-fieldset = document.createElement("fieldset");
-fieldset.setAttribute("id", section.id);
-fieldset.innerHTML = `<legend>${section.legend}</legend><div class="form-container"></div>`;
-container = fieldset.querySelector(".form-container");
-section.fields.forEach(field => {
-    container.innerHTML += `
-        <label>${field.label}</label>
-        <input type="text" name="${field.name}" value="${field.value}"></input>
-        <label class="GND-label">GND-ID</label>
-        <input type="text" name="${field.name}GND" value="${field.gnd}"></input>`;
-});
-//const opInput = fieldset.querySelector("input[name='opera']");
-//opInput.setAttribute("list", "operas");
-    orph.appendChild(fieldset);
+    // performance section
+    const performance = xml.createElement("performance");
+    performance.innerHTML = `
+        <opera></opera>
+        <composer></composer>
+        <libretto></libretto>
+        <firstPerformance></firstPerformance>
+        <production></production>
+        <stage></stage>
+        <place></place>
+        <premiere></premiere>
+        <director></director>
+        <conductor></conductor>
+        <dramatist></dramatist>
+        <orchestra></orchestra>`;
+    orph.appendChild(performance);
+
+    // cast section
+    const cast = xml.createElement("cast");
+    orph.appendChild(cast);
+    
 
 
     // serialize flat orph for GitHub repository
