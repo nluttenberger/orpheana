@@ -10,7 +10,8 @@
 		<link rel="stylesheet" href="css/form.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 	</head>
-    <body onload="fillBooklet()">
+    <body onload="collect()">
+        <script src="js/collect.js" ></script>
         <script>
             function fillBooklet() { 
                 const operas = [ 
@@ -570,6 +571,8 @@
                 let fieldset;
                 let container;
                 let addNewText;
+
+                // read orph from repository
 
                 // performance
                 section = 
