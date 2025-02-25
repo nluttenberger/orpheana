@@ -17,44 +17,56 @@ function collect () {
         const utf8Array = encoder.encode(str);
         return btoa(String.fromCharCode.apply(null, utf8Array));
     }
-      
-    function getForm () {
+
+    // Create form for orph data
+    function makeForm(XMLdata) {
+        alert ("Hat geklappt");
+        console.log (XMLdata);
+    }
+    
+    // Get form data from repository
+    alert ("Start");
+    let myPath;
+    let myOrph;
+    let orphXML;
+    let myURL;
+    let gitName; 
+    let gitPath;
+    let gitSHA;
+    let hdrs;
+
     apiKey = localStorage.getItem('apiKey');
     hdrs = {
         'Accept': 'application/vnd.github.v3+json',
         'Authorization': apiKey
     }
-    let myURL = new URL (document.URL);
-    myColl = myURL.searchParams.get('coll');
-    myChap = myURL.searchParams.get('chap');
-    myRecp = myURL.searchParams.get('recp');
-    console.log (`Sammlung: ${myColl}, Kapitel: ${myChap}, Rezept: ${myRecp}`);
+    myURL = new URL(document.URL);
+    myPath = myURL.searchParams.get('path');
+    myOrph = myURL.searchParams.get('orph');
+    console.log (`Pfad: ${myPath}, Orph: ${myOrph}`);
     
-    let url_str = `https://api.github.com/repos/nluttenberger/${myColl}/contents/recipes_xml/${myChap}/${myChap}.xml`;
+    let url_str = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${myPath}/.gitkeep`;
     fetch (url_str,{headers: hdrs})
     .then (resp => resp.json())
     .then (data => {
-        rcpXML = b64_to_utf8(data.content);
-        let parser = new DOMParser();
-        let xmlDoc = parser.parseFromString(rcpXML, "text/xml");
-        prefix = xmlDoc.getElementsByTagName("fr:recipe")[0].getAttribute("prefix");
-        rcpID = `${prefix}_${myRecp.split(".xml")[0].replace(/-/g, '').replace(/ /g,'_').replace(/\./g,'').replace(/,/g,'').replace(/\)/g,'').replace(/\(/g,'').replace(/\)/g,'')}`
-        url_str = `https://api.github.com/repos/nluttenberger/${myColl}/contents/recipes_xml/${myChap}/${myRecp}`;
+        console.log("Path ok");
+        url_str = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${myPath}/${myOrph}`;
         fetch (url_str,{headers: hdrs})
         .then (resp => resp.json())
         .then (data => {
-            rcpXML = b64_to_utf8(data.content);
+            orphXML = b64_to_utf8(data.content);
             gitName = data.name;
             gitPath = data.path;
             gitSHA = data.sha;
-            makeForm(rcpXML);
+            makeForm(orphXML);
         })
         .catch ((error) => {
-            console.log('Error while reading recipe xml data:', error);
+            console.log('Error while reading orph data:', error);
         })
     })
     .catch ((error) => {
-        console.log('Error while reading chapter xml data:', error);
+        console.log(`Error while accessing ${myPath}`, error);
     })
-    }
+
+
 }
