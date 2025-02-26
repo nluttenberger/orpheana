@@ -11,21 +11,33 @@ fieldset {
 }
 
 legend {
-    display: inline;
-    background-color: aliceblue;
+  display: inline;
+  background-color: aliceblue;
+}
+
+.logo-container {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  gap: 15px 10px;
+  max-width: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .form-container {
-    display: grid;
-    grid-template-columns: 150px 1fr 80px 0.6fr;
-    gap: 15px 10px;
-    max-width: auto;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 150px 1fr 80px 0.6fr;
+  gap: 15px 10px;
+  max-width: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
 .cast-list-container {
@@ -41,9 +53,9 @@ legend {
 }
 
   label {
-    text-align: right;
-    font-size: 14px;
-    color: #333;
+  text-align: right;
+  font-size: 14px;
+  color: #333;
   }
 
   .right-text {
@@ -94,12 +106,6 @@ legend {
     font-family: sans-serif;
     font-size: small;
     top: 0.2em;
-}
-
-.boxtainer {
-    box-sizing: border-box;
-    width: inherit;
-    display: grid;
 }
 
 .logo {
