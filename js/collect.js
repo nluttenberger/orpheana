@@ -593,7 +593,9 @@ function collect () {
         orph.innerHTML = `<legend>${year} ${opera} ${composer} ${place}</legend>
                 <div class="form-container"></div>`;
         body.appendChild(orph);
-        //container = fieldset.querySelector(".form-container");
+        container = fieldset.querySelector(".form-container");
+        container.innerHTML += `
+            <p>orphID: ${orphID}</p>`
 
         
         // performance section
