@@ -21,11 +21,6 @@ function collect () {
     // Create form for orph data
     function makeForm(XMLdata) {
         console.log (XMLdata);
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(XMLdata, "text/xml");  
-        const short = xml.querySelector("short");
-        const opera = short.querySelector("opera").textContent;
-
         const operas = [ 
             ["1984", "Lorin Maazel", "2005", "J. D. McClatchy, Thomas Meehan"],
             ["Abu Hassan", "Carl Maria von Weber", "1811", "Franz Carl Hiemer"],
@@ -576,17 +571,28 @@ function collect () {
         const body = document.getElementsByTagName("body")[0]
         body.appendChild(boxtainer);
 
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(XMLdata, "text/xml");  
+        const opera = xml.querySelector("short opera").textContent;
+        console.log (opera);
+        const composer = xml.querySelector("short composer").textContent;   
+        console.log (composer);
+        const firstPerformance = xml.querySelector("short firstPerformance").textContent;   
+        console.log (firstPerformance);
+        const libretto = xml.querySelector("short libretto").textContent;   
+        console.log (libretto);
+
         // create outer fieldset
-        const booklet = document.createElement("fieldset");
-        booklet.setAttribute("id", "booklet");
+        const orph = document.createElement("fieldset");
+        orph.setAttribute("id", "orph");
         let section;
         let fieldset;
         let container;
         let addNewText;
 
-        // read orph from repository
+        // short section
 
-        // performance
+        // performance section
         section = 
             { id: "performance", legend: "Aufführung", fields: [
                 { label: "Oper", value: "", name: "opera", gnd: "" },
@@ -615,7 +621,7 @@ function collect () {
         });
         const opInput = fieldset.querySelector("input[name='opera']");
         opInput.setAttribute("list", "operas");
-        booklet.appendChild(fieldset);
+        orph.appendChild(fieldset);
 
         // cast list section
         section = 
@@ -639,7 +645,7 @@ function collect () {
         Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
         container.appendChild(addNewCastLine);
         addNewCastLine.addEventListener("click", addCastLine);
-        booklet.appendChild(fieldset);
+        orph.appendChild(fieldset);
 
         // staging-related texts section
         section = 
@@ -674,7 +680,7 @@ function collect () {
         Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
         addNewText.addEventListener("click", addText);
         fieldset.appendChild(addNewText);
-        booklet.appendChild(fieldset);
+        orph.appendChild(fieldset);
 
         // story-related texts section
         section = 
@@ -709,7 +715,7 @@ function collect () {
         Object.assign(addNewText, {type: "button", value: "weiterer Text"});
         fieldset.appendChild(addNewText);
         addNewText.addEventListener("click", addText);
-        booklet.appendChild(fieldset);
+        orph.appendChild(fieldset);
 
         // music-related texts section
         section = 
@@ -744,7 +750,7 @@ function collect () {
         Object.assign(addNewText, {type: "button", value: "weiterer Text"});
         addNewText.addEventListener("click", addText);
         fieldset.appendChild(addNewText);
-        booklet.appendChild(fieldset);
+        orph.appendChild(fieldset);
 
         // historic texts section 
         section = 
@@ -779,21 +785,19 @@ function collect () {
         Object.assign(addNewText, {type: "button", value: "weiterer Text"});
         fieldset.appendChild(addNewText);
         addNewText.addEventListener("click", addText);
-        booklet.appendChild(fieldset);
+        orph.appendChild(fieldset);
 
         // add save button
         button = document.createElement("div")
         button.innerHTML += `<input type="button" id="saveButton" value="Speichern" ></input>`
-        booklet.appendChild(button);
+        orph.appendChild(button);
 
-        body.appendChild(booklet);
+        body.appendChild(orph);
 
         // add event listener to opera input field
         document.querySelector("input[name='opera']").addEventListener("change", function() {
             const op = document.querySelector("input[name='opera']").value;
-            console.log (op);
             const idx = operas.findIndex (opera => opera[0] === op);
-            console.log (idx);
             const composer = operas[idx][1];
             const firstPerf = operas[idx][2];
             const libretto = operas[idx][3];
@@ -904,8 +908,8 @@ function collect () {
 
         // init XML parser and create top-level XML elements
         const parser = new DOMParser();
-        const xml = parser.parseFromString("<booklet></booklet>", "text/xml");
-        const booklet = xml.querySelector("booklet");
+        const xml = parser.parseFromString("<orph></orph>", "text/xml");
+        const orph = xml.querySelector("orph");
         const performance = xml.createElement("performance");
         const castList = xml.createElement("castList");
         const stagingRelated = xml.createElement("stagingRelated");
@@ -957,11 +961,10 @@ function collect () {
                 <orchestraName>${orchestra}</orchestraName>
                 <orchestraGND>${orchestraGND}</orchestraGND>    
             </orchestra>`;
-        booklet.appendChild(performance);
+        orph.appendChild(performance);
 
         // cast list
         roles.forEach((role, index) => {
-            console.log (role.value)
             const cast = xml.createElement("cast");
             cast.innerHTML = `
                 <role>${roles[index].value}</role>
@@ -969,7 +972,7 @@ function collect () {
                 <artistGND>${artistGNDs[index].value}</artistGND>`;
             castList.appendChild(cast);
         });
-        booklet.appendChild(castList);
+        orph.appendChild(castList);
 
         // staging-related texts
         const stagingTexts = document.querySelectorAll("#staging-related .form-container");
@@ -987,7 +990,7 @@ function collect () {
             });
             stagingRelated.appendChild(textElement);
         });
-        booklet.appendChild(stagingRelated);
+        orph.appendChild(stagingRelated);
 
         // story-related texts
         const storyTexts = document.querySelectorAll("#story-related .form-container");
@@ -1005,7 +1008,7 @@ function collect () {
             });
             storyRelated.appendChild(textElement);
         });
-        booklet.appendChild(storyRelated);
+        orph.appendChild(storyRelated);
 
         // music-related texts
         const musicTexts = document.querySelectorAll("#music-related .form-container");
@@ -1023,7 +1026,7 @@ function collect () {
             });
             musicRelated.appendChild(textElement);
         });
-        booklet.appendChild(musicRelated);
+        orph.appendChild(musicRelated);
 
         // historic texts
         const historicTexts = document.querySelectorAll("#historic .form-container");
@@ -1041,7 +1044,7 @@ function collect () {
             });
             historic.appendChild(textElement);
         });
-        booklet.appendChild(historic);
+        orph.appendChild(historic);
 
         // preliminary solution for file name creation
         const sOpera = "Holländer";
@@ -1049,7 +1052,7 @@ function collect () {
         const sPlace = "Düsseldorf";
         const sYear = "2000";
 
-        // save booklet file to download folder
+        // save orph to download folder
         const xmlString = new XMLSerializer().serializeToString(xml);
         const blob = new Blob([xmlString], { type: "text/xml" });
         const url = URL.createObjectURL(blob);
@@ -1059,7 +1062,7 @@ function collect () {
         a.download = `${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`;
         a.click();
 
-        // save booklet data to GitHub repo
+        // save orph data to GitHub repo
         const repo = "https://api.github.com/repos/nluttenberger/orpheana/contents/";
     }
     
@@ -1105,6 +1108,4 @@ function collect () {
     .catch ((error) => {
         console.log(`Error while accessing ${myPath}`, error);
     })
-
-
 }
