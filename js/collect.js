@@ -581,21 +581,20 @@ function collect () {
         const orphID = formData.querySelector("short orphID").textContent; 
         console.log (orphID);
 
-        // create outer fieldset
+        // some variables
         let section;
         let fieldset;
         let container;
         let addNewText;
 
-        // create form body
+        // create outer fieldset, i.e. the orph
         const orph = document.createElement("fieldset");
-
-        // short section
         orph.setAttribute("id", orphID);
         orph.innerHTML = `<legend>${year} ${opera} ${composer} ${place}</legend>
                 <div class="form-container"></div>`;
-        container = fieldset.querySelector(".form-container");
         body.appendChild(orph);
+        //container = fieldset.querySelector(".form-container");
+
         
         // performance section
         section = 
