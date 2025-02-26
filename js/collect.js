@@ -553,7 +553,8 @@ function collect () {
             option.setAttribute("value", opera[0]);
             datalist.appendChild(option);
         });
-        document.getElementsByTagName("body")[0].appendChild(datalist);
+        const body = document.getElementsByTagName("body")[0]
+        body.appendChild(datalist);
         
         // show logo block 
         const logotainer = document.createElement("div");
@@ -565,7 +566,6 @@ function collect () {
                     <img class="logoImage" src="fruschtique%20Logo%20grau%20transparent.png" alt="Logo" title="fruschtique-Logo">
                 </div>
             </div> `;
-        const body = document.getElementsByTagName("body")[0]
         body.appendChild(logotainer);
 
         console.log (XMLdata);
@@ -582,19 +582,21 @@ function collect () {
         console.log (orphID);
 
         // create outer fieldset
-        let orph;
         let section;
         let fieldset;
         let container;
         let addNewText;
 
+        // create form body
+        const orph = document.createElement("fieldset");
+
         // short section
-        fieldset = document.createElement("fieldset");
-        fieldset.setAttribute("id", orphID);
-        fieldset.innerHTML = `<legend>${year} ${opera} ${composer} ${place}</legend>
+        orph.setAttribute("id", orphID);
+        orph.innerHTML = `<legend>${year} ${opera} ${composer} ${place}</legend>
                 <div class="form-container"></div>`;
         container = fieldset.querySelector(".form-container");
-
+        body.appendChild(orph);
+        
         // performance section
         section = 
             { id: "performance", legend: "Aufführung", fields: [
