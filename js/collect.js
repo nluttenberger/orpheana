@@ -556,9 +556,9 @@ function collect () {
         document.getElementsByTagName("body")[0].appendChild(datalist);
         
         // show logo block 
-        const boxtainer = document.createElement("div");
-        boxtainer.classList.add("logo-container");
-        boxtainer.innerHTML = `
+        const logotainer = document.createElement("div");
+        logotainer.classList.add("logo-container");
+        logotainer.innerHTML = `
             <div></div>
             <div class="logo">
                 <div>
@@ -566,7 +566,7 @@ function collect () {
                 </div>
             </div> `;
         const body = document.getElementsByTagName("body")[0]
-        body.appendChild(boxtainer);
+        body.appendChild(logotainer);
 
         console.log (XMLdata);
         const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
