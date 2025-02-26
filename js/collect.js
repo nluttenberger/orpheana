@@ -590,13 +590,10 @@ function collect () {
         // create outer fieldset, i.e. the orph
         const orph = document.createElement("fieldset");
         orph.setAttribute("id", orphID);
-        orph.innerHTML = `<legend>${year} ${opera} ${composer} ${place}</legend>
-                <div class="form-container"></div>`;
+        orph.innerHTML = `
+            <legend>${year} ${opera} ${composer} ${place}</legend>
+            <div class="form-container"><p>orphID: ${orphID}</p></div>`;
         body.appendChild(orph);
-        container = fieldset.querySelector(".form-container");
-        container.innerHTML += `
-            <p>orphID: ${orphID}</p>`
-
         
         // performance section
         section = 
