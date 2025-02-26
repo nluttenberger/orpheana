@@ -576,14 +576,16 @@ function collect () {
         console.log (opera);
         const composer = formData.querySelector("short composer").textContent;   
         console.log (composer);
-        const firstPerformance = formData.querySelector("short firstPerformance").textContent;   
-        console.log (firstPerformance);
-        const libretto = formData.querySelector("short libretto").textContent;   
-        console.log (libretto);
+        const place = formData.querySelector("short place").textContent;   
+        console.log (place);
+        const year = formData.querySelector("short year").textContent;   
+        console.log (year);
+        const orphID = formData.querySelector("short orphID").textContent; 
+        console.log (orphID);
 
         // create outer fieldset
         const orph = document.createElement("fieldset");
-        orph.setAttribute("id", "orph");
+        orph.setAttribute("id", "orphID");
         let section;
         let fieldset;
         let container;
