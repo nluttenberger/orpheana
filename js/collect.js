@@ -20,7 +20,6 @@ function collect () {
 
     // Create form for orph data
     function makeForm(XMLdata) {
-        console.log (XMLdata);
         const operas = [ 
             ["1984", "Lorin Maazel", "2005", "J. D. McClatchy, Thomas Meehan"],
             ["Abu Hassan", "Carl Maria von Weber", "1811", "Franz Carl Hiemer"],
@@ -571,15 +570,15 @@ function collect () {
         const body = document.getElementsByTagName("body")[0]
         body.appendChild(boxtainer);
 
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(XMLdata, "text/xml");  
-        const opera = xml.querySelector("short opera").textContent;
+        console.log (XMLdata);
+        const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
+        const opera = formData.querySelector("short opera").textContent;
         console.log (opera);
-        const composer = xml.querySelector("short composer").textContent;   
+        const composer = formData.querySelector("short composer").textContent;   
         console.log (composer);
-        const firstPerformance = xml.querySelector("short firstPerformance").textContent;   
+        const firstPerformance = formData.querySelector("short firstPerformance").textContent;   
         console.log (firstPerformance);
-        const libretto = xml.querySelector("short libretto").textContent;   
+        const libretto = formData.querySelector("short libretto").textContent;   
         console.log (libretto);
 
         // create outer fieldset
