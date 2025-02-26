@@ -19,7 +19,7 @@ function collect () {
     }
 
     // Create form for orph data
-    function makeForm(XMLdata) {
+    function makeForm(XMLdata, orphURL) {
         const operas = [ 
             ["1984", "Lorin Maazel", "2005", "J. D. McClatchy, Thomas Meehan"],
             ["Abu Hassan", "Carl Maria von Weber", "1811", "Franz Carl Hiemer"],
@@ -592,7 +592,9 @@ function collect () {
         orph.setAttribute("id", orphID);
         orph.innerHTML = `
             <legend>${year} ${opera} ${composer} ${place}</legend>
-            <div class="form-container"><p>orphID: ${orphID}</p></div>`;
+            <div class="head-container"><p>orph-ID: ${orphID}</p><p>fimt-ID:</p><\br>
+            <a href="orphURL" target="_blank">Link zum orph</a></div>
+            </div>`;
         body.appendChild(orph);
         
         // performance section
@@ -1102,7 +1104,7 @@ function collect () {
             gitName = data.name;
             gitPath = data.path;
             gitSHA = data.sha;
-            makeForm(orphXML);
+            makeForm(orphXML, `https://github.com/nluttenberger/orpheana/blob/main/orphs/Wagner/Holl%C3%A4nder/2000-Holl%C3%A4nder-Wagner-D%C3%BCsseldorf.xml`);
         })
         .catch ((error) => {
             console.log('Error while reading orph data:', error);

@@ -38,7 +38,20 @@ legend {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
+
+.head-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px 10px;
+  max-width: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 .cast-list-container {
   display: grid;
@@ -52,26 +65,26 @@ legend {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-  label {
+label {
   text-align: right;
   font-size: 14px;
   color: #333;
-  }
+}
 
-  .right-text {
-    grid-column: span 2;
-    margin: 4px;
-  }
+.right-text {
+  grid-column: span 2;
+  margin: 4px;
+}
 
-  .full-text {
-    grid-column: span 2;
-    margin: 4px;
-  }
+.full-text {
+  grid-column: span 2;
+  margin: 4px;
+}
 
-  textarea {
-    padding: 4px;
-    min-height: 120px;
-  }
+textarea {
+  padding: 4px;
+  min-height: 120px;
+}
 
   input[type="button"] {
     border: 1px solid #ccc;
