@@ -557,10 +557,8 @@ function collect () {
         
         // show logo block 
         const boxtainer = document.createElement("div");
-        boxtainer.classList.add("form-container");
+        boxtainer.classList.add("logo-container");
         boxtainer.innerHTML = `
-            <div></div>
-            <div></div>
             <div></div>
             <div class="logo">
                 <div>
