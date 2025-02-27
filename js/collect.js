@@ -593,7 +593,7 @@ function collect () {
         const orph = document.createElement("fieldset");
         orph.setAttribute("id", orphID);
         orph.innerHTML = `
-            <legend>${year} ${opera} ${composer} ${place}</legend>
+            <legend>${year} ${composer} ${opera} ${place}</legend>
             <div class="head-container">
             <p>orph-ID: ${orphID}</p>
             <p>fimt-ID: ${fimtID}</p>
@@ -606,20 +606,40 @@ function collect () {
         const vOperaGND = formData.querySelector("performance operaGND").textContent;
         const vComposer = formData.querySelector("performance composerName").textContent;
         const vComposerGND = formData.querySelector("performance composerGND").textContent;
+        const vLibretto = formData.querySelector("performance librettoName").textContent;
+        const vLibrettoGND = formData.querySelector("performance librettoGND").textContent;
+        const vFirstPerformance = formData.querySelector("performance firstPerformance").textContent;
+        const vProduction = formData.querySelector("performance productionName").textContent;
+        const vProductionGND = formData.querySelector("performance productionGND").textContent;
+        const vStage = formData.querySelector("performance stageName").textContent;
+        const vStageGND = formData.querySelector("performance stageGND").textContent;
+        const vPlace = formData.querySelector("performance placeName").textContent; 
+        const vPlaceGND = formData.querySelector("performance placeGND").textContent;
+        const vPremiere = formData.querySelector("performance premiere").textContent;
+        const vPremiereGND = formData.querySelector("performance premiereGND").textContent;
+        const vDirector = formData.querySelector("performance directorName").textContent;
+        const vDirectorGND = formData.querySelector("performance directorGND").textContent;
+        const vConductor = formData.querySelector("performance conductorName").textContent;
+        const vConductorGND = formData.querySelector("performance conductorGND").textContent;
+        const vDramatist = formData.querySelector("performance dramatistName").textContent;
+        const vDramatistGND = formData.querySelector("performance dramatistGND").textContent;
+        const vOrchestra = formData.querySelector("performance orchestraName").textContent;
+        const vOrchestraGND = formData.querySelector("performance orchestraGND").textContent;
+
         section = 
             { id: "performance", legend: "Aufführung", fields: [
                 { label: "Oper", value: vOpera, name: "opera", gnd: vOperaGND },
                 { label: "Komponist", value: vComposer, name: "composer", gnd: vComposerGND },
-                { label: "Librettist", value: "", name: "libretto", gnd: "" },
-                { label: "Uraufführung (Jahr)", value: "", name: "firstPerformance", gnd: "" },
-                { label: "Produktion", value: "", name: "production", gnd: "" },
-                { label: "Bühne", value: "", name: "stage", gnd: "" },
-                { label: "Ort", value: "", name: "place", gnd: "" },
-                { label: "Premiere (Jahr)", value: "", name: "premiere", p: "", gnd: "" },
-                { label: "Inszenierung", value: "", name: "director", gnd: ""},
-                { label: "Musikal. Leitung", value: "", name: "conductor", gnd: ""},
-                { label: "Dramaturgie", value: "", name: "dramatist", gnd: ""},
-                { label: "Orchester", value: "", name: "orchestra", gnd: ""}
+                { label: "Librettist", value: vLibretto, name: "libretto", gnd: vLibrettoGND },
+                { label: "Uraufführung (Jahr)", value: vFirstPerformance, name: "firstPerformance", gnd: "" },
+                { label: "Produktion", value: vProduction, name: "production", gnd: vProductionGND },
+                { label: "Bühne", value: vStage, name: "stage", gnd: vStageGND },
+                { label: "Ort", value: vPlace, name: "place", gnd: vPlaceGND },
+                { label: "Premiere (Jahr)", value: vPremiere, name: "premiere", p: "", gnd: "" },
+                { label: "Inszenierung", value: vDirector, name: "director", gnd: vDirectorGND},
+                { label: "Musikal. Leitung", value: vConductor, name: "conductor", gnd: vConductorGND},
+                { label: "Dramaturgie", value: vDramatist, name: "dramatist", gnd: vDramatistGND},
+                { label: "Orchester", value: vOrchestra, name: "orchestra", gnd: vOrchestraGND}
             ] };
         fieldset = document.createElement("fieldset");
         fieldset.setAttribute("id", section.id);
