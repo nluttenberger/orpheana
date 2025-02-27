@@ -625,7 +625,6 @@ function collect () {
         const vDramatistGND = formData.querySelector("performance dramatistGND").textContent;
         const vOrchestra = formData.querySelector("performance orchestraName").textContent;
         const vOrchestraGND = formData.querySelector("performance orchestraGND").textContent;
-
         section = 
             { id: "performance", legend: "Aufführung", fields: [
                 { label: "Oper", value: vOpera, name: "opera", gnd: vOperaGND },
@@ -676,8 +675,8 @@ function collect () {
                 <input type="text" name="artistGND" value="${vArtistGND}"></input>`     
             addNewCastLine = document.createElement("input");
             Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
-            container.appendChild(addNewCastLine);
             addNewCastLine.addEventListener("click", addCastLine);
+            container.appendChild(addNewCastLine);
         });
         orph.appendChild(fieldset);
 
