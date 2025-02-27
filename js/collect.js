@@ -593,7 +593,7 @@ function collect () {
         const orph = document.createElement("fieldset");
         orph.setAttribute("id", orphID);
         orph.innerHTML = `
-            <legend>${year} ${composer} ${opera} ${place}</legend>
+            <legend>${year} ${opera} ${composer} ${place}</legend>
             <div class="head-container">
             <p>orph-ID: ${orphID}</p>
             <p>fimt-ID: ${fimtID}</p>
@@ -674,11 +674,11 @@ function collect () {
                 <input type="text" name="artist" value="${vArtist}"></input>
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="artistGND" value="${vArtistGND}"></input>`     
+            addNewCastLine = document.createElement("input");
+            Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
+            container.appendChild(addNewCastLine);
+            addNewCastLine.addEventListener("click", addCastLine);
         });
-        addNewCastLine = document.createElement("input");
-        Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
-        container.appendChild(addNewCastLine);
-        addNewCastLine.addEventListener("click", addCastLine);
         orph.appendChild(fieldset);
 
         // staging-related texts section
