@@ -657,22 +657,23 @@ function collect () {
         orph.appendChild(fieldset);
 
         // cast list section
-        section = 
-            { id: "cast-list", legend: "Besetzung", fields: [
-                { role: "", artist: "", gnd: "" }                       
-            ] };
         fieldset = document.createElement("fieldset");
-        fieldset.setAttribute("id", section.id);
+        fieldset.setAttribute("id", "cast-list");
         fieldset.innerHTML = `<legend>${section.legend}</legend><div class="cast-list-container"></div>`;
         container = fieldset.querySelector(".cast-list-container");
-        section.fields.forEach(field => {
+        const casts = formData.querySelectorAll("castList cast");
+        casts.forEach(cast => {
+            const vRole = cast.querySelector("role").textContent;
+            const vArtist = cast.querySelector("artist").textContent;
+            const vArtistGND = cast.querySelector("artistGND").textContent;
+            console.log(vRole, vArtist, vArtistGND);
             container.innerHTML += `
                 <label>Rolle</label>
-                <input type="text" name="role" value="${field.role}"></input>
+                <input type="text" name="role" value="${vRole}"></input>
                 <label>Künstler</label>
-                <input type="text" name="artist" value="${field.artist}"></input>
+                <input type="text" name="artist" value="${vArtist}"></input>
                 <label class="GND-label">GND-ID</label>
-                <input type="text" name="artistGND" value="${field.gnd}"></input>`     
+                <input type="text" name="artistGND" value="${vArtistGND}"></input>`     
         });
         addNewCastLine = document.createElement("input");
         Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
