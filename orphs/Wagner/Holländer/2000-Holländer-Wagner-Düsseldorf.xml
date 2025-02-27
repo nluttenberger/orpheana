@@ -60,8 +60,18 @@
     </performance>
     <castList>
         <cast>
-            <role/>
-            <artist/>
+            <role>Holländer</role>
+            <artist>Wicus Slabbert</artist>
+            <artistGND>https://explore.gnd.network/gnd/1329930835</artistGND>
+        </cast>
+        <cast>
+            <role>Daland</role>
+            <artist>Artur Korn</artist>
+            <artistGND>https://explore.gnd.network/gnd/1328292495</artistGND>
+        </cast>
+        <cast>
+            <role>Senta</role>
+            <artist>Rebecca Turner</artist>
             <artistGND/>
         </cast>
     </castList>
