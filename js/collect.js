@@ -602,10 +602,14 @@ function collect () {
         body.appendChild(orph);
         
         // performance section
+        const vOpera = formData.querySelector("performance operaTitle").textContent;
+        const vOperaGND = formData.querySelector("performance operaGND").textContent;
+        const vComposer = formData.querySelector("performance composerName").textContent;
+        const vComposerGND = formData.querySelector("performance composerGND").textContent;
         section = 
             { id: "performance", legend: "Aufführung", fields: [
-                { label: "Oper", value: "", name: "opera", gnd: "" },
-                { label: "Komponist", value: "", name: "composer", gnd: "" },
+                { label: "Oper", value: vOpera, name: "opera", gnd: vOperaGND },
+                { label: "Komponist", value: vComposer, name: "composer", gnd: vComposerGND },
                 { label: "Librettist", value: "", name: "libretto", gnd: "" },
                 { label: "Uraufführung (Jahr)", value: "", name: "firstPerformance", gnd: "" },
                 { label: "Produktion", value: "", name: "production", gnd: "" },
