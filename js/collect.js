@@ -595,9 +595,8 @@ function collect () {
         orph.innerHTML = `
             <legend>${year} ${opera} ${composer} ${place}</legend>
             <div class="head-container">
-            <p>orph-ID: ${orphID}</p>
-            <p>fimt-ID: ${fimtID}</p>
-            <p>Im Repositorium anschauen: <a href="https://github.com/nluttenberger/orpheana" target="_blank">hier</a></p>
+            <p>orph-ID: ${orphID}<br>fimt-ID: ${fimtID}<br>
+            Im Repositorium anschauen: <a href="https://github.com/nluttenberger/orpheana" target="_blank">hier</a></p>
             </div>`;
         body.appendChild(orph);
         
@@ -665,7 +664,6 @@ function collect () {
             const vRole = cast.querySelector("role").textContent;
             const vArtist = cast.querySelector("artist").textContent;
             const vArtistGND = cast.querySelector("artistGND").textContent;
-            console.log(vRole, vArtist, vArtistGND);
             container.innerHTML += `
                 <label>Rolle</label>
                 <input type="text" name="role" value="${vRole}"></input>
@@ -675,8 +673,11 @@ function collect () {
                 <input type="text" name="artistGND" value="${vArtistGND}"></input>`     
             addNewCastLine = document.createElement("input");
             Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
-            addNewCastLine.addEventListener("click", addCastLine);
             container.appendChild(addNewCastLine);
+        });
+        btns = container.querySelectorAll("input[type='button']");
+        btns.forEach(btn => {
+            btn.addEventListener("click", addCastLine);
         });
         orph.appendChild(fieldset);
 
