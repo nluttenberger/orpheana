@@ -580,6 +580,8 @@ function collect () {
         console.log (year);
         const orphID = formData.querySelector("short orphID").textContent; 
         console.log (orphID);
+        const fimtID = formData.querySelector("short fimtID").textContent;
+        console.log (fimtID);
 
         // some variables
         let section;
@@ -587,13 +589,15 @@ function collect () {
         let container;
         let addNewText;
 
-        // create outer fieldset, i.e. the orph
+        // create outer fieldset
         const orph = document.createElement("fieldset");
         orph.setAttribute("id", orphID);
         orph.innerHTML = `
             <legend>${year} ${opera} ${composer} ${place}</legend>
-            <div class="head-container"><p>orph-ID: ${orphID}</p><p>fimt-ID:</p><\br>
-            <a href="orphURL" target="_blank">Link zum orph</a></div>
+            <div class="head-container">
+            <p>orph-ID: ${orphID}</p>
+            <p>fimt-ID: ${fimtID}</p>
+            <p>Im Repositorium anschauen: <a href="https://github.com/nluttenberger/orpheana" target="_blank">hier</a></p>
             </div>`;
         body.appendChild(orph);
         
