@@ -595,7 +595,7 @@ function collect () {
         orph.innerHTML = `
             <legend>${year} ${opera} ${composer} ${place}</legend>
             <div class="head-container">
-            <p>orph-ID: ${orphID}<br>fimt-ID: ${fimtID}<br>
+            <p>orph-ID: ${orphID}<br><br>fimt-ID: ${fimtID}<br><br>
             Im Repositorium anschauen: <a href="https://github.com/nluttenberger/orpheana" target="_blank">hier</a></p>
             </div>`;
         body.appendChild(orph);
@@ -657,7 +657,7 @@ function collect () {
         // cast list section
         fieldset = document.createElement("fieldset");
         fieldset.setAttribute("id", "cast-list");
-        fieldset.innerHTML = `<legend>${section.legend}</legend><div class="cast-list-container"></div>`;
+        fieldset.innerHTML = `<legend>Besetzung</legend><div class="cast-list-container"></div>`;
         container = fieldset.querySelector(".cast-list-container");
         const casts = formData.querySelectorAll("castList cast");
         casts.forEach(cast => {
@@ -682,36 +682,38 @@ function collect () {
         orph.appendChild(fieldset);
 
         // staging-related texts section
-        section = 
-            { id: "staging-related", legend: "Texte zur Aufführung", fields: [
-                { author: "", gnd: "", title: "", paragraphs: [""] }                       
-            ] };
         fieldset = document.createElement("fieldset");
-        fieldset.setAttribute("id", section.id);
-        fieldset.innerHTML = `<legend>${section.legend}</legend><div class="form-container"></div>`;
+        fieldset.setAttribute("id", "staging-related");
+        fieldset.innerHTML = `<legend>Texte zur Aufführung</legend><div class="form-container"></div>`;
         container = fieldset.querySelector(".form-container");
-        section.fields.forEach(field => {
+        const texts = formData.querySelectorAll("stagingRelated text");
+        texts.forEach(text => {
+            const vAuthor = text.querySelector("author").textContent;
+            const vAuthorGND = text.querySelector("authorGND").textContent; 
+            const vTitle = text.querySelector("title").textContent;
             container.innerHTML += `
                 <label>Autor</label>
-                <input type="text" name="Author" value="${field.author}"></input>
+                <input type="text" name="Author" value="${vAuthor}"></input>
                 <label class="GND-label">GND-ID</label>
-                <input type="text" name="GND" value="${field.gnd}"></input>
+                <input type="text" name="GND" value="${vAuthorGND}"></input>
                 <label>Titel</label>
-                <input type="text" name="Title" value="${field.title}"></input>
+                <input type="text" name="Title" value="${vTitle}"></input>
                 <p class="right-text"></p>`;
-            field.paragraphs.forEach(paragraph => {
-                container.innerHTML += `
-                    <label>Absatz</label>
-                    <textarea class="full-text"></textarea>`
-            });
+            //field.paragraphs.forEach(paragraph => {
+                //container.innerHTML += `
+                    //<label>Absatz</label>
+                    //<textarea class="full-text"></textarea>`
+            //});
+            addNewText = document.createElement("input");
+            Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
+            container.appendChild(addNewText);
         });
         addNewPara = document.createElement("input");
         Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
         container.appendChild(addNewPara);
         addNewPara.addEventListener("click", addParagraph);
 
-        addNewText = document.createElement("input");
-        Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
+        
         addNewText.addEventListener("click", addText);
         fieldset.appendChild(addNewText);
         orph.appendChild(fieldset);
