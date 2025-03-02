@@ -1,4 +1,4 @@
-function save (xmlString) {
+function save (xml) {
 
     // preliminary solution for file name creation
     const sOpera = "Holländer";
