@@ -168,7 +168,8 @@ function register() {
         'content': b64orph
     }
     const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${composer}/${opera}/${fn}`;
-    // upload and commit --------------------------------------------------
+
+    // upload and commit 
     fetch (urlStr,{
         method: 'PUT',
         body: JSON.stringify(update),
