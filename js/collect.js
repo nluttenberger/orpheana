@@ -826,10 +826,10 @@ function collect () {
         orph.appendChild(fieldset);
 
         // add save button
-        button = document.createElement("div")
-        button.innerHTML += `<input type="button" id="saveButton" value="Speichern" ></input>`
-        orph.appendChild(button);
-
+        buttonArea = document.createElement("div")
+        buttonArea.innerHTML += `<input type="button" id="saveButton" value="Speichern" ></input>`
+        orph.appendChild(buttonArea);
+        orph.querySelector("#saveButton").addEventListener("click", save);
         body.appendChild(orph);
 
         // add event listener to opera input field
@@ -843,9 +843,6 @@ function collect () {
             document.querySelector("input[name='firstPerformance']").value = firstPerf;
             document.querySelector("input[name='libretto']").value = libretto;
         });
-
-        // add event handler to save button
-        document.getElementById("saveButton").addEventListener("click", saveFile); 
     }
 
     function addCastLine() {
