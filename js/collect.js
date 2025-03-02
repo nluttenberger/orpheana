@@ -699,11 +699,13 @@ function collect () {
                 <label>Titel</label>
                 <input type="text" name="Title" value="${vTitle}"></input>
                 <p class="right-text"></p>`;
-            //field.paragraphs.forEach(paragraph => {
-                //container.innerHTML += `
-                    //<label>Absatz</label>
-                    //<textarea class="full-text"></textarea>`
-            //});
+            const paragraphs = text.querySelectorAll("paragraph");
+            paragraphs.forEach(paragraph => {
+                const vParagraph = paragraph.textContent;
+                container.innerHTML += `
+                    <label>Absatz</label>
+                    <textarea class="full-text" >${vParagraph}</textarea>`
+            });
             addNewText = document.createElement("input");
             Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
             container.appendChild(addNewText);
