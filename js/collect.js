@@ -568,20 +568,20 @@ function collect () {
             </div> `;
         body.appendChild(logotainer);
 
-        console.log (XMLdata);
+        //console.log (XMLdata);
         const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
         const opera = formData.querySelector("short opera").textContent;
-        console.log (opera);
+        //console.log (opera);
         const composer = formData.querySelector("short composer").textContent;   
-        console.log (composer);
+        //console.log (composer);
         const place = formData.querySelector("short place").textContent;   
-        console.log (place);
+        //console.log (place);
         const year = formData.querySelector("short year").textContent;   
-        console.log (year);
+        //console.log (year);
         const orphID = formData.querySelector("short orphID").textContent; 
-        console.log (orphID);
+        //console.log (orphID);
         const fimtID = formData.querySelector("short fimtID").textContent;
-        console.log (fimtID);
+        //console.log (fimtID);
 
         // some variables
         let section;
@@ -829,7 +829,7 @@ function collect () {
         buttonArea = document.createElement("div")
         buttonArea.innerHTML += `<input type="button" id="saveButton" value="Speichern" ></input>`
         orph.appendChild(buttonArea);
-        orph.querySelector("#saveButton").addEventListener("click", save);
+        orph.querySelector("#saveButton").addEventListener("click", createPDOrph);
         body.appendChild(orph);
 
         // add event listener to opera input field
@@ -911,7 +911,7 @@ function collect () {
         cont.insertAdjacentElement("afterend", button);
     }
 
-    function saveFile() {
+    function createPDOrph () {
         // collect text input from performance section
         const opera = document.querySelector("input[name='opera']").value;
         const operaGND = document.querySelector("input[name='operaGND']").value;
@@ -1080,8 +1080,8 @@ function collect () {
             historic.appendChild(textElement);
         });
         orph.appendChild(historic);
-
-        
+        console.log (new XMLSerializer().serializeToString(orph));
+        save(orph);
     }
 
     // -------------------------
