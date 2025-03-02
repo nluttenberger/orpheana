@@ -1,10 +1,12 @@
 function save () {
-    
+
     // preliminary solution for file name creation
     const sOpera = "Holländer";
     const sComposer = "Wagner";
     const sPlace = "Düsseldorf";
     const sYear = "2000";
+
+    alert (`${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`)
 
     // save orph to download folder
     const xmlString = new XMLSerializer().serializeToString(xml);
