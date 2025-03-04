@@ -1012,7 +1012,7 @@ function collect () {
                 roleCntr += 1;
             }
         });
-        console.log (roleCntr)
+        //console.log (roleCntr)
         if (roleCntr === 0)
             {
                 const cast = xml.createElement("cast");
@@ -1026,19 +1026,33 @@ function collect () {
 
         // staging-related texts
         const stagingTexts = document.querySelectorAll("#staging-related .form-container");
+        let stagingCntr = 0
         stagingTexts.forEach(text => {
-            const textElement = xml.createElement("text");
-            textElement.innerHTML = `
-                <author>${text.querySelector("input[name='Author']").value}</author>
-                <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                <title>${text.querySelector("input[name='Title']").value}</title>`;
-            const paragraphs = text.querySelectorAll("textarea");
-            paragraphs.forEach((para, index) => {
-                const paragraph = xml.createElement("paragraph");
-                paragraph.innerHTML = para.value;
-                textElement.appendChild(paragraph);
-            });
-            stagingRelated.appendChild(textElement);
+            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ===""))
+            {
+                const textElement = xml.createElement("text");
+                textElement.innerHTML = `
+                    <author>${text.querySelector("input[name='Author']").value}</author>
+                    <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
+                    <title>${text.querySelector("input[name='Title']").value}</title>`;
+                const paragraphs = text.querySelectorAll("textarea");
+                paragraphs.forEach((para, index) => {
+                    const paragraph = xml.createElement("paragraph");
+                    paragraph.innerHTML = para.value;
+                    textElement.appendChild(paragraph);
+                });
+                stagingRelated.appendChild(textElement);
+                stagingCntr += 1;
+            }
+            if (stagingCntr === 0) 
+            {
+                const textElement = xml.createElement("text");
+                textElement.innerHTML = `
+                    <author></author>
+                    <authorGND></authorGND>
+                    <title></title>
+                    <paragraph></paragraph>`;
+            }
         });
         orph.appendChild(stagingRelated);
 
