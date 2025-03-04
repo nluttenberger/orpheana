@@ -999,14 +999,28 @@ function collect () {
         orph.appendChild(performance);
 
         // cast list
+        let roleCntr = 0;
         roles.forEach((role, index) => {
-            const cast = xml.createElement("cast");
-            cast.innerHTML = `
-                <role>${roles[index].value}</role>
-                <artist>${artists[index].value}</artist>
-                <artistGND>${artistGNDs[index].value}</artistGND>`;
-            castList.appendChild(cast);
+            if (roles[index].value != "" || artists[index].value != "" || artistGNDs[index].value != "")
+            {
+                const cast = xml.createElement("cast");
+                cast.innerHTML = `
+                    <role>${roles[index].value}</role>
+                    <artist>${artists[index].value}</artist>
+                    <artistGND>${artistGNDs[index].value}</artistGND>`;
+                castList.appendChild(cast);
+                roleCntr += 1;
+            }
         });
+        if (roleCntr === 0)
+            {
+                const cast = xml.createElement("cast");
+                cast.innerHTML = `
+                    <role></role>
+                    <artist></artist>
+                    <artistGND></artistGND>`;
+                castList.appendChild(cast);
+            }
         orph.appendChild(castList);
 
         // staging-related texts
