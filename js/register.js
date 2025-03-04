@@ -186,4 +186,56 @@ function register() {
         .catch((error) => {
         console.error('Error while creating orph: ', error);
         })
-}         
+}   
+
+function createForm() {
+    // show logo block 
+    const boxtainer = document.createElement("div");
+    boxtainer.classList.add("logo-container");
+    boxtainer.innerHTML = `
+        <div class="logo">
+            <div>
+                <img class="logoImage" src="fruschtique%20Logo%20grau%20transparent.png" alt="Logo" title="fruschtique-Logo">
+            </div>
+        </div> `;
+    const body = document.getElementsByTagName("body")[0]
+    body.appendChild(boxtainer);
+
+    // create short block fieldset
+    const booklet = document.createElement("fieldset");
+    booklet.setAttribute("id", "booklet");
+    let section;
+    let fieldset;
+    let container;
+    let addNewText
+    
+    // show short block
+    section = 
+        { id: "short", legend: "Registrierungsdaten", fields: [
+            { label: "Oper", value: "", name: "s-opera", p: "Opera title; preferably one word" },
+            { label: "Komponist", value: "", name: "s-composer", p: "Composer name; preferably one word" },
+            { label: "Ort", value: "", name: "s-place", p: "Place of performance" },
+            { label: "Jahr", value: "", name: "s-year", p: "Publication of booklet" },
+            { label: "fimtID", value: "", name: "s-fimtID", p: "ID given by fimt" }
+        ] };
+    fieldset = document.createElement("fieldset");
+    fieldset.setAttribute("id", section.id);
+    fieldset.innerHTML = `<legend>${section.legend}</legend><div class="form-container"></div>`;
+    container = fieldset.querySelector(".form-container");
+    section.fields.forEach(field => {
+        container.innerHTML += `
+            <label>${field.label}</label>
+            <input type="text" name="${field.name}" value="${field.value}"></input>
+            <p class="right-text">${field.p}</p>`;
+    });
+    booklet.appendChild(fieldset);
+    body.appendChild(booklet);
+
+    // add register button
+    button = document.createElement("div")
+    button.innerHTML += `<input type="button" id="registerButton" value="orph registrieren" ></input>`
+    booklet.appendChild(button);
+
+    // add event handler to register button
+    document.getElementById("registerButton").addEventListener("click", register); 
+}
