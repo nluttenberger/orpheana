@@ -1052,6 +1052,7 @@ function collect () {
                     <authorGND></authorGND>
                     <title></title>
                     <paragraph></paragraph>`;
+                stagingRelated.appendChild(textElement);
             }
         });
         orph.appendChild(stagingRelated);
