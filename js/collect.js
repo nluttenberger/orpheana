@@ -1095,7 +1095,7 @@ function collect () {
             historic.appendChild(textElement);
         });
         orph.appendChild(historic);
-        console.log (new XMLSerializer().serializeToString(orph));
+        //console.log (new XMLSerializer().serializeToString(orph));
         save(orph);
     }
 
@@ -1121,7 +1121,7 @@ function collect () {
     myURL = new URL(document.URL);
     myPath = myURL.searchParams.get('path');
     myOrph = myURL.searchParams.get('orph');
-    console.log (`Pfad: ${myPath}, Orph: ${myOrph}`);
+    //console.log (`Pfad: ${myPath}, Orph: ${myOrph}`);
     
     let url_str = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${myPath}/.gitkeep`;
     fetch (url_str,{headers: hdrs})

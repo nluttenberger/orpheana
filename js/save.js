@@ -14,7 +14,7 @@ function save (xml) {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    alert (`${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`)
+    //alert (`${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`)
     a.download = `${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`;
     a.click();
 
