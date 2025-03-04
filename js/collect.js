@@ -1001,7 +1001,7 @@ function collect () {
         // cast list
         let roleCntr = 0;
         roles.forEach((role, index) => {
-            if (roles[index].value != "" || artists[index].value != "" || artistGNDs[index].value != "")
+            if (!(roles[index].value === "" && artists[index].value === "" && artistGNDs[index].value === ""))
             {
                 const cast = xml.createElement("cast");
                 cast.innerHTML = `
@@ -1012,6 +1012,7 @@ function collect () {
                 roleCntr += 1;
             }
         });
+        console.log (roleCntr)
         if (roleCntr === 0)
             {
                 const cast = xml.createElement("cast");
