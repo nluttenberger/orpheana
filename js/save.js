@@ -14,9 +14,9 @@ function save (xml) {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    //alert (`${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`)
     a.download = `${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`;
     a.click();
+    console.log (xmlString)
 
     // save orph data to GitHub repo
     const repo = "https://api.github.com/repos/nluttenberger/orpheana/contents/";
