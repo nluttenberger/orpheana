@@ -568,34 +568,30 @@ function collect () {
             </div> `;
         body.appendChild(logotainer);
 
-        //console.log (XMLdata);
-        const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
-        const opera = formData.querySelector("short opera").textContent;
-        //console.log (opera);
-        const composer = formData.querySelector("short composer").textContent;   
-        //console.log (composer);
-        const place = formData.querySelector("short place").textContent;   
-        //console.log (place);
-        const year = formData.querySelector("short year").textContent;   
-        //console.log (year);
-        const orphID = formData.querySelector("short orphID").textContent; 
-        //console.log (orphID);
-        const fimtID = formData.querySelector("short fimtID").textContent;
-        //console.log (fimtID);
-
         // some variables
         let section;
         let fieldset;
         let container;
         let addNewText;
 
-        // create outer fieldset
+        // get short section data
+        const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
+        const short = {
+            sOpera:    formData.querySelector("short opera").textContent,
+            sComposer: formData.querySelector("short composer").textContent, 
+            sPlace:    formData.querySelector("short place").textContent,
+            sYear:     formData.querySelector("short year").textContent, 
+            sOrphID:   formData.querySelector("short orphID").textContent,
+            sFimtID:   formData.querySelector("short fimtID").textContent
+        }
+
+        // create outer fieldset for short section data
         const orph = document.createElement("fieldset");
         orph.setAttribute("id", orphID);
         orph.innerHTML = `
-            <legend>${year} ${opera} ${composer} ${place}</legend>
+            <legend>${sYear} ${short.sOpera} ${short.sComposer} ${short.sPlace}</legend>
             <div class="head-container">
-            <p>orph-ID: ${orphID}<br><br>fimt-ID: ${fimtID}<br><br>
+            <p>orph-ID: ${short.sOrphID}<br><br>fimt-ID: ${short.sFimtID}<br><br>
             Im Repositorium anschauen: <a href="https://github.com/nluttenberger/orpheana" target="_blank">hier</a></p>
             </div>`;
         body.appendChild(orph);
@@ -860,7 +856,7 @@ function collect () {
         button.setAttribute("name", "add_castline");
         button.setAttribute("value", "+");
         button.addEventListener("click", addCastLine);
-        const clicked = event.target;
+        const clicked = Event.target;
         clicked.insertAdjacentElement("afterend", labelRole);
         labelRole.insertAdjacentElement("afterend", role);
         role.insertAdjacentElement("afterend", labelArtist);
@@ -878,7 +874,7 @@ function collect () {
         button.setAttribute("type", "button");
         button.setAttribute("value", "+");
         button.addEventListener("click", addParagraph);
-        const clicked = event.target;
+        const clicked = Event.target;
         clicked.insertAdjacentElement("afterend", label);
         label.insertAdjacentElement("afterend", paragraph);
         paragraph.insertAdjacentElement("afterend", button);
@@ -906,19 +902,20 @@ function collect () {
         button.setAttribute("type", "button");
         button.setAttribute("value", "weiterer Text");
         button.addEventListener("click", addText);
-        const clicked = event.target;
+        const clicked = Event.target;
         clicked.insertAdjacentElement("afterend", cont);
         cont.insertAdjacentElement("afterend", button);
     }
 
     function createPDOrph () {
         // collect text input from short section
-        const sOpera = orphXML.querySelector("short opera").textContent;
-        const sComposer = orphXML.querySelector("short composer").textContent;
-        const sPlace = orphXML.querySelector("short place").textContent;
-        const sYear = orphXML.querySelector("short year").textContent;
-        const sOrphID = orphXML.querySelector("short orphID").textContent;
-        const sFimtID = orphXML.querySelector("short fimtID").textContent;
+        //const sOpera = orphXML.querySelector("short opera").textContent;
+        //const sComposer = orphXML.querySelector("short composer").textContent;
+        //const sPlace = orphXML.querySelector("short place").textContent;
+        //const sYear = orphXML.querySelector("short year").textContent;
+        //const sOrphID = orphXML.querySelector("short orphID").textContent;
+        //const sFimtID = orphXML.querySelector("short fimtID").textContent;
+        console.log (short)
 
         // collect text input from performance section
         const opera = document.querySelector("input[name='opera']").value;
@@ -953,7 +950,7 @@ function collect () {
         const parser = new DOMParser();
         const xml = parser.parseFromString("<orph></orph>", "text/xml");
         const orph = xml.querySelector("orph");
-        const short = xml.createElement("short");
+        const header = xml.createElement("short");
         const performance = xml.createElement("performance");
         const castList = xml.createElement("castList");
         const stagingRelated = xml.createElement("stagingRelated");
@@ -962,13 +959,13 @@ function collect () {
         const historic = xml.createElement("historic");
 
         // short
-        short.innerHTML = `
-            <opera>${sOpera}</opera>
-            <composer>${sComposer}</composer>
-            <place>${sPlace}</place>
-            <year>${sYear}</year>
-            <orphID>${sOrphID}</orphID>
-            <fimtID>${sFimtID}</fimtID>`;
+        header.innerHTML = `
+            <opera>${short.sOpera}</opera>
+            <composer>${short.sComposer}</composer>
+            <place>${short.sPlace}</place>
+            <year>${short.sYear}</year>
+            <orphID>${short.sOrphID}</orphID>
+            <fimtID>${short.sFimtID}</fimtID>`;
         orph.appendChild(short);
 
         // performance
@@ -1140,7 +1137,6 @@ function collect () {
     // Get form data from repository
     let myPath;
     let myOrph;
-    let orphXML;
     let myURL;
     let gitName; 
     let gitPath;
@@ -1166,11 +1162,11 @@ function collect () {
         fetch (url_str,{headers: hdrs})
         .then (resp => resp.json())
         .then (data => {
-            orphXML = b64_to_utf8(data.content);
+            myOrph = b64_to_utf8(data.content);
             gitName = data.name;
             gitPath = data.path;
             gitSHA = data.sha;
-            makeForm(orphXML, `https://github.com/nluttenberger/orpheana/blob/main/orphs/Wagner/Holl%C3%A4nder/2000-Holl%C3%A4nder-Wagner-D%C3%BCsseldorf.xml`);
+            makeForm(myOrph, `https://github.com/nluttenberger/orpheana/blob/main/orphs/Wagner/Holl%C3%A4nder/2000-Holl%C3%A4nder-Wagner-D%C3%BCsseldorf.xml`);
         })
         .catch ((error) => {
             console.log('Error while reading orph data:', error);
