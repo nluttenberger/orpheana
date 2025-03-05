@@ -841,7 +841,7 @@ function collect () {
         });
     }
 
-    function addCastLine() {
+    function addCastLine(clicked) {
         const labelRole = document.createElement("label");
         const role = document.createElement("input");
         Object.assign(role, {type: "text", name: "role"});
@@ -856,7 +856,7 @@ function collect () {
         button.setAttribute("name", "add_castline");
         button.setAttribute("value", "+");
         button.addEventListener("click", addCastLine);
-        const clicked = Event.target;
+        //const clicked = event.target;
         clicked.insertAdjacentElement("afterend", labelRole);
         labelRole.insertAdjacentElement("afterend", role);
         role.insertAdjacentElement("afterend", labelArtist);
@@ -866,7 +866,7 @@ function collect () {
         gnd.insertAdjacentElement("afterend", button);
     }
 
-    function addParagraph() {
+    function addParagraph(clicked) {
         const label = document.createElement("label");
         const paragraph = document.createElement("textarea");
         paragraph.classList.add("full-text");
@@ -874,13 +874,13 @@ function collect () {
         button.setAttribute("type", "button");
         button.setAttribute("value", "+");
         button.addEventListener("click", addParagraph);
-        const clicked = Event.target;
+        //const clicked = Event.target;
         clicked.insertAdjacentElement("afterend", label);
         label.insertAdjacentElement("afterend", paragraph);
         paragraph.insertAdjacentElement("afterend", button);
     }
 
-    function addText() {
+    function addText(clicked) {
         const cont = document .createElement("div");
         cont.innerHTML += `
                 <label>Autor</label>
@@ -902,21 +902,12 @@ function collect () {
         button.setAttribute("type", "button");
         button.setAttribute("value", "weiterer Text");
         button.addEventListener("click", addText);
-        const clicked = Event.target;
+        //const clicked = Event.target;
         clicked.insertAdjacentElement("afterend", cont);
         cont.insertAdjacentElement("afterend", button);
     }
 
     function createPDOrph (short) {
-        // collect text input from short section
-        //const sOpera = orphXML.querySelector("short opera").textContent;
-        //const sComposer = orphXML.querySelector("short composer").textContent;
-        //const sPlace = orphXML.querySelector("short place").textContent;
-        //const sYear = orphXML.querySelector("short year").textContent;
-        //const sOrphID = orphXML.querySelector("short orphID").textContent;
-        //const sFimtID = orphXML.querySelector("short fimtID").textContent;
-        console.log (short)
-
         // collect text input from performance section
         const opera = document.querySelector("input[name='opera']").value;
         const operaGND = document.querySelector("input[name='operaGND']").value;
