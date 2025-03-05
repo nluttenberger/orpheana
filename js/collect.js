@@ -966,7 +966,7 @@ function collect () {
             <year>${short.sYear}</year>
             <orphID>${short.sOrphID}</orphID>
             <fimtID>${short.sFimtID}</fimtID>`;
-        orph.appendChild(short);
+        orph.appendChild(header);
 
         // performance
         performance.innerHTML = `
