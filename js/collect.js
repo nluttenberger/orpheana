@@ -19,7 +19,7 @@ function collect () {
     }
 
     // Create form for orph data
-    function makeForm(XMLdata, orphURL) {
+    function makeForm(XMLdata) {
         const operas = [ 
             ["1984", "Lorin Maazel", "2005", "J. D. McClatchy, Thomas Meehan"],
             ["Abu Hassan", "Carl Maria von Weber", "1811", "Franz Carl Hiemer"],
@@ -825,7 +825,7 @@ function collect () {
         buttonArea = document.createElement("div")
         buttonArea.innerHTML += `<input type="button" id="saveButton" value="Speichern" ></input>`
         orph.appendChild(buttonArea);
-        orph.querySelector("#saveButton").addEventListener("click", createPDOrph);
+        orph.querySelector("#saveButton").addEventListener("click", function() {createPDOrph(short)});
         body.appendChild(orph);
 
         // add event listener to opera input field
@@ -907,7 +907,7 @@ function collect () {
         cont.insertAdjacentElement("afterend", button);
     }
 
-    function createPDOrph () {
+    function createPDOrph (short) {
         // collect text input from short section
         //const sOpera = orphXML.querySelector("short opera").textContent;
         //const sComposer = orphXML.querySelector("short composer").textContent;
@@ -1166,7 +1166,7 @@ function collect () {
             gitName = data.name;
             gitPath = data.path;
             gitSHA = data.sha;
-            makeForm(myOrph, `https://github.com/nluttenberger/orpheana/blob/main/orphs/Wagner/Holl%C3%A4nder/2000-Holl%C3%A4nder-Wagner-D%C3%BCsseldorf.xml`);
+            makeForm(myOrph);
         })
         .catch ((error) => {
             console.log('Error while reading orph data:', error);
