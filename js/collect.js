@@ -1032,6 +1032,7 @@ function collect () {
         orph.appendChild(castList);
 
         // staging-related texts
+        let paraCntr = 0;
         const stagingTexts = document.querySelectorAll("#staging-related .form-container");
         let stagingCntr = 0
         stagingTexts.forEach(text => {
@@ -1044,10 +1045,19 @@ function collect () {
                     <title>${text.querySelector("input[name='Title']").value}</title>`;
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
-                    const paragraph = xml.createElement("paragraph");
-                    paragraph.innerHTML = para.value;
-                    textElement.appendChild(paragraph);
+                    if (!(para.value === "")) {
+                        const paragraph = xml.createElement("paragraph");
+                        paragraph.innerHTML = para.value;
+                        textElement.appendChild(paragraph);
+                        paraCntr += 1;
+                    }
+                if (paraCntr === 0) {
+                    const paraEl = xml.createElement("paragraph")
+                    paraEl.value = "";
+                    textElement.appendChild(paraEl);
+                }
                 });
+
                 stagingRelated.appendChild(textElement);
                 stagingCntr += 1;
             }
