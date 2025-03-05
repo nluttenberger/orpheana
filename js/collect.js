@@ -587,7 +587,7 @@ function collect () {
 
         // create outer fieldset for short section data
         const orph = document.createElement("fieldset");
-        orph.setAttribute("id", orphID);
+        orph.setAttribute("id", short.sOrphID);
         orph.innerHTML = `
             <legend>${sYear} ${short.sOpera} ${short.sComposer} ${short.sPlace}</legend>
             <div class="head-container">
