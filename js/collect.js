@@ -857,7 +857,7 @@ function collect () {
         button.setAttribute("value", "+");
         button.addEventListener("click", addCastLine);
         //const clicked = event.target;
-        clicked.insertAdjacentElement("afterend", labelRole);
+        clicked.target.insertAdjacentElement("afterend", labelRole);
         labelRole.insertAdjacentElement("afterend", role);
         role.insertAdjacentElement("afterend", labelArtist);
         labelArtist.insertAdjacentElement("afterend", artist);
@@ -875,7 +875,7 @@ function collect () {
         button.setAttribute("value", "+");
         button.addEventListener("click", addParagraph);
         //const clicked = Event.target;
-        clicked.insertAdjacentElement("afterend", label);
+        clicked.target.insertAdjacentElement("afterend", label);
         label.insertAdjacentElement("afterend", paragraph);
         paragraph.insertAdjacentElement("afterend", button);
     }
@@ -903,7 +903,7 @@ function collect () {
         button.setAttribute("value", "weiterer Text");
         button.addEventListener("click", addText);
         //const clicked = Event.target;
-        clicked.insertAdjacentElement("afterend", cont);
+        clicked.target.insertAdjacentElement("afterend", cont);
         cont.insertAdjacentElement("afterend", button);
     }
 
