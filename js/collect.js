@@ -912,6 +912,14 @@ function collect () {
     }
 
     function createPDOrph () {
+        // collect text input from short section
+        const sOpera = orphXML.querySelector("short opera").textContent;
+        const sComposer = orphXML.querySelector("short composer").textContent;
+        const sPlace = orphXML.querySelector("short place").textContent;
+        const sYear = orphXML.querySelector("short year").textContent;
+        const sOrphID = orphXML.querySelector("short orphID").textContent;
+        const sFimtID = orphXML.querySelector("short fimtID").textContent;
+
         // collect text input from performance section
         const opera = document.querySelector("input[name='opera']").value;
         const operaGND = document.querySelector("input[name='operaGND']").value;
@@ -945,12 +953,23 @@ function collect () {
         const parser = new DOMParser();
         const xml = parser.parseFromString("<orph></orph>", "text/xml");
         const orph = xml.querySelector("orph");
+        const short = xml.createElement("short");
         const performance = xml.createElement("performance");
         const castList = xml.createElement("castList");
         const stagingRelated = xml.createElement("stagingRelated");
         const storyRelated = xml.createElement("storyRelated");
         const musicRelated = xml.createElement("musicRelated");
         const historic = xml.createElement("historic");
+
+        // short
+        short.innerHTML = `
+            <opera>${sOpera}</opera>
+            <composer>${sComposer}</composer>
+            <place>${sPlace}</place>
+            <year>${sYear}</year>
+            <orphID>${sOrphID}</orphID>
+            <fimtID>${sFimtID}</fimtID>`;
+        orph.appendChild(short);
 
         // performance
         performance.innerHTML = `
@@ -1110,7 +1129,7 @@ function collect () {
             historic.appendChild(textElement);
         });
         orph.appendChild(historic);
-        //console.log (new XMLSerializer().serializeToString(orph));
+        
         save(orph);
     }
 
