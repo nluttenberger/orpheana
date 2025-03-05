@@ -589,7 +589,7 @@ function collect () {
         const orph = document.createElement("fieldset");
         orph.setAttribute("id", short.sOrphID);
         orph.innerHTML = `
-            <legend>${sYear} ${short.sOpera} ${short.sComposer} ${short.sPlace}</legend>
+            <legend>${short.sYear} ${short.sOpera} ${short.sComposer} ${short.sPlace}</legend>
             <div class="head-container">
             <p>orph-ID: ${short.sOrphID}<br><br>fimt-ID: ${short.sFimtID}<br><br>
             Im Repositorium anschauen: <a href="https://github.com/nluttenberger/orpheana" target="_blank">hier</a></p>
