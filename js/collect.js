@@ -1153,7 +1153,7 @@ function collect () {
                 })
             }
         })
-        orph.appendChild(stagingTexts);
+        orph.appendChild(stagingRelated);
 
         // story-related texts
         const storyTexts = document.querySelectorAll("#storyRelated .form-container");
@@ -1182,7 +1182,7 @@ function collect () {
                 })
             }
         })
-        orph.appendChild(storyTexts);
+        orph.appendChild(storyRelated);
 
         // music-related texts
         const musicTexts = document.querySelectorAll("#musicRelated .form-container");
@@ -1211,7 +1211,7 @@ function collect () {
                 })
             }
         })
-        orph.appendChild(musicTexts);
+        orph.appendChild(musicRelated);
 
         // historic texts
         const historicTexts = document.querySelectorAll("#historic .form-container");
