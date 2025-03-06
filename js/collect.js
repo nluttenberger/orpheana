@@ -611,7 +611,6 @@ function collect () {
         const vPlace = formData.querySelector("performance placeName").textContent; 
         const vPlaceGND = formData.querySelector("performance placeGND").textContent;
         const vPremiere = formData.querySelector("performance premiere").textContent;
-        const vPremiereGND = formData.querySelector("performance premiereGND").textContent;
         const vDirector = formData.querySelector("performance directorName").textContent;
         const vDirectorGND = formData.querySelector("performance directorGND").textContent;
         const vConductor = formData.querySelector("performance conductorName").textContent;
@@ -656,21 +655,35 @@ function collect () {
         fieldset.innerHTML = `<legend>Besetzung</legend><div class="cast-list-container"></div>`;
         container = fieldset.querySelector(".cast-list-container");
         const casts = formData.querySelectorAll("castList cast");
-        casts.forEach(cast => {
-            const vRole = cast.querySelector("role").textContent;
-            const vArtist = cast.querySelector("artist").textContent;
-            const vArtistGND = cast.querySelector("artistGND").textContent;
+        if (casts.length === 0) {
             container.innerHTML += `
                 <label>Rolle</label>
-                <input type="text" name="role" value="${vRole}"></input>
+                <input type="text" name="role" value=""></input>
                 <label>Künstler</label>
-                <input type="text" name="artist" value="${vArtist}"></input>
+                <input type="text" name="artist" value=""></input>
                 <label class="GND-label">GND-ID</label>
-                <input type="text" name="artistGND" value="${vArtistGND}"></input>`     
+                <input type="text" name="artistGND" value=""></input>`     
             addNewCastLine = document.createElement("input");
             Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
             container.appendChild(addNewCastLine);
-        });
+            alert ("blubbi")
+        } else {
+            casts.forEach(cast => {
+                const vRole = cast.querySelector("role").textContent;
+                const vArtist = cast.querySelector("artist").textContent;
+                const vArtistGND = cast.querySelector("artistGND").textContent;
+                container.innerHTML += `
+                    <label>Rolle</label>
+                    <input type="text" name="role" value="${vRole}"></input>
+                    <label>Künstler</label>
+                    <input type="text" name="artist" value="${vArtist}"></input>
+                    <label class="GND-label">GND-ID</label>
+                    <input type="text" name="artistGND" value="${vArtistGND}"></input>`     
+                addNewCastLine = document.createElement("input");
+                Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
+                container.appendChild(addNewCastLine);
+            });
+        }
         btns = container.querySelectorAll("input[type='button']");
         btns.forEach(btn => {
             btn.addEventListener("click", addCastLine);
