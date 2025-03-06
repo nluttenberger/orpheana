@@ -1149,7 +1149,7 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
-                stagingTexts.appendChild(textElement);
+                stagingRelated.appendChild(textElement);
                 })
             }
         })
@@ -1178,7 +1178,7 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
-                storyTexts.appendChild(textElement);
+                storyRelated.appendChild(textElement);
                 })
             }
         })
@@ -1207,7 +1207,7 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
-                musicTexts.appendChild(textElement);
+                musicRelated.appendChild(textElement);
                 })
             }
         })
@@ -1236,7 +1236,7 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
-                historicTexts.appendChild(textElement);
+                historic.appendChild(textElement);
                 })
             }
         })
