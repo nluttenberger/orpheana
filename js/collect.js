@@ -1128,7 +1128,7 @@ function collect () {
         // staging-related texts
         const stagingTexts = document.querySelectorAll("#stagingRelated .form-container");
         paraCntr = 0;
-        historicTexts.forEach(text => {
+        stagingTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
                 const textElement = xml.createElement("text");
                 textElement.innerHTML = `
@@ -1157,7 +1157,7 @@ function collect () {
         // story-related texts
         const storyTexts = document.querySelectorAll("#storyRelated .form-container");
         paraCntr = 0;
-        historicTexts.forEach(text => {
+        storyTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
                 const textElement = xml.createElement("text");
                 textElement.innerHTML = `
@@ -1186,7 +1186,7 @@ function collect () {
         // music-related texts
         const musicTexts = document.querySelectorAll("#musicRelated .form-container");
         paraCntr = 0;
-        historicTexts.forEach(text => {
+        musicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
                 const textElement = xml.createElement("text");
                 textElement.innerHTML = `
