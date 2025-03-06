@@ -1124,13 +1124,14 @@ function collect () {
         orph.appendChild(castList);
 
         let paraCntr;
+        let textElement;
 
         // staging-related texts
         const stagingTexts = document.querySelectorAll("#stagingRelated .form-container");
         paraCntr = 0;
         stagingTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                const textElement = xml.createElement("text");
+                textElement = xml.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -1148,18 +1149,18 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
+                stagingTexts.appendChild(textElement);
                 })
             }
         })
-        stagingTexts.appendChild(textElement);
-        orph.appendChild(hstagingTexts);
+        orph.appendChild(stagingTexts);
 
         // story-related texts
         const storyTexts = document.querySelectorAll("#storyRelated .form-container");
         paraCntr = 0;
         storyTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                const textElement = xml.createElement("text");
+                textElement = xml.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -1177,10 +1178,10 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
+                storyTexts.appendChild(textElement);
                 })
             }
         })
-        storyTexts.appendChild(textElement);
         orph.appendChild(storyTexts);
 
         // music-related texts
@@ -1188,7 +1189,7 @@ function collect () {
         paraCntr = 0;
         musicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                const textElement = xml.createElement("text");
+                textElement = xml.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -1206,10 +1207,10 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
+                musicTexts.appendChild(textElement);
                 })
             }
         })
-        musicTexts.appendChild(textElement);
         orph.appendChild(musicTexts);
 
         // historic texts
@@ -1217,7 +1218,7 @@ function collect () {
         paraCntr = 0;
         historicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                const textElement = xml.createElement("text");
+                textElement = xml.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -1235,10 +1236,10 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
+                historicTexts.appendChild(textElement);
                 })
             }
         })
-        historicTexts.appendChild(textElement);
         orph.appendChild(historic);
         
         save(orph);
