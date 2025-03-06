@@ -104,52 +104,18 @@ function register() {
     orph.appendChild(performance);
 
     // castList section
-    castList.innerHTML = `
-        <cast>
-            <role></role>
-            <artist></artist>   
-            <artistGND></artistGND>
-        </cast>`;
     orph.appendChild(castList);
 
     // stagingRelated texts section
-    stagingRelated.innerHTML = `
-        <text>
-            <author></author>  
-            <authorGND></authorGND>
-            <title></title>
-            <paragraph></paragraph>
-        </text>`;
     orph.appendChild(stagingRelated);
 
     // storyRelated texts section
-    storyRelated.innerHTML = `
-        <text>
-            <author></author>  
-            <authorGND></authorGND>
-            <title></title>
-            <paragraph></paragraph>
-        </text>`;
     orph.appendChild(storyRelated);
 
     // musicRelated texts section
-    musicRelated.innerHTML = `
-        <text>
-            <author></author>  
-            <authorGND></authorGND>
-            <title></title>
-            <paragraph></paragraph>
-        </text>`;
     orph.appendChild(musicRelated);
 
     // historic section
-    historic.innerHTML = `
-        <text>
-            <author></author>  
-            <authorGND></authorGND>
-            <title></title>
-            <paragraph></paragraph>
-        </text>`;
     orph.appendChild(historic);
 
     // serialize flat orph for GitHub repository
