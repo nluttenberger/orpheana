@@ -1138,7 +1138,7 @@ function collect () {
 
         // staging-related texts
         let paraCntr = 0;
-        const stagingTexts = document.querySelectorAll("#staging-related .form-container");
+        const stagingTexts = document.querySelectorAll("#stagingRelated .form-container");
         let stagingCntr = 0
         stagingTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ===""))
@@ -1180,7 +1180,7 @@ function collect () {
         orph.appendChild(stagingRelated);
 
         // story-related texts
-        const storyTexts = document.querySelectorAll("#story-related .form-container");
+        const storyTexts = document.querySelectorAll("#storyRelated .form-container");
         storyTexts.forEach(text => {
             const textElement = xml.createElement("text");
             textElement.innerHTML = `
@@ -1198,7 +1198,7 @@ function collect () {
         orph.appendChild(storyRelated);
 
         // music-related texts
-        const musicTexts = document.querySelectorAll("#music-related .form-container");
+        const musicTexts = document.querySelectorAll("#musicRelated .form-container");
         musicTexts.forEach(text => {
             const textElement = xml.createElement("text");
             textElement.innerHTML = `
