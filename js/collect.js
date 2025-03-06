@@ -706,6 +706,15 @@ function collect () {
                 <p class="right-text"></p>
                 <label>Absatz</label>
                 <textarea class="full-text"></textarea>`;
+                addNewPara = document.createElement("input");
+                Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
+                container.appendChild(addNewPara);
+                addNewPara.addEventListener("click", addParagraph);
+                addNewText = document.createElement("input");
+                Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
+                container.appendChild(addNewText);
+                addNewText.addEventListener("click", addText);
+                fieldset.appendChild(addNewText);
         } else {
             texts.forEach(text => {
                 const vAuthor = text.querySelector("author").textContent;
@@ -734,8 +743,6 @@ function collect () {
             Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
             container.appendChild(addNewPara);
             addNewPara.addEventListener("click", addParagraph);
-
-            
             addNewText.addEventListener("click", addText);
             fieldset.appendChild(addNewText);
         }
