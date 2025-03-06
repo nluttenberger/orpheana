@@ -51,13 +51,7 @@
             <orchestraGND/>
         </orchestra>
     </performance>
-    <castList>
-        <cast>
-            <role/>
-            <artist/>
-            <artistGND/>
-        </cast>
-    </castList>
+    <castList/>
     <stagingRelated>
         <text>
             <author>a</author>
@@ -74,14 +68,7 @@
             <paragraph>f</paragraph>
         </text>
     </storyRelated>
-    <musicRelated>
-        <text>
-            <author>g</author>
-            <authorGND/>
-            <title>h</title>
-            <paragraph>i</paragraph>
-        </text>
-    </musicRelated>
+    <musicRelated/>
     <historic>
         <text>
             <author>j</author>
