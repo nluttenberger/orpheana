@@ -1111,38 +1111,25 @@ function collect () {
         orph.appendChild(performance);
 
         // cast list
-        let roleCntr = 0;
         roles.forEach((role, index) => {
-            if (!(roles[index].value === "" && artists[index].value === "" && artistGNDs[index].value === ""))
-            {
+            if (!(roles[index].value === "" && artists[index].value === "" && artistGNDs[index].value === "")) {
                 const cast = xml.createElement("cast");
                 cast.innerHTML = `
                     <role>${roles[index].value}</role>
                     <artist>${artists[index].value}</artist>
                     <artistGND>${artistGNDs[index].value}</artistGND>`;
                 castList.appendChild(cast);
-                roleCntr += 1;
             }
         });
-        //console.log (roleCntr)
-        if (roleCntr === 0)
-            {
-                const cast = xml.createElement("cast");
-                cast.innerHTML = `
-                    <role></role>
-                    <artist></artist>
-                    <artistGND></artistGND>`;
-                castList.appendChild(cast);
-            }
         orph.appendChild(castList);
 
+        let paraCntr;
+
         // staging-related texts
-        let paraCntr = 0;
         const stagingTexts = document.querySelectorAll("#stagingRelated .form-container");
-        let stagingCntr = 0
-        stagingTexts.forEach(text => {
-            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ===""))
-            {
+        paraCntr = 0;
+        historicTexts.forEach(text => {
+            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
                 const textElement = xml.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
@@ -1161,76 +1148,97 @@ function collect () {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
-                });
-
-                stagingRelated.appendChild(textElement);
-                stagingCntr += 1;
+                })
             }
-            if (stagingCntr === 0) 
-            {
-                const textElement = xml.createElement("text");
-                textElement.innerHTML = `
-                    <author></author>
-                    <authorGND></authorGND>
-                    <title></title>
-                    <paragraph></paragraph>`;
-                stagingRelated.appendChild(textElement);
-            }
-        });
-        orph.appendChild(stagingRelated);
+        })
+        stagingTexts.appendChild(textElement);
+        orph.appendChild(hstagingTexts);
 
         // story-related texts
         const storyTexts = document.querySelectorAll("#storyRelated .form-container");
-        storyTexts.forEach(text => {
-            const textElement = xml.createElement("text");
-            textElement.innerHTML = `
-                <author>${text.querySelector("input[name='Author']").value}</author>
-                <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                <title>${text.querySelector("input[name='Title']").value}</title>`;
-            const paragraphs = text.querySelectorAll("textarea");
-            paragraphs.forEach((para, index) => {
-                const paragraph = xml.createElement("paragraph");
-                paragraph.innerHTML = para.value;
-                textElement.appendChild(paragraph);
-            });
-            storyRelated.appendChild(textElement);
-        });
-        orph.appendChild(storyRelated);
+        paraCntr = 0;
+        historicTexts.forEach(text => {
+            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
+                const textElement = xml.createElement("text");
+                textElement.innerHTML = `
+                    <author>${text.querySelector("input[name='Author']").value}</author>
+                    <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
+                    <title>${text.querySelector("input[name='Title']").value}</title>`;
+                const paragraphs = text.querySelectorAll("textarea");
+                paragraphs.forEach((para, index) => {
+                    if (!(para.value === "")) {
+                        const paragraph = xml.createElement("paragraph");
+                        paragraph.innerHTML = para.value;
+                        textElement.appendChild(paragraph);
+                        paraCntr += 1;
+                    }
+                if (paraCntr === 0) {
+                    const paraEl = xml.createElement("paragraph")
+                    paraEl.value = "";
+                    textElement.appendChild(paraEl);
+                }
+                })
+            }
+        })
+        storyTexts.appendChild(textElement);
+        orph.appendChild(storyTexts);
 
         // music-related texts
         const musicTexts = document.querySelectorAll("#musicRelated .form-container");
-        musicTexts.forEach(text => {
-            const textElement = xml.createElement("text");
-            textElement.innerHTML = `
-                <author>${text.querySelector("input[name='Author']").value}</author>
-                <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                <title>${text.querySelector("input[name='Title']").value}</title>`;
-            const paragraphs = text.querySelectorAll("textarea");
-            paragraphs.forEach((para, index) => {
-                const paragraph = xml.createElement("paragraph");
-                paragraph.innerHTML = para.value;
-                textElement.appendChild(paragraph);
-            });
-            musicRelated.appendChild(textElement);
-        });
-        orph.appendChild(musicRelated);
+        paraCntr = 0;
+        historicTexts.forEach(text => {
+            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
+                const textElement = xml.createElement("text");
+                textElement.innerHTML = `
+                    <author>${text.querySelector("input[name='Author']").value}</author>
+                    <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
+                    <title>${text.querySelector("input[name='Title']").value}</title>`;
+                const paragraphs = text.querySelectorAll("textarea");
+                paragraphs.forEach((para, index) => {
+                    if (!(para.value === "")) {
+                        const paragraph = xml.createElement("paragraph");
+                        paragraph.innerHTML = para.value;
+                        textElement.appendChild(paragraph);
+                        paraCntr += 1;
+                    }
+                if (paraCntr === 0) {
+                    const paraEl = xml.createElement("paragraph")
+                    paraEl.value = "";
+                    textElement.appendChild(paraEl);
+                }
+                })
+            }
+        })
+        musicTexts.appendChild(textElement);
+        orph.appendChild(musicTexts);
 
         // historic texts
         const historicTexts = document.querySelectorAll("#historic .form-container");
+        paraCntr = 0;
         historicTexts.forEach(text => {
-            const textElement = xml.createElement("text");
-            textElement.innerHTML = `
-                <author>${text.querySelector("input[name='Author']").value}</author>
-                <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                <title>${text.querySelector("input[name='Title']").value}</title>`;
-            const paragraphs = text.querySelectorAll("textarea");
-            paragraphs.forEach((para, index) => {
-                const paragraph = xml.createElement("paragraph");
-                paragraph.innerHTML = para.value;
-                textElement.appendChild(paragraph);
-            });
-            historic.appendChild(textElement);
-        });
+            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
+                const textElement = xml.createElement("text");
+                textElement.innerHTML = `
+                    <author>${text.querySelector("input[name='Author']").value}</author>
+                    <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
+                    <title>${text.querySelector("input[name='Title']").value}</title>`;
+                const paragraphs = text.querySelectorAll("textarea");
+                paragraphs.forEach((para, index) => {
+                    if (!(para.value === "")) {
+                        const paragraph = xml.createElement("paragraph");
+                        paragraph.innerHTML = para.value;
+                        textElement.appendChild(paragraph);
+                        paraCntr += 1;
+                    }
+                if (paraCntr === 0) {
+                    const paraEl = xml.createElement("paragraph")
+                    paraEl.value = "";
+                    textElement.appendChild(paraEl);
+                }
+                })
+            }
+        })
+        historicTexts.appendChild(textElement);
         orph.appendChild(historic);
         
         save(orph);
@@ -1241,44 +1249,36 @@ function collect () {
     // -------------------------
 
     // Get form data from repository
-    let myPath;
-    let myOrph;
-    let myURL;
-    let gitName; 
-    let gitPath;
-    let gitSHA;
-    let hdrs;
-
-    apiKey = localStorage.getItem('apiKey');
-    hdrs = {
+    const apiKey = localStorage.getItem('apiKey');
+    const hdrs = {
         'Accept': 'application/vnd.github.v3+json',
         'Authorization': apiKey
-    }
-    myURL = new URL(document.URL);
-    myPath = myURL.searchParams.get('path');
-    myOrph = myURL.searchParams.get('orph');
-    //console.log (`Pfad: ${myPath}, Orph: ${myOrph}`);
+    };
+    const myURL = new URL(document.URL);
+    const myPath = myURL.searchParams.get('path');
+    const myOrph = myURL.searchParams.get('orph');
     
     let url_str = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${myPath}/.gitkeep`;
     fetch (url_str,{headers: hdrs})
-    .then (resp => resp.json())
-    .then (data => {
-        console.log("Path ok");
-        url_str = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${myPath}/${myOrph}`;
-        fetch (url_str,{headers: hdrs})
         .then (resp => resp.json())
         .then (data => {
-            myOrph = b64_to_utf8(data.content);
-            gitName = data.name;
-            gitPath = data.path;
-            gitSHA = data.sha;
-            makeForm(myOrph);
+            console.log("Path ok");
+            url_str = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${myPath}/${myOrph}`;
+            fetch (url_str,{headers: hdrs})
+                .then (resp => resp.json())
+                .then (data => {
+                    const myOrph = b64_to_utf8(data.content);
+                    const gitName = data.name;
+                    const gitPath = data.path;
+                    const gitSHA = data.sha;
+                    makeForm(myOrph);
+                })
+                .catch ((error) => {
+                    console.log('Error while reading orph data:', error);
+                })
         })
         .catch ((error) => {
-            console.log('Error while reading orph data:', error);
+            console.log(`Error while accessing ${myPath}`, error);
         })
-    })
-    .catch ((error) => {
-        console.log(`Error while accessing ${myPath}`, error);
-    })
+
 }
