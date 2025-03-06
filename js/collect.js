@@ -666,7 +666,6 @@ function collect () {
             addNewCastLine = document.createElement("input");
             Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
             container.appendChild(addNewCastLine);
-            alert ("blubbi")
         } else {
             casts.forEach(cast => {
                 const vRole = cast.querySelector("role").textContent;
@@ -696,37 +695,50 @@ function collect () {
         fieldset.innerHTML = `<legend>Texte zur Aufführung</legend><div class="form-container"></div>`;
         container = fieldset.querySelector(".form-container");
         const texts = formData.querySelectorAll("stagingRelated text");
-        texts.forEach(text => {
-            const vAuthor = text.querySelector("author").textContent;
-            const vAuthorGND = text.querySelector("authorGND").textContent; 
-            const vTitle = text.querySelector("title").textContent;
+        if (texts.length === 0) {
             container.innerHTML += `
                 <label>Autor</label>
-                <input type="text" name="Author" value="${vAuthor}"></input>
+                <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
-                <input type="text" name="GND" value="${vAuthorGND}"></input>
+                <input type="text" name="GND" value=""></input>
                 <label>Titel</label>
-                <input type="text" name="Title" value="${vTitle}"></input>
-                <p class="right-text"></p>`;
-            const paragraphs = text.querySelectorAll("paragraph");
-            paragraphs.forEach(paragraph => {
-                const vParagraph = paragraph.textContent;
+                <input type="text" name="Title" value=""></input>
+                <p class="right-text"></p>
+                <label>Absatz</label>
+                <textarea class="full-text"></textarea>`;
+        } else {
+            texts.forEach(text => {
+                const vAuthor = text.querySelector("author").textContent;
+                const vAuthorGND = text.querySelector("authorGND").textContent; 
+                const vTitle = text.querySelector("title").textContent;
                 container.innerHTML += `
-                    <label>Absatz</label>
-                    <textarea class="full-text" >${vParagraph}</textarea>`
+                    <label>Autor</label>
+                    <input type="text" name="Author" value="${vAuthor}"></input>
+                    <label class="GND-label">GND-ID</label>
+                    <input type="text" name="GND" value="${vAuthorGND}"></input>
+                    <label>Titel</label>
+                    <input type="text" name="Title" value="${vTitle}"></input>
+                    <p class="right-text"></p>`;
+                const paragraphs = text.querySelectorAll("paragraph");
+                paragraphs.forEach(paragraph => {
+                    const vParagraph = paragraph.textContent;
+                    container.innerHTML += `
+                        <label>Absatz</label>
+                        <textarea class="full-text">${vParagraph}</textarea>`
+                });
+                addNewText = document.createElement("input");
+                Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
+                container.appendChild(addNewText);
             });
-            addNewText = document.createElement("input");
-            Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
-            container.appendChild(addNewText);
-        });
-        addNewPara = document.createElement("input");
-        Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
-        container.appendChild(addNewPara);
-        addNewPara.addEventListener("click", addParagraph);
+            addNewPara = document.createElement("input");
+            Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
+            container.appendChild(addNewPara);
+            addNewPara.addEventListener("click", addParagraph);
 
-        
-        addNewText.addEventListener("click", addText);
-        fieldset.appendChild(addNewText);
+            
+            addNewText.addEventListener("click", addText);
+            fieldset.appendChild(addNewText);
+        }
         orph.appendChild(fieldset);
 
         // story-related texts section
