@@ -1,6 +1,6 @@
 function save (short,gitName,gitPath,gitSHA) {
 
-    function createOrph (short) {
+    function createOrph (shortIN) {
         // collect text input from performance section
         const opera = document.querySelector("input[name='opera']").value;
         const operaGND = document.querySelector("input[name='operaGND']").value;
@@ -44,12 +44,12 @@ function save (short,gitName,gitPath,gitSHA) {
 
         // short
         short.innerHTML = `
-            <opera>${short.sOpera}</opera>
-            <composer>${short.sComposer}</composer>
-            <place>${short.sPlace}</place>
-            <year>${short.sYear}</year>
-            <orphID>${short.sOrphID}</orphID>
-            <fimtID>${short.sFimtID}</fimtID>`;
+            <opera>${shortIN.sOpera}</opera>
+            <composer>${shortIN.sComposer}</composer>
+            <place>${shortIN.sPlace}</place>
+            <year>${shortIN.sYear}</year>
+            <orphID>${shortIN.sOrphID}</orphID>
+            <fimtID>${shortIN.sFimtID}</fimtID>`;
         orph.appendChild(short);
 
         // performance
