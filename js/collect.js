@@ -1041,7 +1041,7 @@ function collect () {
                     const gitName = data.name;
                     const gitPath = data.path;
                     const gitSHA = data.sha;
-                    makeForm(myOrph);
+                    makeForm(myOrph,gitName,gitPath,gitSHA);
                 })
                 .catch ((error) => {
                     console.log('Error while reading orph data:', error);
