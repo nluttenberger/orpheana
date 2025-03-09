@@ -229,7 +229,7 @@ function save (short,gitName,gitPath,gitSHA) {
             }
         })
         orph.appendChild(historic);
-        return xml;
+        return orph;
     }
 
     // preliminary solution for file name creation
