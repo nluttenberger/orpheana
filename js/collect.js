@@ -19,7 +19,7 @@ function collect () {
     }
 
     // Create form for orph data
-    function makeForm(XMLdata) {
+    function makeForm(XMLdata,gitName,gitPath,gitSHA) {
         const operas = [ 
             ["1984", "Lorin Maazel", "2005", "J. D. McClatchy, Thomas Meehan"],
             ["Abu Hassan", "Carl Maria von Weber", "1811", "Franz Carl Hiemer"],
