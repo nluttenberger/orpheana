@@ -32,8 +32,8 @@ function save (short,gitName,gitPath,gitSHA) {
 
         // init XML parser and create top-level XML elements
         const parser = new DOMParser();
-        const docEl = parser.parseFromString("<orph></orph>", "text/xml");
-        const orph = docEl.querySelector("orph");
+        const orph = parser.parseFromString("<orph></orph>", "text/xml");
+        
         const short = orph.createElement("short");
         const performance = orph.createElement("performance");
         const castList = orph.createElement("castList");
