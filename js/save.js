@@ -34,13 +34,13 @@ function save (short,gitName,gitPath,gitSHA) {
         const parser = new DOMParser();
         const xx = parser.parseFromString("<orph></orph>", "text/xml");    
         const orph = xx.querySelector("orph");   
-        const short = orph.createElement("short");
-        const performance = orph.createElement("performance");
-        const castList = orph.createElement("castList");
-        const stagingRelated = orph.createElement("stagingRelated");
-        const storyRelated = orph.createElement("storyRelated");
-        const musicRelated = orph.createElement("musicRelated");
-        const historic = orph.createElement("historic");
+        const short = document.createElement("short");
+        const performance = document.createElement("performance");
+        const castList = document.createElement("castList");
+        const stagingRelated = document.createElement("stagingRelated");
+        const storyRelated = document.createElement("storyRelated");
+        const musicRelated = document.createElement("musicRelated");
+        const historic = document.createElement("historic");
 
         // short
         short.innerHTML = `
