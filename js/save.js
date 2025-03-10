@@ -241,24 +241,6 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         orph.appendChild(historic);
         return orph;
     }
-
-    // preliminary solution for file name creation
-    const sOpera = "Holländer";
-    const sComposer = "Wagner";
-    const sPlace = "Düsseldorf";
-    const sYear = "2000";
-
-    console.log (gitName, gitPath, gitSHA);
-    alert (`${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`)
-    
-    // save orph to download folder
-    const xmlString = new XMLSerializer().serializeToString(createOrph(short));
-    const blob = new Blob([xmlString], {type: "text/xml"});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`;
-    a.click();
     
     // build update object and url 
     const update = {
@@ -266,8 +248,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         'content': utf8_to_b64(xmlString),
         'sha': gitSHA
     }
-    let urlStrUp = `https://api.github.com/repos/nluttenberger/orpheana/contents/${gitPath}`;
-    //let urlStrReload = `https://api.github.com/repos/nluttenberger/${myColl}/contents/recipes_xml/${myChap}/${myRecp}`;
+    const urlStrUp = `https://api.github.com/repos/nluttenberger/orpheana/contents/${gitPath}`;
 
     // upload and commit --------------------------------------------------
     fetch (urlStrUp,{
