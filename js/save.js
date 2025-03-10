@@ -36,6 +36,8 @@ function save (short,gitName,gitPath,gitSHA) {
             '<?xml version="1.0" encoding="UTF-8"?> \n' +
             '<orph></orph>', 'text/xml');    
         const orph = orphXML.querySelector("orph");   
+        console.log (orph);
+        console.log (orphXML.getElementsByName("orph")[0]);
         const short = orph.createElement("short");
         const performance = orph.createElement("performance");
         const castList = orph.createElement("castList");
