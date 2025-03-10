@@ -255,7 +255,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
     // build update object and url 
     const update = {
         'message': 'update',
-        'content': xmlString,
+        'content': utf8_to_b64(xmlString),
         'sha': gitSHA
     }
     let urlStrUp = `https://api.github.com/repos/nluttenberger/orpheana/contents/${gitPath}`;
