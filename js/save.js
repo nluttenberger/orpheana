@@ -260,6 +260,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         console.log('Update: ', resp.status, resp.statusText);
         if (resp.status === 200) {
             alert ('orph abgespeichert!')
+            window.location.reload();
         }
     })
     .catch((error) => {
