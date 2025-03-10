@@ -252,4 +252,28 @@ function save (short,gitName,gitPath,gitSHA) {
     a.download = `${sYear}-${sOpera}-${sComposer}-${sPlace}.xml`;
     a.click();
     
+    // build update object and url 
+    const update = {
+        'message': 'update',
+        'content': xmlString,
+        'sha': gitSHA
+    }
+    let urlStrUp = `https://api.github.com/repos/nluttenberger/orpheana/contents/${gitPath}`;
+    //let urlStrReload = `https://api.github.com/repos/nluttenberger/${myColl}/contents/recipes_xml/${myChap}/${myRecp}`;
+
+    // upload and commit --------------------------------------------------
+    fetch (urlStrUp,{
+        method: 'PUT',
+        body: JSON.stringify(update),
+        headers: hdrs
+    })
+    .then (resp => {
+        console.log('Update: ', resp.status, resp.statusText);
+        if (resp.status === 200) {
+            alert ('orph abgespeichert!')
+        }
+    })
+    .catch((error) => {
+        console.error('Error while saving recipe: ', error);
+    })
 }
