@@ -11,13 +11,6 @@ function collect () {
         return decoder.decode(bytes);
     }
       
-    // Encode XML string to UTF-8
-    function utf8_to_b64(str) {
-        const encoder = new TextEncoder();
-        const utf8Array = encoder.encode(str);
-        return btoa(String.fromCharCode.apply(null, utf8Array));
-    }
-
     // Create form for orph data
     function makeForm(XMLdata,gitName,gitPath,gitSHA) {
         const operas = [ 

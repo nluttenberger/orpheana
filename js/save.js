@@ -1,5 +1,13 @@
 function save (short,gitName,gitPath,gitSHA,hdrs) {
 
+    // Encode XML string to UTF-8
+    function utf8_to_b64(str) {
+        const encoder = new TextEncoder();
+        const utf8Array = encoder.encode(str);
+        return btoa(String.fromCharCode.apply(null, utf8Array));
+    }
+
+    //
     function createOrph (shortIN) {
         // collect text input from performance section
         const opera = document.querySelector("input[name='opera']").value;
