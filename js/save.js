@@ -35,17 +35,14 @@ function save (short,gitName,gitPath,gitSHA) {
         let orphXML = parser.parseFromString(
             '<?xml version="1.0" encoding="UTF-8"?> \n' +
             '<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph"></pdo:orph>', 'text/xml');    
-        const orph = orphXML.querySelector("orph");   
-        console.log (orph);
-
-        console.log (orphXML.getElementsByTagName("orph")[0]);
-        const short = orphXML.createElement("short");
-        const performance = orphXML.createElement("performance");
-        const castList = orphXML.createElement("castList");
-        const stagingRelated = orphXML.createElement("stagingRelated");
-        const storyRelated = orphXML.createElement("storyRelated");
-        const musicRelated = orphXML.createElement("musicRelated");
-        const historic = orphXML.createElement("historic");
+        const orph = orphXML.querySelector("pdo:orph");   
+        const short = orphXML.createElement("pdo:short");
+        const performance = orphXML.createElement("pdo:performance");
+        const castList = orphXML.createElement("pdo:castList");
+        const stagingRelated = orphXML.createElement("pdo:stagingRelated");
+        const storyRelated = orphXML.createElement("pdo:storyRelated");
+        const musicRelated = orphXML.createElement("pdo:musicRelated");
+        const historic = orphXML.createElement("pdo:historic");
 
         // short
         short.innerHTML = `
