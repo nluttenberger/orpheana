@@ -65,12 +65,9 @@
                     <role>Holländer</role>
                     <artist>Michael Burt</artist>
                     <artistGND/></cast></pdo:castList><pdo:stagingRelated><text>
-                    <author>a</author>
+                    <author>Petrika Ionesco</author>
                     <authorGND/>
-                    <title>b</title><paragraph>c</paragraph></text></pdo:stagingRelated><pdo:storyRelated><text>
-                    <author>d</author>
+                    <title>Notizen zur Konzeption</title><paragraph/></text></pdo:stagingRelated><pdo:storyRelated><text>
+                    <author/>
                     <authorGND/>
-                    <title>e</title><paragraph>f</paragraph></text></pdo:storyRelated><pdo:musicRelated/><pdo:historic><text>
-                    <author>j</author>
-                    <authorGND/>
-                    <title>k</title><paragraph>l</paragraph></text></pdo:historic></pdo:orph>
+                    <title>Der fliegende Holländer</title><paragraph/></text></pdo:storyRelated><pdo:musicRelated/><pdo:historic/></pdo:orph>
