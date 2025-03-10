@@ -67,7 +67,10 @@
                     <artistGND/></cast></pdo:castList><pdo:stagingRelated><text>
                     <author>Petrika Ionesco</author>
                     <authorGND/>
-                    <title>Notizen zur Konzeption</title><paragraph/></text></pdo:stagingRelated><pdo:storyRelated><text>
+                    <title>Notizen zur Konzeption</title><paragraph/></text><text>
+                    <author/>
+                    <authorGND/>
+                    <title>Gedanken zum Holländer</title><paragraph/></text></pdo:stagingRelated><pdo:storyRelated><text>
                     <author/>
                     <authorGND/>
                     <title>Der fliegende Holländer</title><paragraph/></text></pdo:storyRelated><pdo:musicRelated/><pdo:historic/></pdo:orph>
