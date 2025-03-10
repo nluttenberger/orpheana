@@ -708,7 +708,7 @@ function collect () {
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
                 container.appendChild(addNewText);
                 addNewText.addEventListener("click", addText);
-                fieldset.appendChild(addNewText);
+                fieldset.appendChild(addText);
         } else {
             texts.forEach(text => {
                 const vAuthor = text.querySelector("author").textContent;
@@ -728,15 +728,17 @@ function collect () {
                     container.innerHTML += `
                         <label>Absatz</label>
                         <textarea class="full-text">${vParagraph}</textarea>`
+                        addNewPara = document.createElement("input");
+                        Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
+                        container.appendChild(addNewPara);
+                        addNewPara.addEventListener("click", addParagraph);
                 });
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
                 container.appendChild(addNewText);
+                addNewText.addEventListener("click", addText);
             });
-            addNewPara = document.createElement("input");
-            Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
-            container.appendChild(addNewPara);
-            addNewPara.addEventListener("click", addParagraph);
+
             addNewText.addEventListener("click", addText);
             fieldset.appendChild(addNewText);
         }
@@ -787,15 +789,17 @@ function collect () {
                     container.innerHTML += `
                         <label>Absatz</label>
                         <textarea class="full-text">${vParagraph}</textarea>`
+                    addNewPara = document.createElement("input");
+                    Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
+                    container.appendChild(addNewPara);
+                    addNewPara.addEventListener("click", addParagraph);
                 });
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
                 container.appendChild(addNewText);
+                addNewText.addEventListener("click", addNewText);
             });
-            addNewPara = document.createElement("input");
-            Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
-            container.appendChild(addNewPara);
-            addNewPara.addEventListener("click", addParagraph);
+            
             addNewText.addEventListener("click", addText);
             fieldset.appendChild(addNewText);
         }
