@@ -32,15 +32,17 @@ function save (short,gitName,gitPath,gitSHA) {
 
         // init XML parser and create top-level XML elements
         const parser = new DOMParser();
-        const xx = parser.parseFromString("<orph></orph>", "text/xml");    
-        const orph = xx.querySelector("orph");   
-        const short = document.createElement("short");
-        const performance = document.createElement("performance");
-        const castList = document.createElement("castList");
-        const stagingRelated = document.createElement("stagingRelated");
-        const storyRelated = document.createElement("storyRelated");
-        const musicRelated = document.createElement("musicRelated");
-        const historic = document.createElement("historic");
+        let orphXML = parser.parseFromString(
+            '<?xml version="1.0" encoding="UTF-8"?> \n' +
+            '<orph></orph>', 'text/xml');    
+        const orph = orphXML.querySelector("orph");   
+        const short = orph.createElement("short");
+        const performance = orph.createElement("performance");
+        const castList = orph.createElement("castList");
+        const stagingRelated = orph.createElement("stagingRelated");
+        const storyRelated = orph.createElement("storyRelated");
+        const musicRelated = orph.createElement("musicRelated");
+        const historic = orph.createElement("historic");
 
         // short
         short.innerHTML = `
@@ -101,7 +103,7 @@ function save (short,gitName,gitPath,gitSHA) {
         // cast list
         roles.forEach((role, index) => {
             if (!(roles[index].value === "" && artists[index].value === "" && artistGNDs[index].value === "")) {
-                const cast = document.createElement("cast");
+                const cast = orph.createElement("cast");
                 cast.innerHTML = `
                     <role>${roles[index].value}</role>
                     <artist>${artists[index].value}</artist>
@@ -119,7 +121,7 @@ function save (short,gitName,gitPath,gitSHA) {
         paraCntr = 0;
         stagingTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = document.createElement("text");
+                textElement = orph.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -127,13 +129,13 @@ function save (short,gitName,gitPath,gitSHA) {
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = document.createElement("paragraph");
+                        const paragraph = orph.createElement("paragraph");
                         paragraph.innerHTML = para.value;
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 if (paraCntr === 0) {
-                    const paraEl = document.createElement("paragraph")
+                    const paraEl = orph.createElement("paragraph")
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
@@ -148,7 +150,7 @@ function save (short,gitName,gitPath,gitSHA) {
         paraCntr = 0;
         storyTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = document.createElement("text");
+                textElement = orph.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -156,13 +158,13 @@ function save (short,gitName,gitPath,gitSHA) {
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = document.createElement("paragraph");
+                        const paragraph = orph.createElement("paragraph");
                         paragraph.innerHTML = para.value;
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 if (paraCntr === 0) {
-                    const paraEl = document.createElement("paragraph")
+                    const paraEl = orph.createElement("paragraph")
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
@@ -177,7 +179,7 @@ function save (short,gitName,gitPath,gitSHA) {
         paraCntr = 0;
         musicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = document.createElement("text");
+                textElement = orph.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -185,13 +187,13 @@ function save (short,gitName,gitPath,gitSHA) {
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = document.createElement("paragraph");
+                        const paragraph = orph.createElement("paragraph");
                         paragraph.innerHTML = para.value;
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 if (paraCntr === 0) {
-                    const paraEl = document.createElement("paragraph")
+                    const paraEl = orph.createElement("paragraph")
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
@@ -206,7 +208,7 @@ function save (short,gitName,gitPath,gitSHA) {
         paraCntr = 0;
         historicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = document.createElement("text");
+                textElement = orph.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -214,13 +216,13 @@ function save (short,gitName,gitPath,gitSHA) {
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = document.createElement("paragraph");
+                        const paragraph = orph.createElement("paragraph");
                         paragraph.innerHTML = para.value;
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 if (paraCntr === 0) {
-                    const paraEl = document.createElement("paragraph")
+                    const paraEl = orph.createElement("paragraph")
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
