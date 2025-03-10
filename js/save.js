@@ -106,7 +106,7 @@ function save (short,gitName,gitPath,gitSHA) {
         // cast list
         roles.forEach((role, index) => {
             if (!(roles[index].value === "" && artists[index].value === "" && artistGNDs[index].value === "")) {
-                const cast = orph.createElement("cast");
+                const cast = orphXML.createElement("cast");
                 cast.innerHTML = `
                     <role>${roles[index].value}</role>
                     <artist>${artists[index].value}</artist>
@@ -124,7 +124,7 @@ function save (short,gitName,gitPath,gitSHA) {
         paraCntr = 0;
         stagingTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = orph.createElement("text");
+                textElement = orphXML.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -132,13 +132,13 @@ function save (short,gitName,gitPath,gitSHA) {
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = orph.createElement("paragraph");
+                        const paragraph = orphXML.createElement("paragraph");
                         paragraph.innerHTML = para.value;
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 if (paraCntr === 0) {
-                    const paraEl = orph.createElement("paragraph")
+                    const paraEl = orphXML.createElement("paragraph")
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
@@ -153,7 +153,7 @@ function save (short,gitName,gitPath,gitSHA) {
         paraCntr = 0;
         storyTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = orph.createElement("text");
+                textElement = orphXML.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -161,13 +161,13 @@ function save (short,gitName,gitPath,gitSHA) {
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = orph.createElement("paragraph");
+                        const paragraph = orphXML.createElement("paragraph");
                         paragraph.innerHTML = para.value;
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 if (paraCntr === 0) {
-                    const paraEl = orph.createElement("paragraph")
+                    const paraEl = orphXML.createElement("paragraph")
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
@@ -182,7 +182,7 @@ function save (short,gitName,gitPath,gitSHA) {
         paraCntr = 0;
         musicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = orph.createElement("text");
+                textElement = orphXML.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -190,13 +190,13 @@ function save (short,gitName,gitPath,gitSHA) {
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = orph.createElement("paragraph");
+                        const paragraph = orphXML.createElement("paragraph");
                         paragraph.innerHTML = para.value;
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 if (paraCntr === 0) {
-                    const paraEl = orph.createElement("paragraph")
+                    const paraEl = orphXML.createElement("paragraph")
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
@@ -211,7 +211,7 @@ function save (short,gitName,gitPath,gitSHA) {
         paraCntr = 0;
         historicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = orph.createElement("text");
+                textElement = orphXML.createElement("text");
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
@@ -219,13 +219,13 @@ function save (short,gitName,gitPath,gitSHA) {
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = orph.createElement("paragraph");
+                        const paragraph = orphXML.createElement("paragraph");
                         paragraph.innerHTML = para.value;
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 if (paraCntr === 0) {
-                    const paraEl = orph.createElement("paragraph")
+                    const paraEl = orphXML.createElement("paragraph")
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
