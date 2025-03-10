@@ -35,7 +35,7 @@ function save (short,gitName,gitPath,gitSHA) {
         let orphXML = parser.parseFromString(
             '<?xml version="1.0" encoding="UTF-8"?> \n' +
             '<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph"></pdo:orph>', 'text/xml');    
-        const orph = orphXML.querySelector("pdo:orph");   
+        const orph = orphXML.querySelector("orph");   
         const short = orphXML.createElement("pdo:short");
         const performance = orphXML.createElement("pdo:performance");
         const castList = orphXML.createElement("pdo:castList");
