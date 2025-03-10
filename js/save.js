@@ -37,14 +37,15 @@ function save (short,gitName,gitPath,gitSHA) {
             '<orph></orph>', 'text/xml');    
         const orph = orphXML.querySelector("orph");   
         console.log (orph);
-        console.log (orphXML.getElementsByName("orph")[0]);
-        const short = orph.createElement("short");
-        const performance = orph.createElement("performance");
-        const castList = orph.createElement("castList");
-        const stagingRelated = orph.createElement("stagingRelated");
-        const storyRelated = orph.createElement("storyRelated");
-        const musicRelated = orph.createElement("musicRelated");
-        const historic = orph.createElement("historic");
+
+        console.log (orphXML.getElementsByTagName("orph")[0]);
+        const short = orphXML.createElement("short");
+        const performance = orphXML.createElement("performance");
+        const castList = orphXML.createElement("castList");
+        const stagingRelated = orphXML.createElement("stagingRelated");
+        const storyRelated = orphXML.createElement("storyRelated");
+        const musicRelated = orphXML.createElement("musicRelated");
+        const historic = orphXML.createElement("historic");
 
         // short
         short.innerHTML = `
