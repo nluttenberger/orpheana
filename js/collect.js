@@ -686,11 +686,13 @@ function collect () {
         // staging-related texts section
         fieldset = document.createElement("fieldset");
         fieldset.setAttribute("id", "stagingRelated");
-        fieldset.innerHTML = `<legend>Texte zur Aufführung</legend><div class="form-container"></div>`;
+        fieldset.innerHTML = `<legend>Texte zur Aufführung</legend>`;
         container = fieldset.querySelector(".form-container");
         texts = formData.querySelectorAll("stagingRelated text");
         if (texts.length === 0) {
-            container.innerHTML += `
+            innerContainer = document.createElement("div");
+            innerContainer.classList.add("form-container");
+            innerContainer.innerHTML += `
                 <label>Autor</label>
                 <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
@@ -702,19 +704,22 @@ function collect () {
                 <textarea class="full-text"></textarea>`;
                 addNewPara = document.createElement("input");
                 Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
-                container.appendChild(addNewPara);
+                innerContainer.appendChild(addNewPara);
                 addNewPara.addEventListener("click", addParagraph);
+                fieldset.appendChild(innerContainer);
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
-                container.appendChild(addNewText);
                 addNewText.addEventListener("click", addText);
+                fieldset.appendChild(addNewText);
                 fieldset.appendChild(addText);
         } else {
             texts.forEach(text => {
                 const vAuthor = text.querySelector("author").textContent;
                 const vAuthorGND = text.querySelector("authorGND").textContent; 
                 const vTitle = text.querySelector("title").textContent;
-                container.innerHTML += `
+                innerContainer = document.createElement("div");
+                innerContainer.classList.add("form-container");
+                innerContainer.innerHTML += `
                     <label>Autor</label>
                     <input type="text" name="Author" value="${vAuthor}"></input>
                     <label class="GND-label">GND-ID</label>
@@ -725,17 +730,18 @@ function collect () {
                 const paragraphs = text.querySelectorAll("paragraph");
                 paragraphs.forEach(paragraph => {
                     const vParagraph = paragraph.textContent;
-                    container.innerHTML += `
+                    innerContainer.innerHTML += `
                         <label>Absatz</label>
                         <textarea class="full-text">${vParagraph}</textarea>`
                         addNewPara = document.createElement("input");
                         Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
-                        container.appendChild(addNewPara);
+                        innerContainer.appendChild(addNewPara);
                         addNewPara.addEventListener("click", addParagraph);
                 });
+                fieldset.appendChild(innerContainer);
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
-                container.appendChild(addNewText);
+                fieldset.appendChild(addNewText);
                 addNewText.addEventListener("click", addText);
             });
         }
