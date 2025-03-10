@@ -733,14 +733,11 @@ function collect () {
                         container.appendChild(addNewPara);
                         addNewPara.addEventListener("click", addParagraph);
                 });
-                addNewText = document.createElement("input");
-                Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
-                container.appendChild(addNewText);
-                addNewText.addEventListener("click", addText);
             });
-
-            addNewText.addEventListener("click", addText);
+            addNewText = document.createElement("input");
+            Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
             fieldset.appendChild(addNewText);
+            addNewText.addEventListener("click", addText);
         }
         orph.appendChild(fieldset);
 
