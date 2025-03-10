@@ -46,20 +46,20 @@ function save (short,gitName,gitPath,gitSHA) {
 
         // short
         short.innerHTML = `
-            <opera>${shortIN.sOpera}</opera>
-            <composer>${shortIN.sComposer}</composer>
-            <place>${shortIN.sPlace}</place>
-            <year>${shortIN.sYear}</year>
-            <orphID>${shortIN.sOrphID}</orphID>
-            <fimtID>${shortIN.sFimtID}</fimtID>`;
+            <pdo:opera>${shortIN.sOpera}</pdo:opera>
+            <pdo:composer>${shortIN.sComposer}</pdo:composer>
+            <pdo:place>${shortIN.sPlace}</pdo:place>
+            <pdo:year>${shortIN.sYear}</pdo:year>
+            <pdo:orphID>${shortIN.sOrphID}</pdo:orphID>
+            <pdo:fimtID>${shortIN.sFimtID}</pdo:fimtID>`;
         orph.appendChild(short);
 
         // performance
         performance.innerHTML = `
-            <opera>
-                <operaTitle>${opera}</operaTitle>
-                <operaGND>${operaGND}</operaGND>
-            </opera>
+            <pdo:opera>
+                <pdo:operaTitle>${opera}</pdo:operaTitle>
+                <pdo:operaGND>${operaGND}</pdo:operaGND>
+            </pdo:opera>
             <composer>
                 <composerName>${composer}</composerName>
                 <composerGND>${composerGND}</composerGND>
