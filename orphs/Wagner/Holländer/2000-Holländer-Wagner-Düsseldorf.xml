@@ -1,110 +1,64 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<orph>
-    <short>
-        <opera>Holländer</opera>
-        <composer>Wagner</composer>
-        <place>Düsseldorf</place>
-        <year>2000</year>
-        <fimtID>fimt-abcde</fimtID>
-        <orphID>orph-8db3451dd9a162f30eba9bd19dbab90e</orphID>
-    </short>
-    <performance>
-        <opera>
-            <operaTitle>Der fliegende Holländer</operaTitle>
-            <operaGND>https://explore.gnd.network/gnd/300169752</operaGND>
-        </opera>
-        <composer>
-            <composerName>Richard Wagner</composerName>
-            <composerGND>https://explore.gnd.network/gnd/118594117</composerGND>
-        </composer>
-        <libretto>
-            <librettoName>Richard Wagner</librettoName>
-            <librettoGND>https://explore.gnd.network/gnd/118594117</librettoGND>
-        </libretto>
-        <firstPerformance>
-            <firstPerformanceDate>1843</firstPerformanceDate>
-            <firstPerformanceGND/>
-        </firstPerformance>
-        <production>
-            <productionName>Deutsche Oper am Rhein</productionName>
-            <productionGND>https://explore.gnd.network/gnd/2007978-3</productionGND>
-        </production>
-        <stage>
-            <stageName>Opernhaus Düsseldorf</stageName>
-            <stageGND>https://explore.gnd.network/gnd/16084411-3</stageGND>
-        </stage>
-        <place>
-            <placeName>Düsseldorf</placeName>
-            <placeGND>https://explore.gnd.network/gnd/4013255-9</placeGND>
-        </place>
-        <premiere>
-            <premiereDate>2000</premiereDate>
-            <premiereGND/>
-        </premiere>
-        <director>
-            <directorName>Adolf Dresen</directorName>
-            <directorGND>https://explore.gnd.network/gnd/11817732X</directorGND>
-        </director>
-        <conductor>
-            <conductorName>Zoltán Peskó</conductorName>
-            <conductorGND>https://explore.gnd.network/gnd/134483022</conductorGND>
-        </conductor>
-        <dramatist>
-            <dramatistName/>
-            <dramatistGND/>
-        </dramatist>
-        <orchestra>
-            <orchestraName>Düsseldorfer Symphoniker</orchestraName>
-            <orchestraGND>https://explore.gnd.network/gnd/672263-5</orchestraGND>
-        </orchestra>
-    </performance>
-    <castList>
-        <cast>
-            <role>Holländer</role>
-            <artist>Wicus Slabbert</artist>
-            <artistGND>https://explore.gnd.network/gnd/1329930835</artistGND>
-        </cast>
-        <cast>
-            <role>Daland</role>
-            <artist>Artur Korn</artist>
-            <artistGND>https://explore.gnd.network/gnd/1328292495</artistGND>
-        </cast>
-        <cast>
-            <role>Senta</role>
-            <artist>Rebecca Turner</artist>
-            <artistGND/>
-        </cast>
-    </castList>
-    <stagingRelated>
-        <text>
-            <author>Adolf Dresen</author>
-            <authorGND>https://explore.gnd.network/gnd/11817732X</authorGND>
-            <title>Liebe und Erlösung</title>
-            <paragraph>Lore ipsum</paragraph>
-        </text>
-    </stagingRelated>
-    <storyRelated>
-        <text>
-            <author/>
-            <authorGND/>
-            <title/>
-            <paragraph/>
-        </text>
-    </storyRelated>
-    <musicRelated>
-        <text>
-            <author/>
-            <authorGND/>
-            <title/>
-            <paragraph/>
-        </text>
-    </musicRelated>
-    <historic>
-        <text>
-            <author/>
-            <authorGND/>
-            <title/>
-            <paragraph/>
-        </text>
-    </historic>
-</orph>
+<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph"><pdo:short>
+            <opera>Holländer</opera>
+            <composer>Wagner</composer>
+            <place>Düsseldorf</place>
+            <year>2000</year>
+            <orphID>orph-8db3451dd9a162f30eba9bd19dbab90e</orphID>
+            <fimtID>fimt-abcde</fimtID></pdo:short><pdo:performance>
+            <opera>
+                <operaTitle>Der fliegende Holländer</operaTitle>
+                <operaGND>https://explore.gnd.network/gnd/300169752</operaGND>
+            </opera>
+            <composer>
+                <composerName>Richard Wagner</composerName>
+                <composerGND>https://explore.gnd.network/gnd/118594117</composerGND>
+            </composer>
+            <libretto>
+                <librettoName>Richard Wagner</librettoName>
+                <librettoGND>https://explore.gnd.network/gnd/118594117</librettoGND>
+            </libretto>
+            <firstPerformance>            1843                    </firstPerformance>
+            <production>
+                <productionName>Deutsche Oper am Rhein</productionName>
+                <productionGND>https://explore.gnd.network/gnd/2007978-3</productionGND>
+            </production>
+            <stage>
+                <stageName>Opernhaus Düsseldorf</stageName>
+                <stageGND>https://explore.gnd.network/gnd/16084411-3</stageGND>
+            </stage>
+            <place>
+                <placeName>Düsseldorf</placeName>
+                <placeGND>https://explore.gnd.network/gnd/4013255-9</placeGND>
+            </place>
+            <premiere>            2000                    </premiere>
+            <director>
+                <directorName>Adolf Dresen</directorName>
+                <directorGND>https://explore.gnd.network/gnd/11817732X</directorGND>
+            </director>
+            <conductor>
+                <conductorName>Zoltán Peskó</conductorName>
+                <conductorGND>https://explore.gnd.network/gnd/134483022</conductorGND>
+            </conductor>
+            <dramatist>
+                <dramatistName/>
+                <dramatistGND/>
+            </dramatist>
+            <orchestra>
+                <orchestraName>Düsseldorfer Symphoniker</orchestraName>
+                <orchestraGND>https://explore.gnd.network/gnd/672263-5</orchestraGND>    
+            </orchestra></pdo:performance><pdo:castList><cast>
+                    <role>Holländer</role>
+                    <artist>Wicus Slabbert</artist>
+                    <artistGND>https://explore.gnd.network/gnd/1329930835</artistGND></cast><cast>
+                    <role>Daland</role>
+                    <artist>Artur Korn</artist>
+                    <artistGND>https://explore.gnd.network/gnd/1328292495</artistGND></cast><cast>
+                    <role>Senta</role>
+                    <artist>Rebecca Turner</artist>
+                    <artistGND/></cast></pdo:castList><pdo:stagingRelated><text>
+                    <author>Adolf Dresen</author>
+                    <authorGND>https://explore.gnd.network/gnd/11817732X</authorGND>
+                    <title>Liebe und Erlösung</title><paragraph>Lore ipsum</paragraph></text></pdo:stagingRelated><pdo:storyRelated/><pdo:musicRelated/><pdo:historic><text>
+                    <author>xxx</author>
+                    <authorGND/>
+                    <title>yyy</title><paragraph>zzz</paragraph></text></pdo:historic></pdo:orph>
