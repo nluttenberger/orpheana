@@ -931,7 +931,7 @@ function collect () {
         buttonArea.innerHTML += `<input type="button" id="saveButton" value="Speichern" ></input>`
         orph.appendChild(buttonArea);
         orph.querySelector("#saveButton").addEventListener("click", function() {
-            save(short, gitName, gitPath, gitSHA);
+            save(short, gitName, gitPath, gitSHA, hdrs);
         });
         body.appendChild(orph);
 

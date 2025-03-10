@@ -1,4 +1,4 @@
-function save (short,gitName,gitPath,gitSHA) {
+function save (short,gitName,gitPath,gitSHA,hdrs) {
 
     function createOrph (shortIN) {
         // collect text input from performance section
