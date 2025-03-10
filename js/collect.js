@@ -735,7 +735,7 @@ function collect () {
                 });
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
-                fieldset.appendChild(addNewText);
+                container.appendChild(addNewText);
                 addNewText.addEventListener("click", addText);
             });
         }
@@ -796,9 +796,6 @@ function collect () {
                 container.appendChild(addNewText);
                 addNewText.addEventListener("click", addNewText);
             });
-            
-            addNewText.addEventListener("click", addText);
-            fieldset.appendChild(addNewText);
         }
         orph.appendChild(fieldset);
 
