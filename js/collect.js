@@ -811,13 +811,13 @@ function collect () {
     function addText(clicked) {
         const cont = document .createElement("div");
         cont.innerHTML += `
+                <label>Titel</label>
+                <input type="text" name="Title" value=""></input>
+                <p class="right-text"><button class="pillButton">classifier 1</button><button class="pillButton">classifier 2</button><button class="pillButton">classifier 3</button></p>
                 <label>Autor</label>
                 <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="GND" value=""></input>
-                <label>Titel</label>
-                <input type="text" name="Title" value=""></input>
-                <p class="right-text"></p>
                 <label>Absatz</label>
                 <textarea class="full-text"></textarea>`;
         cont.classList.add("form-container");

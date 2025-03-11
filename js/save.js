@@ -7,7 +7,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         return btoa(String.fromCharCode.apply(null, utf8Array));
     }
 
-    //
+    // create XML-encoded plain-data orph from form input
     function createOrph (shortIN) {
         // collect text input from performance section
         const opera = document.querySelector("input[name='opera']").value;
@@ -124,65 +124,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         let paraCntr;
         let textElement;
 
-        // staging-related texts
-        const stagingTexts = document.querySelectorAll("#stagingRelated .form-container");
-        paraCntr = 0;
-        stagingTexts.forEach(text => {
-            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = orphXML.createElement("text");
-                textElement.innerHTML = `
-                    <author>${text.querySelector("input[name='Author']").value}</author>
-                    <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                    <title>${text.querySelector("input[name='Title']").value}</title>`;
-                const paragraphs = text.querySelectorAll("textarea");
-                paragraphs.forEach((para, index) => {
-                    if (!(para.value === "")) {
-                        const paragraph = orphXML.createElement("paragraph");
-                        paragraph.innerHTML = para.value;
-                        textElement.appendChild(paragraph);
-                        paraCntr += 1;
-                    }
-                if (paraCntr === 0) {
-                    const paraEl = orphXML.createElement("paragraph")
-                    paraEl.value = "";
-                    textElement.appendChild(paraEl);
-                }
-                stagingRelated.appendChild(textElement);
-                })
-            }
-        })
-        orph.appendChild(stagingRelated);
-
-        // story-related texts
-        const storyTexts = document.querySelectorAll("#storyRelated .form-container");
-        paraCntr = 0;
-        storyTexts.forEach(text => {
-            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = orphXML.createElement("text");
-                textElement.innerHTML = `
-                    <author>${text.querySelector("input[name='Author']").value}</author>
-                    <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                    <title>${text.querySelector("input[name='Title']").value}</title>`;
-                const paragraphs = text.querySelectorAll("textarea");
-                paragraphs.forEach((para, index) => {
-                    if (!(para.value === "")) {
-                        const paragraph = orphXML.createElement("paragraph");
-                        paragraph.innerHTML = para.value;
-                        textElement.appendChild(paragraph);
-                        paraCntr += 1;
-                    }
-                if (paraCntr === 0) {
-                    const paraEl = orphXML.createElement("paragraph")
-                    paraEl.value = "";
-                    textElement.appendChild(paraEl);
-                }
-                storyRelated.appendChild(textElement);
-                })
-            }
-        })
-        orph.appendChild(storyRelated);
-
-        // music-related texts
+        // texts
         const musicTexts = document.querySelectorAll("#musicRelated .form-container");
         paraCntr = 0;
         musicTexts.forEach(text => {
@@ -211,34 +153,6 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         })
         orph.appendChild(musicRelated);
 
-        // historic texts
-        const historicTexts = document.querySelectorAll("#historic .form-container");
-        paraCntr = 0;
-        historicTexts.forEach(text => {
-            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
-                textElement = orphXML.createElement("text");
-                textElement.innerHTML = `
-                    <author>${text.querySelector("input[name='Author']").value}</author>
-                    <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                    <title>${text.querySelector("input[name='Title']").value}</title>`;
-                const paragraphs = text.querySelectorAll("textarea");
-                paragraphs.forEach((para, index) => {
-                    if (!(para.value === "")) {
-                        const paragraph = orphXML.createElement("paragraph");
-                        paragraph.innerHTML = para.value;
-                        textElement.appendChild(paragraph);
-                        paraCntr += 1;
-                    }
-                if (paraCntr === 0) {
-                    const paraEl = orphXML.createElement("paragraph")
-                    paraEl.value = "";
-                    textElement.appendChild(paraEl);
-                }
-                historic.appendChild(textElement);
-                })
-            }
-        })
-        orph.appendChild(historic);
         return orph;
     }
     
