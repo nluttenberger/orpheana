@@ -7,15 +7,15 @@
             <fimtID>fimt-HollNbg96</fimtID></pdo:short><pdo:performance>
             <opera>
                 <operaTitle>Der fliegende Holländer</operaTitle>
-                <operaGND/>
+                <operaGND>https://explore.gnd.network/gnd/300169752</operaGND>
             </opera>
             <composer>
                 <composerName>Richard Wagner</composerName>
-                <composerGND/>
+                <composerGND>https://explore.gnd.network/gnd/118594117</composerGND>
             </composer>
             <libretto>
                 <librettoName>Richard Wagner</librettoName>
-                <librettoGND/>
+                <librettoGND>https://explore.gnd.network/gnd/118594117</librettoGND>
             </libretto>
             <firstPerformance>1843</firstPerformance>
             <production>
@@ -23,14 +23,14 @@
                 <productionGND>https://explore.gnd.network/gnd/1004668-9</productionGND>
             </production>
             <stage>
-                <stageName/>
-                <stageGND/>
+                <stageName>Städtische Bühnen Nürnberg</stageName>
+                <stageGND>https://explore.gnd.network/gnd/1004668-9</stageGND>
             </stage>
             <place>
                 <placeName>Nürnberg</placeName>
                 <placeGND>https://explore.gnd.network/gnd/4042742-0</placeGND>
             </place>
-            <premiere> 1996</premiere>
+            <premiere>1996</premiere>
             <director>
                 <directorName>Petrika Ionesco</directorName>
                 <directorGND>http://viaf.org/viaf/47024553</directorGND>
@@ -49,10 +49,10 @@
             </orchestra></pdo:performance><pdo:castList><cast>
                     <role>Daland</role>
                     <artist>Heinz-Klaus Ecker</artist>
-                    <artistGND/></cast><cast>
+                    <artistGND>https://explore.gnd.network/gnd/134593189</artistGND></cast><cast>
                     <role>Senta</role>
                     <artist>Elizabeth Whitehouse</artist>
-                    <artistGND/></cast><cast>
+                    <artistGND>https://explore.gnd.network/gnd/124150659</artistGND></cast><cast>
                     <role>Erik</role>
                     <artist>Karl-Heinz Thiemann</artist>
                     <artistGND/></cast><cast>
