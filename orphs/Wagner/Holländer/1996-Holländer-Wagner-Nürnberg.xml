@@ -64,4 +64,13 @@
                     <artistGND/></cast><cast>
                     <role>Holländer</role>
                     <artist>Michael Burt</artist>
-                    <artistGND/></cast></pdo:castList><pdo:stagingRelated/><pdo:storyRelated/><pdo:musicRelated/><pdo:historic/></pdo:orph>
+                    <artistGND/></cast></pdo:castList><pdo:musicRelated><text>
+                    <author/>
+                    <authorGND/>
+                    <title>Der fliegende Holländer</title><paragraph>Die Handlung:</paragraph></text><text>
+                    <author>Petrika Ionesco</author>
+                    <authorGND>http://viaf.org/viaf/47024553</authorGND>
+                    <title>Notizen zur Konzeption</title><paragraph>Senta:</paragraph></text><text>
+                    <author>Petrika Ionesco</author>
+                    <authorGND>http://viaf.org/viaf/47024553</authorGND>
+                    <title>Gedanken zum Holländer</title><paragraph>Romantische Oper?</paragraph></text></pdo:musicRelated></pdo:orph>
