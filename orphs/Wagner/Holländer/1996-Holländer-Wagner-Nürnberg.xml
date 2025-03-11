@@ -1,76 +1,110 @@
-<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph"><pdo:short>
-            <opera>Holländer</opera>
-            <composer>Wagner</composer>
-            <place>Nürnberg</place>
-            <year>1996</year>
-            <orphID>orph-1e9e4312b720ee6845a4a2fb5631a1dd</orphID>
-            <fimtID>fimt-HollNbg96</fimtID></pdo:short><pdo:performance>
-            <opera>
-                <operaTitle>Der fliegende Holländer</operaTitle>
-                <operaGND/>
-            </opera>
-            <composer>
-                <composerName>Richard Wagner</composerName>
-                <composerGND/>
-            </composer>
-            <libretto>
-                <librettoName>Richard Wagner</librettoName>
-                <librettoGND/>
-            </libretto>
-            <firstPerformance>1843</firstPerformance>
-            <production>
-                <productionName>Städtische Bühnen Nürnberg</productionName>
-                <productionGND>https://explore.gnd.network/gnd/1004668-9</productionGND>
-            </production>
-            <stage>
-                <stageName/>
-                <stageGND/>
-            </stage>
-            <place>
-                <placeName>Nürnberg</placeName>
-                <placeGND>https://explore.gnd.network/gnd/4042742-0</placeGND>
-            </place>
-            <premiere> 1996</premiere>
-            <director>
-                <directorName>Petrika Ionesco</directorName>
-                <directorGND>http://viaf.org/viaf/47024553</directorGND>
-            </director>
-            <conductor>
-                <conductorName>Christoph Kurig</conductorName>
-                <conductorGND/>
-            </conductor>
-            <dramatist>
-                <dramatistName/>
-                <dramatistGND/>
-            </dramatist>
-            <orchestra>
-                <orchestraName>Philharmonisches Orchester der Stadt Nürnberg</orchestraName>
-                <orchestraGND>https://explore.gnd.network/gnd/2076085-1</orchestraGND>    
-            </orchestra></pdo:performance><pdo:castList><cast>
-                    <role>Daland</role>
-                    <artist>Heinz-Klaus Ecker</artist>
-                    <artistGND/></cast><cast>
-                    <role>Senta</role>
-                    <artist>Elizabeth Whitehouse</artist>
-                    <artistGND/></cast><cast>
-                    <role>Erik</role>
-                    <artist>Karl-Heinz Thiemann</artist>
-                    <artistGND/></cast><cast>
-                    <role>Mary</role>
-                    <artist>Christa Puhlmann-Richter</artist>
-                    <artistGND/></cast><cast>
-                    <role>Steuermann</role>
-                    <artist>Richard Kindley</artist>
-                    <artistGND/></cast><cast>
-                    <role>Holländer</role>
-                    <artist>Michael Burt</artist>
-                    <artistGND/></cast></pdo:castList><pdo:stagingRelated><text>
-                    <author>Petrika Ionesco</author>
-                    <authorGND/>
-                    <title>Notizen zur Konzeption</title><paragraph/></text><text>
-                    <author/>
-                    <authorGND/>
-                    <title>Gedanken zum Holländer</title><paragraph/></text></pdo:stagingRelated><pdo:storyRelated><text>
-                    <author/>
-                    <authorGND/>
-                    <title>Der fliegende Holländer</title><paragraph/></text></pdo:storyRelated><pdo:musicRelated/><pdo:historic/></pdo:orph>
+<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph">
+    <pdo:short>
+        <opera>Holländer</opera>
+        <composer>Wagner</composer>
+        <place>Nürnberg</place>
+        <year>1996</year>
+        <orphID>orph-1e9e4312b720ee6845a4a2fb5631a1dd</orphID>
+        <fimtID>fimt-HollNbg96</fimtID>
+    </pdo:short>
+    <pdo:performance>
+        <opera>
+            <operaTitle>Der fliegende Holländer</operaTitle>
+            <operaGND/>
+        </opera>
+        <composer>
+            <composerName>Richard Wagner</composerName>
+            <composerGND/>
+        </composer>
+        <libretto>
+            <librettoName>Richard Wagner</librettoName>
+            <librettoGND/>
+        </libretto>
+        <firstPerformance>1843</firstPerformance>
+        <production>
+            <productionName>Städtische Bühnen Nürnberg</productionName>
+            <productionGND>https://explore.gnd.network/gnd/1004668-9</productionGND>
+        </production>
+        <stage>
+            <stageName/>
+            <stageGND/>
+        </stage>
+        <place>
+            <placeName>Nürnberg</placeName>
+            <placeGND>https://explore.gnd.network/gnd/4042742-0</placeGND>
+        </place>
+        <premiere> 1996</premiere>
+        <director>
+            <directorName>Petrika Ionesco</directorName>
+            <directorGND>http://viaf.org/viaf/47024553</directorGND>
+        </director>
+        <conductor>
+            <conductorName>Christoph Kurig</conductorName>
+            <conductorGND/>
+        </conductor>
+        <dramatist>
+            <dramatistName/>
+            <dramatistGND/>
+        </dramatist>
+        <orchestra>
+            <orchestraName>Philharmonisches Orchester der Stadt Nürnberg</orchestraName>
+            <orchestraGND>https://explore.gnd.network/gnd/2076085-1</orchestraGND>
+        </orchestra>
+    </pdo:performance>
+    <pdo:castList>
+        <cast>
+            <role>Daland</role>
+            <artist>Heinz-Klaus Ecker</artist>
+            <artistGND/>
+        </cast>
+        <cast>
+            <role>Senta</role>
+            <artist>Elizabeth Whitehouse</artist>
+            <artistGND/>
+        </cast>
+        <cast>
+            <role>Erik</role>
+            <artist>Karl-Heinz Thiemann</artist>
+            <artistGND/>
+        </cast>
+        <cast>
+            <role>Mary</role>
+            <artist>Christa Puhlmann-Richter</artist>
+            <artistGND/>
+        </cast>
+        <cast>
+            <role>Steuermann</role>
+            <artist>Richard Kindley</artist>
+            <artistGND/>
+        </cast>
+        <cast>
+            <role>Holländer</role>
+            <artist>Michael Burt</artist>
+            <artistGND/>
+        </cast>
+    </pdo:castList>
+    <pdo:stagingRelated>
+        <text>
+            <author>Petrika Ionesco</author>
+            <authorGND/>
+            <title>Notizen zur Konzeption</title>
+            <paragraph/>
+        </text>
+        <text>
+            <author/>
+            <authorGND/>
+            <title>Gedanken zum Holländer</title>
+            <paragraph/>
+        </text>
+    </pdo:stagingRelated>
+    <pdo:storyRelated>
+        <text>
+            <author/>
+            <authorGND/>
+            <title>Der fliegende Holländer</title>
+            <paragraph/>
+        </text>
+    </pdo:storyRelated>
+    <pdo:musicRelated/>
+    <pdo:historic/>
+</pdo:orph>
