@@ -55,16 +55,16 @@
                     <artistGND>https://explore.gnd.network/gnd/124150659</artistGND></cast><cast>
                     <role>Erik</role>
                     <artist>Karl-Heinz Thiemann</artist>
-                    <artistGND/></cast><cast>
+                    <artistGND>https://explore.gnd.network/gnd/1330471822</artistGND></cast><cast>
                     <role>Mary</role>
                     <artist>Christa Puhlmann-Richter</artist>
-                    <artistGND/></cast><cast>
+                    <artistGND>https://explore.gnd.network/gnd/143060643</artistGND></cast><cast>
                     <role>Steuermann</role>
                     <artist>Richard Kindley</artist>
-                    <artistGND/></cast><cast>
+                    <artistGND>https://explore.gnd.network/gnd/141784768</artistGND></cast><cast>
                     <role>Holländer</role>
                     <artist>Michael Burt</artist>
-                    <artistGND/></cast></pdo:castList><pdo:musicRelated><text>
+                    <artistGND>https://explore.gnd.network/gnd/123949653</artistGND></cast></pdo:castList><pdo:musicRelated><text>
                     <author/>
                     <authorGND/>
                     <title>Der fliegende Holländer</title><paragraph>Die Handlung:</paragraph></text><text>
