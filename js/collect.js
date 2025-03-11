@@ -827,7 +827,7 @@ function collect () {
                 <input type="text" name="GND" value=""></input>
                 <label>Titel</label>
                 <input type="text" name="Title" value=""></input>
-                <p class="right-text"></p>
+                <p class="right-text"><button class="pillButton">classifier 1</button><button class="pillButton">classifier 2</button></p>
                 <label>Absatz</label>
                 <textarea class="full-text"></textarea>`;
                 addNewPara = document.createElement("input");

@@ -86,15 +86,15 @@ textarea {
   min-height: 120px;
 }
 
-  input[type="button"] {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    width: 120px;
-    height: 28px;
-    padding: 2px;
-    vertical-align: middle;
-  }
+input[type="button"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 120px;
+  height: 28px;
+  padding: 2px;
+  vertical-align: middle;
+}
 
 .shortTextInput {
     width: 160px;
@@ -107,18 +107,17 @@ textarea {
     vertical-align: middle;
 }
 
-.generalTextField {
-    word-break: normal;
-    overflow-wrap: normal;
-    width: 560px;
-    height: 120px;
-    padding: 2px;
-    margin: 2px;
-    margin-right: 2em;
-    border: 0;
-    font-family: sans-serif;
-    font-size: small;
-    top: 0.2em;
+.pillButton {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
 }
 
 .logo {
