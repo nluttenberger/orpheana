@@ -837,9 +837,9 @@ function collect () {
                 fieldset.appendChild(innerContainer);
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
-                addNewText.addEventListener("click", addText);
                 fieldset.appendChild(addNewText);
-                fieldset.appendChild(addText);
+                addNewText.addEventListener("click", addText);
+                
         } else {
             texts.forEach(text => {
                 const vAuthor = text.querySelector("author").textContent;
