@@ -47,10 +47,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         const short = orphXML.createElement("pdo:short");
         const performance = orphXML.createElement("pdo:performance");
         const castList = orphXML.createElement("pdo:castList");
-        const stagingRelated = orphXML.createElement("pdo:stagingRelated");
-        const storyRelated = orphXML.createElement("pdo:storyRelated");
         const musicRelated = orphXML.createElement("pdo:musicRelated");
-        const historic = orphXML.createElement("pdo:historic");
 
         // short
         short.innerHTML = `
@@ -130,6 +127,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         musicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
                 textElement = orphXML.createElement("text");
+                console.log ("subject: ", `${text.querySelector("select[name='subject'].value")}`);
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
