@@ -109,15 +109,14 @@ input[type="button"] {
 
 .pillButton {
   background-color: #ddd;
-  border: none;
+  border: black;
   color: black;
-  padding: 10px 20px;
+  padding: 6px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 16px;
 }
 
 .logo {

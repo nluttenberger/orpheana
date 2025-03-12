@@ -695,7 +695,15 @@ function collect () {
             innerContainer.innerHTML += `
                 <label>Titel</label>
                 <input type="text" name="Title" value=""></input>
-                <p class="right-text"><button class="pillButton">classifier 1</button><button class="pillButton">classifier 2</button><button class="pillButton">classifier 3</button></p>
+                <p class="right-text">
+                    <select class="pillButton" name="subject">
+                        <option value="" selected disabled hidden>Gegenstand</option>
+                        <option value="Inszenierung">Inszenierung</option>
+                        <option value="Handlung">Handlung</option>
+                        <option value="Musik">Musik</option>
+                        <option value="Rezeption">Rezeption</option>
+                    </select>
+                </p>
                 <label>Autor</label>
                 <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
