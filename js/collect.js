@@ -625,12 +625,11 @@ function collect () {
             button.setAttribute("type", "button");
             button.setAttribute("value", "weiterer Text");
             button.addEventListener("click", addText);
-            document.querySelectorAll("select").forEach(select => {
+            cont.querySelectorAll("select").forEach(select => {
                 select.addEventListener("change", function() {
                     console.log(this.value);
                 });
             });
-            //const clicked = Event.target;
             clicked.target.insertAdjacentElement("afterend", cont);
             cont.insertAdjacentElement("afterend", button);
         }
@@ -812,7 +811,7 @@ function collect () {
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
                 fieldset.appendChild(addNewText);
                 addNewText.addEventListener("click", addText);
-                document.querySelectorAll("select").forEach(select => {
+                fieldset.querySelectorAll("select").forEach(select => {
                     select.addEventListener("change", function() {
                         console.log(this.value);
                     });
@@ -863,7 +862,7 @@ function collect () {
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
                 fieldset.appendChild(addNewText);
                 addNewText.addEventListener("click", addText);
-                document.querySelectorAll("select").forEach(select => {
+                fieldset.querySelectorAll("select").forEach(select => {
                     select.addEventListener("change", function() {
                         console.log(this.value);
                     });
