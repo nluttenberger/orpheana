@@ -696,7 +696,7 @@ function collect () {
                 <label>Titel</label>
                 <input type="text" name="Title" value=""></input>
                 <p class="right-text">
-                    <select class="pillButton" name="subject">
+                    <select name="subject">
                         <option value="" selected disabled hidden>Gegenstand</option>
                         <option value="Inszenierung">Inszenierung</option>
                         <option value="Handlung">Handlung</option>
