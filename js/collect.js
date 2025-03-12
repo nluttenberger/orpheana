@@ -548,6 +548,87 @@ function collect () {
         });
         const body = document.getElementsByTagName("body")[0]
         body.appendChild(datalist);
+
+        function addCastLine(clicked) {
+            const labelRole = document.createElement("label");
+            const role = document.createElement("input");
+            Object.assign(role, {type: "text", name: "role"});
+            const labelArtist = document.createElement("label");
+            const artist = document.createElement("input");
+            Object.assign(artist, {type: "text", name: "artist"});
+            const labelGND = document.createElement("label");
+            const gnd = document.createElement("input");
+            Object.assign(gnd, {type: "text", name: "artistGND"});
+            const button = document.createElement("input");
+            button.setAttribute("type", "button");
+            button.setAttribute("name", "add_castline");
+            button.setAttribute("value", "+");
+            button.addEventListener("click", addCastLine);
+            //const clicked = event.target;
+            clicked.target.insertAdjacentElement("afterend", labelRole);
+            labelRole.insertAdjacentElement("afterend", role);
+            role.insertAdjacentElement("afterend", labelArtist);
+            labelArtist.insertAdjacentElement("afterend", artist);
+            artist.insertAdjacentElement("afterend", labelGND);
+            labelGND.insertAdjacentElement("afterend", gnd);
+            gnd.insertAdjacentElement("afterend", button);
+        }
+    
+        function addParagraph(clicked) {
+            const label = document.createElement("label");
+            const paragraph = document.createElement("textarea");
+            paragraph.classList.add("full-text");
+            const button = document.createElement("input");
+            button.setAttribute("type", "button");
+            button.setAttribute("value", "+");
+            button.addEventListener("click", addParagraph);
+            //const clicked = Event.target;
+            clicked.target.insertAdjacentElement("afterend", label);
+            label.insertAdjacentElement("afterend", paragraph);
+            paragraph.insertAdjacentElement("afterend", button);
+        }
+    
+        function addText(clicked) {
+            const cont = document .createElement("div");
+            cont.innerHTML += `
+                    <label>Titel</label>
+                    <input type="text" name="Title" value=""></input>
+                    <p class="right-text">
+                        <select name="subject">
+                            <option value="" selected disabled hidden>Gegenstand</option>
+                            <option value="Inszenierung">Inszenierung</option>
+                            <option value="Handlung">Handlung</option>
+                            <option value="Musik">Musik</option>
+                            <option value="Rezeption">Rezeption</option>
+                            <option value="anders">anders</option>
+                        </select>
+                        <select name="origin">
+                            <option value="" selected disabled hidden>Entstehung</option>
+                            <option value="Inszenierung">dediziert</option>
+                            <option value="historisch">historisch</option>
+                            <option value="anders">anders</option>
+                        </select>
+                    </p>
+                    <label>Autor</label>
+                    <input type="text" name="Author" value=""></input>
+                    <label class="GND-label">GND-ID</label>
+                    <input type="text" name="GND" value=""></input>
+                    <label>Absatz</label>
+                    <textarea class="full-text"></textarea>`;
+            cont.classList.add("form-container");
+            const buttonPara = document.createElement("input");
+            buttonPara.setAttribute("type", "button");
+            buttonPara.setAttribute("value", "+");
+            cont.appendChild(buttonPara);
+            buttonPara.addEventListener("click", addParagraph);
+            const button = document.createElement("input");
+            button.setAttribute("type", "button");
+            button.setAttribute("value", "weiterer Text");
+            button.addEventListener("click", addText);
+            //const clicked = Event.target;
+            clicked.target.insertAdjacentElement("afterend", cont);
+            cont.insertAdjacentElement("afterend", button);
+        }
         
         // show logo block 
         const logotainer = document.createElement("div");
@@ -702,6 +783,13 @@ function collect () {
                         <option value="Handlung">Handlung</option>
                         <option value="Musik">Musik</option>
                         <option value="Rezeption">Rezeption</option>
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="origin">
+                        <option value="" selected disabled hidden>Entstehung</option>
+                        <option value="Inszenierung">dediziert</option>
+                        <option value="historisch">historisch</option>
+                        <option value="anders">anders</option>
                     </select>
                 </p>
                 <label>Autor</label>
@@ -730,7 +818,22 @@ function collect () {
                 innerContainer.innerHTML += `
                 <label>Titel</label>
                 <input type="text" name="Title" value="${vTitle}"></input>
-                <p class="right-text"><button class="pillButton">classifier 1</button><button class="pillButton">classifier 2</button><button class="pillButton">classifier 3</button></p>
+                <p class="right-text">
+                    <select name="subject">
+                        <option value="" selected disabled hidden>Gegenstand</option>
+                        <option value="Inszenierung">Inszenierung</option>
+                        <option value="Handlung">Handlung</option>
+                        <option value="Musik">Musik</option>
+                        <option value="Rezeption">Rezeption</option>
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="origin">
+                        <option value="" selected disabled hidden>Entstehung</option>
+                        <option value="Inszenierung">dediziert</option>
+                        <option value="historisch">historisch</option>
+                        <option value="anders">anders</option>
+                    </select>
+                </p>
                 <label>Autor</label>
                 <input type="text" name="Author" value="${vAuthor}"></input>
                 <label class="GND-label">GND-ID</label>
@@ -775,72 +878,6 @@ function collect () {
             document.querySelector("input[name='firstPerformance']").value = firstPerf;
             document.querySelector("input[name='libretto']").value = libretto;
         });
-    }
-
-    function addCastLine(clicked) {
-        const labelRole = document.createElement("label");
-        const role = document.createElement("input");
-        Object.assign(role, {type: "text", name: "role"});
-        const labelArtist = document.createElement("label");
-        const artist = document.createElement("input");
-        Object.assign(artist, {type: "text", name: "artist"});
-        const labelGND = document.createElement("label");
-        const gnd = document.createElement("input");
-        Object.assign(gnd, {type: "text", name: "artistGND"});
-        const button = document.createElement("input");
-        button.setAttribute("type", "button");
-        button.setAttribute("name", "add_castline");
-        button.setAttribute("value", "+");
-        button.addEventListener("click", addCastLine);
-        //const clicked = event.target;
-        clicked.target.insertAdjacentElement("afterend", labelRole);
-        labelRole.insertAdjacentElement("afterend", role);
-        role.insertAdjacentElement("afterend", labelArtist);
-        labelArtist.insertAdjacentElement("afterend", artist);
-        artist.insertAdjacentElement("afterend", labelGND);
-        labelGND.insertAdjacentElement("afterend", gnd);
-        gnd.insertAdjacentElement("afterend", button);
-    }
-
-    function addParagraph(clicked) {
-        const label = document.createElement("label");
-        const paragraph = document.createElement("textarea");
-        paragraph.classList.add("full-text");
-        const button = document.createElement("input");
-        button.setAttribute("type", "button");
-        button.setAttribute("value", "+");
-        button.addEventListener("click", addParagraph);
-        //const clicked = Event.target;
-        clicked.target.insertAdjacentElement("afterend", label);
-        label.insertAdjacentElement("afterend", paragraph);
-        paragraph.insertAdjacentElement("afterend", button);
-    }
-
-    function addText(clicked) {
-        const cont = document .createElement("div");
-        cont.innerHTML += `
-                <label>Titel</label>
-                <input type="text" name="Title" value=""></input>
-                <p class="right-text"><button class="pillButton">classifier 1</button><button class="pillButton">classifier 2</button><button class="pillButton">classifier 3</button></p>
-                <label>Autor</label>
-                <input type="text" name="Author" value=""></input>
-                <label class="GND-label">GND-ID</label>
-                <input type="text" name="GND" value=""></input>
-                <label>Absatz</label>
-                <textarea class="full-text"></textarea>`;
-        cont.classList.add("form-container");
-        const buttonPara = document.createElement("input");
-        buttonPara.setAttribute("type", "button");
-        buttonPara.setAttribute("value", "+");
-        cont.appendChild(buttonPara);
-        buttonPara.addEventListener("click", addParagraph);
-        const button = document.createElement("input");
-        button.setAttribute("type", "button");
-        button.setAttribute("value", "weiterer Text");
-        button.addEventListener("click", addText);
-        //const clicked = Event.target;
-        clicked.target.insertAdjacentElement("afterend", cont);
-        cont.insertAdjacentElement("afterend", button);
     }
 
     // -------------------------
