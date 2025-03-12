@@ -133,7 +133,9 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                    <title>${text.querySelector("input[name='Title']").value}</title>`;
+                    <title>${text.querySelector("input[name='Title']").value}</title>;
+                    <subject>${text.querySelector("select[name='subject']").value}</subject>;
+                    <origin>${text.querySelector("select[name='origin']").value}</origin>`
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
