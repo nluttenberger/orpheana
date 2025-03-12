@@ -602,9 +602,9 @@ function collect () {
                             <option value="Rezeption">Rezeption</option>
                             <option value="anders">anders</option>
                         </select>
-                        <select name="origin">
+                        <select name="occasion">
                             <option value="" selected disabled hidden>Entstehung</option>
-                            <option value="Inszenierung">dediziert</option>
+                            <option value="dediziert">dediziert</option>
                             <option value="historisch">historisch</option>
                             <option value="anders">anders</option>
                         </select>
@@ -789,9 +789,9 @@ function collect () {
                         <option value="Rezeption">Rezeption</option>
                         <option value="anders">anders</option>
                     </select>
-                    <select name="origin">
+                    <select name="occasion">
                         <option value="" selected disabled hidden>Entstehung</option>
-                        <option value="Inszenierung">dediziert</option>
+                        <option value="dediziert">dediziert</option>
                         <option value="historisch">historisch</option>
                         <option value="anders">anders</option>
                     </select>
@@ -835,9 +835,9 @@ function collect () {
                         <option value="Rezeption">Rezeption</option>
                         <option value="anders">anders</option>
                     </select>
-                    <select name="origin">
+                    <select name="occasion">
                         <option value="" selected disabled hidden>Entstehung</option>
-                        <option value="Inszenierung">dediziert</option>
+                        <option value="dediziert">dediziert</option>
                         <option value="historisch">historisch</option>
                         <option value="anders">anders</option>
                     </select>
@@ -920,6 +920,7 @@ function collect () {
                     const gitName = data.name;
                     const gitPath = data.path;
                     const gitSHA = data.sha;
+                    console.log("Orph ok");
                     makeForm(myOrph,gitName,gitPath,gitSHA);
                 })
                 .catch ((error) => {
@@ -929,5 +930,4 @@ function collect () {
         .catch ((error) => {
             console.log(`Error while accessing ${myPath}`, error);
         })
-
 }

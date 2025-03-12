@@ -127,13 +127,12 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         musicTexts.forEach(text => {
             if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
                 textElement = orphXML.createElement("text");
-                console.log ("subject: ", `${text.querySelector("select[name='subject'].value")}`);
                 textElement.innerHTML = `
                     <author>${text.querySelector("input[name='Author']").value}</author>
                     <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
                     <title>${text.querySelector("input[name='Title']").value}</title>
                     <subject>${text.querySelector("select[name='subject']").value}</subject>
-                    <origin>${text.querySelector("select[name='origin']").value}</origin>`
+                    <occasion>${text.querySelector("select[name='occasion']").value}</occasion>`
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
@@ -152,7 +151,6 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
             }
         })
         orph.appendChild(musicRelated);
-
         return orph;
     }
     
@@ -172,7 +170,6 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         headers: hdrs
     })
     .then (resp => {
-        console.log('Update: ', resp.status, resp.statusText);
         if (resp.status === 200) {
             alert ('orph abgespeichert!')
             window.location.reload();
