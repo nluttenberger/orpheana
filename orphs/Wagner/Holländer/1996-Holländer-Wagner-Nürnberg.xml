@@ -1,9 +1,9 @@
 <pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph">
     <pdo:short>
-        <opera>Holländer</opera>
-        <composer>Wagner</composer>
-        <place>Nürnberg</place>
-        <year>1996</year>
+        <sOpera>Holländer</sOpera>
+        <sComposer>Wagner</sComposer>
+        <sPlace>Nürnberg</sPlace>
+        <sYear>1996</sYear>
         <orphID>orph-1e9e4312b720ee6845a4a2fb5631a1dd</orphID>
         <fimtID>fimt-HollNbg96</fimtID>
     </pdo:short>
