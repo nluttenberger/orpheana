@@ -847,14 +847,15 @@ function collect () {
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="GND" value="${vAuthorGND}"></input>`;
                 const paragraphs = text.querySelectorAll("paragraph");
+                let addNewPara;
                 paragraphs.forEach(paragraph => {
                     const vParagraph = paragraph.textContent;
                     innerContainer.innerHTML += `
                         <label>wenn gefüllt</label>
                         <textarea class="full-text">${vParagraph}</textarea>`
-                        const addNewPara = document.createElement("input");
+                        addNewPara = document.createElement("input");
                         Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
-                        innerContainer.appendChild(addNewPara);
+                        innerContainer.appendChild(addNewPara);  
                         addNewPara.addEventListener("click", addParagraph);
                 });
                 fieldset.appendChild(innerContainer);
