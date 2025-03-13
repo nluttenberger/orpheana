@@ -847,18 +847,18 @@ function collect () {
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="GND" value="${vAuthorGND}"></input>`;
                 const paragraphs = text.querySelectorAll("paragraph");
-                let addNewPara;
                 paragraphs.forEach(paragraph => {
                     const vParagraph = paragraph.textContent;
                     innerContainer.innerHTML += `
-                        <label>wenn gefüllt</label>
+                        <label>Absatz</label>
                         <textarea class="full-text">${vParagraph}</textarea>`
-                        addNewPara = document.createElement("input");
-                        Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
-                        innerContainer.appendChild(addNewPara);  
-                        addNewPara.addEventListener("click", addParagraph);
+                    const addNewPara = document.createElement("input");
+                    Object.assign(addNewPara, {type: "button", name: "add_para", value: "++"});
+                    innerContainer.appendChild(addNewPara);   
                 });
                 fieldset.appendChild(innerContainer);
+                fieldset.querySelectorAll("input[name='add_para']").forEach(btn => {
+                    btn.addEventListener("click", addParagraph);
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
                 fieldset.appendChild(addNewText);
