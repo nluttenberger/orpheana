@@ -656,10 +656,10 @@ function collect () {
         // get short section data
         const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
         const short = {
-            sOpera:    formData.querySelector("short opera").textContent,
-            sComposer: formData.querySelector("short composer").textContent, 
-            sPlace:    formData.querySelector("short place").textContent,
-            sYear:     formData.querySelector("short year").textContent, 
+            sOpera:    formData.querySelector("short sOpera").textContent,
+            sComposer: formData.querySelector("short sComposer").textContent, 
+            sPlace:    formData.querySelector("short sPlace").textContent,
+            sYear:     formData.querySelector("short sYear").textContent, 
             sOrphID:   formData.querySelector("short orphID").textContent,
             sFimtID:   formData.querySelector("short fimtID").textContent
         }
