@@ -564,7 +564,6 @@ function collect () {
             button.setAttribute("name", "add_castline");
             button.setAttribute("value", "+");
             button.addEventListener("click", addCastLine);
-            //const clicked = event.target;
             clicked.target.insertAdjacentElement("afterend", labelRole);
             labelRole.insertAdjacentElement("afterend", role);
             role.insertAdjacentElement("afterend", labelArtist);
@@ -580,11 +579,12 @@ function collect () {
             paragraph.classList.add("full-text");
             const button = document.createElement("input");
             button.setAttribute("type", "button");
+            button.setAttribute("name", "add_paragraph");
             button.setAttribute("value", "+");
+            button.addEventListener("click", addParagraph);
             clicked.target.insertAdjacentElement("afterend", label);
             label.insertAdjacentElement("afterend", paragraph);
             paragraph.insertAdjacentElement("afterend", button);
-            button.addEventListener("click", addParagraph);
         }
     
         function addText(clicked) {
