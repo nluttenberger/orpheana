@@ -868,6 +868,7 @@ function collect () {
                     select.addEventListener("change", function() {
                         console.log(this.value);
                     });
+                    select.value = "anders";
                 });
             });
         }
