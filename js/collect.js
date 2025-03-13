@@ -873,8 +873,8 @@ function collect () {
                 }); 
                 console.log(vSubject);
                 console.log(vOccasion);
-                console.log(innerContainer.querySelector("select[name='subject']").value);
-                innerContainer.querySelector("select[name='occasion']").value = "anders";    
+                innerContainer.querySelector("select[name='subject']").value = vSubject;
+                innerContainer.querySelector("select[name='occasion']").value = vOccasion;
             });  
         }
         orph.appendChild(fieldset);
