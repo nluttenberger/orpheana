@@ -575,16 +575,17 @@ function collect () {
     
         function addParagraph(clicked) {
             const label = document.createElement("label");
+            label.textContent = "wenn frisch";
             const paragraph = document.createElement("textarea");
             paragraph.classList.add("full-text");
             const button = document.createElement("input");
             button.setAttribute("type", "button");
             button.setAttribute("name", "add_paragraph");
             button.setAttribute("value", "+");
-            button.addEventListener("click", addParagraph);
             clicked.target.insertAdjacentElement("afterend", label);
             label.insertAdjacentElement("afterend", paragraph);
             paragraph.insertAdjacentElement("afterend", button);
+            button.addEventListener("click", addParagraph);
         }
     
         function addText(clicked) {
@@ -799,7 +800,7 @@ function collect () {
                 <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="GND" value=""></input>
-                <label>Absatz</label>
+                <label>wenn leer</label>
                 <textarea class="full-text"></textarea>`;
                 const addNewPara = document.createElement("input");
                 Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
@@ -849,7 +850,7 @@ function collect () {
                 paragraphs.forEach(paragraph => {
                     const vParagraph = paragraph.textContent;
                     innerContainer.innerHTML += `
-                        <label>Absatz</label>
+                        <label>wenn gefüllt</label>
                         <textarea class="full-text">${vParagraph}</textarea>`
                         const addNewPara = document.createElement("input");
                         Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
