@@ -859,6 +859,7 @@ function collect () {
                 fieldset.appendChild(innerContainer);
                 fieldset.querySelectorAll("input[name='add_para']").forEach(btn => {
                     btn.addEventListener("click", addParagraph);
+                })
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
                 fieldset.appendChild(addNewText);
