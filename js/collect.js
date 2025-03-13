@@ -805,8 +805,8 @@ function collect () {
                 addNewPara = document.createElement("input");
                 Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
                 innerContainer.appendChild(addNewPara);
-                addNewPara.addEventListener("click", addParagraph);
                 fieldset.appendChild(innerContainer);
+                addNewPara.addEventListener("click", addParagraph);
                 addNewText = document.createElement("input");
                 Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
                 fieldset.appendChild(addNewText);
