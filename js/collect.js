@@ -575,7 +575,7 @@ function collect () {
     
         function addParagraph(clicked) {
             const label = document.createElement("label");
-            label.textContent = "wenn frisch";
+            label.textContent = "Absatz";
             const paragraph = document.createElement("textarea");
             paragraph.classList.add("full-text");
             const button = document.createElement("input");
@@ -853,7 +853,7 @@ function collect () {
                         <label>Absatz</label>
                         <textarea class="full-text">${vParagraph}</textarea>`
                     const addNewPara = document.createElement("input");
-                    Object.assign(addNewPara, {type: "button", name: "add_para", value: "++"});
+                    Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
                     innerContainer.appendChild(addNewPara);   
                 });
                 fieldset.appendChild(innerContainer);
