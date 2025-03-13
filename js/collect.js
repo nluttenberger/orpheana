@@ -873,8 +873,8 @@ function collect () {
                         console.log(this.value);
                     })
                 });
-                fieldset.querySelectorAll("select[name='subject']").value = vSubject;
-                fieldset.querySelectorAll("select[name='occasion']").value = vOccasion;     
+                fieldset.querySelector("select[name='subject']").value = vSubject;
+                fieldset.querySelector("select[name='occasion']").value = vOccasion;     
             });  
         }
         orph.appendChild(fieldset);
