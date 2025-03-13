@@ -822,7 +822,9 @@ function collect () {
                 const vAuthorGND = text.querySelector("authorGND").textContent; 
                 const vTitle = text.querySelector("title").textContent;
                 const vSubject = text.querySelector("subject").textContent;
+                console.log(vSubject);
                 const vOccasion = text.querySelector("occasion").textContent;
+                console.log(vOccasion);
                 innerContainer = document.createElement("div");
                 innerContainer.classList.add("form-container");
                 innerContainer.innerHTML += `
