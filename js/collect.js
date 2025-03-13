@@ -741,7 +741,7 @@ function collect () {
                 <input type="text" name="artist" value=""></input>
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="artistGND" value=""></input>`     
-            addNewCastLine = document.createElement("input");
+            const addNewCastLine = document.createElement("input");
             Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
             container.appendChild(addNewCastLine);
         } else {
@@ -756,7 +756,7 @@ function collect () {
                     <input type="text" name="artist" value="${vArtist}"></input>
                     <label class="GND-label">GND-ID</label>
                     <input type="text" name="artistGND" value="${vArtistGND}"></input>`     
-                addNewCastLine = document.createElement("input");
+                const addNewCastLine = document.createElement("input");
                 Object.assign(addNewCastLine, {type: "button", name: "add_castline", value: "+"});
                 container.appendChild(addNewCastLine);
             });
@@ -801,7 +801,7 @@ function collect () {
                 <input type="text" name="GND" value=""></input>
                 <label>Absatz</label>
                 <textarea class="full-text"></textarea>`;
-                addNewPara = document.createElement("input");
+                const addNewPara = document.createElement("input");
                 Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
                 innerContainer.appendChild(addNewPara);
                 fieldset.appendChild(innerContainer);
@@ -851,7 +851,7 @@ function collect () {
                     innerContainer.innerHTML += `
                         <label>Absatz</label>
                         <textarea class="full-text">${vParagraph}</textarea>`
-                        addNewPara = document.createElement("input");
+                        const addNewPara = document.createElement("input");
                         Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
                         innerContainer.appendChild(addNewPara);
                         addNewPara.addEventListener("click", addParagraph);
