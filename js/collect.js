@@ -822,9 +822,7 @@ function collect () {
                 const vAuthorGND = text.querySelector("authorGND").textContent; 
                 const vTitle = text.querySelector("title").textContent;
                 const vSubject = text.querySelector("subject").textContent;
-                console.log(vSubject);
                 const vOccasion = text.querySelector("occasion").textContent;
-                console.log(vOccasion);
                 innerContainer = document.createElement("div");
                 innerContainer.classList.add("form-container");
                 innerContainer.innerHTML += `
@@ -850,6 +848,10 @@ function collect () {
                 <input type="text" name="Author" value="${vAuthor}"></input>
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="GND" value="${vAuthorGND}"></input>`;
+                console.log(vSubject);
+                console.log(vOccasion);
+                innerContainer.querySelector("select[name='subject']").value = vSubject;
+                innerContainer.querySelector("select[name='occasion']").value = vOccasion;   
                 const paragraphs = text.querySelectorAll("paragraph");
                 paragraphs.forEach(paragraph => {
                     const vParagraph = paragraph.textContent;
@@ -872,9 +874,7 @@ function collect () {
                     select.addEventListener("change", function() {
                         console.log(this.value);
                     })
-                });
-                fieldset.querySelector("select[name='subject']").value = vSubject;
-                fieldset.querySelector("select[name='occasion']").value = vOccasion;     
+                });  
             });  
         }
         orph.appendChild(fieldset);
