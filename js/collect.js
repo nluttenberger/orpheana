@@ -821,6 +821,8 @@ function collect () {
                 const vAuthor = text.querySelector("author").textContent;
                 const vAuthorGND = text.querySelector("authorGND").textContent; 
                 const vTitle = text.querySelector("title").textContent;
+                const vSubject = text.querySelector("subject").textContent;
+                const vOccasion = text.querySelector("occasion").textContent;
                 innerContainer = document.createElement("div");
                 innerContainer.classList.add("form-container");
                 innerContainer.innerHTML += `
@@ -867,10 +869,11 @@ function collect () {
                 fieldset.querySelectorAll("select").forEach(select => {
                     select.addEventListener("change", function() {
                         console.log(this.value);
-                    });
-                    select.value = "anders";
+                    })
                 });
-            });
+                fieldset.querySelectorAll("select[name='subject']").value = vSubject;
+                fieldset.querySelectorAll("select[name='occasion']").value = vOccasion;     
+            });  
         }
         orph.appendChild(fieldset);
 
