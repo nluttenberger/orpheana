@@ -850,7 +850,7 @@ function collect () {
                 <input type="text" name="GND" value="${vAuthorGND}"></input>`;
                 console.log(vSubject);
                 console.log(vOccasion);
-                innerContainer.querySelector("select[name='subject']").value = 'anders';
+                console.log(innerContainer.querySelector("select[name='subject']").value);
                 innerContainer.querySelector("select[name='occasion']").value = vOccasion;   
                 const paragraphs = text.querySelectorAll("paragraph");
                 paragraphs.forEach(paragraph => {
