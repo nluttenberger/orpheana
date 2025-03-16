@@ -768,12 +768,12 @@ function collect () {
         });
         orph.appendChild(fieldset);
 
-        // texts section
+        // articles section
         fieldset = document.createElement("fieldset");
-        fieldset.setAttribute("id", "musicRelated");
-        fieldset.innerHTML = `<legend>Texte im Programmheft</legend>`;
+        fieldset.setAttribute("id", "articles");
+        fieldset.innerHTML = `<legend>Aufsätze im Programmheft</legend>`;
         container = fieldset.querySelector(".form-container");
-        texts = formData.querySelectorAll("musicRelated text");
+        texts = formData.querySelectorAll("articles text");
         if (texts.length === 0) {
             innerContainer = document.createElement("div");
             innerContainer.classList.add("form-container");
@@ -800,7 +800,7 @@ function collect () {
                 <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="GND" value=""></input>
-                <label>wenn leer</label>
+                <label>Absatz</label>
                 <textarea class="full-text"></textarea>`;
                 const addNewPara = document.createElement("input");
                 Object.assign(addNewPara, {type: "button", name: "add_para", value: "+"});
@@ -808,7 +808,7 @@ function collect () {
                 fieldset.appendChild(innerContainer);
                 addNewPara.addEventListener("click", addParagraph);
                 addNewText = document.createElement("input");
-                Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
+                Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Aufsatz"});
                 fieldset.appendChild(addNewText);
                 addNewText.addEventListener("click", addText);
                 fieldset.querySelectorAll("select").forEach(select => {

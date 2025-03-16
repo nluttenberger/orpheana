@@ -85,21 +85,19 @@
     </pdo:castList>
     <pdo:articles>
         <article>
-            <articleID></articleID>
             <author/>
             <authorGND/>
             <title>Der fliegende Holländer</title>
             <subject>Handlung</subject>
             <occasion>dediziert</occasion>
             <text>
-                <paragraph>Die Handlung: Seeleute haben vor vielen Jahren ein Bild des fliegenden Holländers in eine norwegische Hafenstadt gebracht und den Bewohnern dessen Geschichte erzählt. Der Holländer wurde - als Strafe für seine Hybris - zur ewigen Verdammnis verurteilt. Nur im Tod kann er Erlösung finden. Alle sieben Jahre darf er an Land gehen, um eine Frau zu finden, die ihn durch ihre Treue von seinem Fluch erlöst. Senta, die Tochter des Seemanns Daland, ist besessen von der Vorstellung, den Holländer zu erlösen. Mary, ihre Ver­traute, sieht voller Besorgnis, wie sich Senta immer mehr in ihrer visionären Welt verliert. Vergeblich versucht Mary, Senta in das Alltagsleben zurückzuführen.</paragraph>
+                <paragraph>Die Handlung: Seeleute haben vor vielen Jahren ein Bild des fliegenden Holländers in eine norwegische Hafenstadt gebracht und den Bewohnern dessen Geschichte erzählt. Der Holländer wurde - als Strafe für seine Hybris - zur ewigen Verdammnis verurteilt. Nur im Tod kann er Erlösung finden. Alle sieben Jahre darf er an Land gehen, um eine Frau zu finden, die ihn durch ihre Treue von seinem Fluch er­ löst. Senta, die Tochter des Seemanns Daland, ist besessen von der Vorstellung, den Holländer zu erlösen. Mary, ihre Ver­traute, sieht voller Besorgnis, wie sich Senta immer mehr in ihrer visionären Welt verliert. Vergeblich versucht Mary, Senta in das Alltagsleben zurückzuführen.</paragraph>
                 <paragraph>Erster Akt: Ein gewaltiger Sturm zwingt Daland, unweit seines Heimathafens in der Bucht von Sandwike vor Anker zu gehen. Daland und die erschöpfte Mannschaft begeben sich zur Ruhe, der Steuermann soll Wache halten. Übermüdet und durch merkwürdige Phantombilder verschreckt fällt er in eine Art Hypnose. Ein fremdes Schiff nähert sich, das des fliegenden Holländers. Dieser verflucht sein Schicksal. Als Daland nach dem Rechten sehen will, liegt ein fremdes Schiff neben seiem. Daland ist fasziniert von den Reichtümern des fremden Kapitäns. Als dieser Daland fragt, ob er eine Tochter hat, bietet Daland ihm diese sofort als Frau an. Der Sturm hat sich gelegt. Daland und seine Leute stechen in See, der Holländer will mit seinem schnellen Schiff nachkommen. </paragraph>
                 <paragraph>Zweiter Akt: In einer Textilfabrik, die Schiffsbedarf herstellt, arbeiten die Frauen. Nur Senta starrt auf das Bild des Holländers. Sie singt die Ballade, die seine Geschichte erzählt. Der Jäger Erik kommt und berichtet von der Rückkehr Dalands. Erik liebt Senta und will sie heiraten. Aber er ist entsetzt über ihr Verhalten. Voller Angst berichtet er ihr von einem Traum, in dem sie mit dem Holländer entflohen sei. Schließlich kehrt Daland heim und bringt einen fremden Mann mit, den Senta sofort erkennt. Ihre Traumvorstellungen werden ihr zur Gewißheit: sie will den fliegenden Holländer erlösen.</paragraph>
                 <paragraph>Dritter Akt: Im Städtchen feiern die Matrosen ausgelassen ihre Heimkehr. Aber unheimliche Stimmen vom Holländer-Schiff verjagen sie. Noch einmal versucht Erik, Senta vor dem Untergang zu retten. Er erinnert sie daran, ihm Treue gelobt zu haben. In ihren Gedanken hört Senta den Holländer, der sie nicht ins Verderben ziehen will und Befehl zum sofortigen Aufbruch gibt. Aber Senta hält ihr Versprechen: durch ihren Tod wird der Holländer erlöst. </paragraph>
             </text>
         </article>
         <article>
-            <articleID></articleID>
             <author>Petrika Ionesco</author>
             <authorGND>http://viaf.org/viaf/47024553</authorGND>
             <title>Notizen zur Konzeption</title>
@@ -118,7 +116,6 @@
             </text>
         </article>
         <article>
-            <articleID></articleID>
             <author>Petrika Ionesco</author>
             <authorGND>http://viaf.org/viaf/47024553</authorGND>
             <title>Gedanken zum Holländer</title>

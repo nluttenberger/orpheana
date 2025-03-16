@@ -121,18 +121,18 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         let paraCntr;
         let textElement;
 
-        // texts
-        const musicTexts = document.querySelectorAll("#musicRelated .form-container");
+        // articles
+        const articles = document.querySelectorAll("article");
         paraCntr = 0;
-        musicTexts.forEach(text => {
-            if (!(text.querySelector("input[name='Author']").value === "" && text.querySelector("input[name='GND']").value ==="" && text.querySelector("input[name='Title']").value ==="")) {
+        articles.forEach(article => {
+            if (!(article.querySelector("input[name='Author']").value === "" && article.querySelector("input[name='GND']").value ==="" && article.querySelector("input[name='Title']").value ==="")) {
                 textElement = orphXML.createElement("text");
                 textElement.innerHTML = `
-                    <author>${text.querySelector("input[name='Author']").value}</author>
-                    <authorGND>${text.querySelector("input[name='GND']").value}</authorGND>
-                    <title>${text.querySelector("input[name='Title']").value}</title>
-                    <subject>${text.querySelector("select[name='subject']").value}</subject>
-                    <occasion>${text.querySelector("select[name='occasion']").value}</occasion>`
+                    <author>${article.querySelector("input[name='Author']").value}</author>
+                    <authorGND>${article.querySelector("input[name='GND']").value}</authorGND>
+                    <title>${article.querySelector("input[name='Title']").value}</title>
+                    <subject>${article.querySelector("select[name='subject']").value}</subject>
+                    <occasion>${article.querySelector("select[name='occasion']").value}</occasion>`
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
@@ -146,11 +146,11 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
                     paraEl.value = "";
                     textElement.appendChild(paraEl);
                 }
-                musicRelated.appendChild(textElement);
+                article.appendChild(textElement);
                 })
             }
         })
-        orph.appendChild(musicRelated);
+        orph.appendChild(articles);
         return orph;
     }
     
