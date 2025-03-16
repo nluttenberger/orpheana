@@ -132,7 +132,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
                     <authorGND>${article.querySelector("input[name='GND']").value}</authorGND>
                     <title>${article.querySelector("input[name='Title']").value}</title>
                     <subject>${article.querySelector("select[name='subject']").value}</subject>
-                    <occasion>${article.querySelector("select[name='occasion']").value}</occasion>`
+                    <occasion>${article.querySelector("select[name='occasion']").value}</occasion>`;
                 const paragraphs = text.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
@@ -141,14 +141,15 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
                         textElement.appendChild(paragraph);
                         paraCntr += 1;
                     }
-                if (paraCntr === 0) {
-                    const paraEl = orphXML.createElement("paragraph")
-                    paraEl.value = "";
-                    textElement.appendChild(paraEl);
-                }
-                article.appendChild(textElement);
+                    if (paraCntr === 0) {
+                        const paraEl = orphXML.createElement("paragraph")
+                        paraEl.value = "";
+                        textElement.appendChild(paraEl);
+                    }
+                
                 })
-            }
+            articles.appendChild(article);  
+            }         
         })
         orph.appendChild(articles);
         return orph;
