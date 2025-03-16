@@ -126,7 +126,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         const containers = arts.querySelectorAll("div.form-container");
         paraCntr = 0;
         containers.forEach(container => {
-            if (!(container.querySelector("input[name='Author']").value === "" && article.querySelector("input[name='GND']").value ==="" && article.querySelector("input[name='Title']").value ==="")) {
+            if (!(container.querySelector("input[name='Author']").value === "" && container.querySelector("input[name='GND']").value ==="" && container.querySelector("input[name='Title']").value ==="")) {
                 article = orphXML.createElement("article");
                 article.innerHTML = `
                     <author>${article.querySelector("input[name='Author']").value}</author>
