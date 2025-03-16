@@ -119,36 +119,35 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         orph.appendChild(castList);
 
         let paraCntr;
-        let textElement;
+        let article;
 
         // articles
-        const articles = document.querySelector("#articles");
-        const artcles = document.querySelectorAll("div.form-container");
+        const articles = orphXML.createElement("articles");
+        const containers = document.querySelectorAll("div.form-container");
         paraCntr = 0;
-        artcles.forEach(article => {
-            if (!(article.querySelector("input[name='Author']").value === "" && article.querySelector("input[name='GND']").value ==="" && article.querySelector("input[name='Title']").value ==="")) {
-                textElement = orphXML.createElement("article");
-                textElement.innerHTML = `
+        containers.forEach(container => {
+            if (!(container.querySelector("input[name='Author']").value === "" && article.querySelector("input[name='GND']").value ==="" && article.querySelector("input[name='Title']").value ==="")) {
+                article = orphXML.createElement("article");
+                article.innerHTML = `
                     <author>${article.querySelector("input[name='Author']").value}</author>
                     <authorGND>${article.querySelector("input[name='GND']").value}</authorGND>
                     <title>${article.querySelector("input[name='Title']").value}</title>
                     <subject>${article.querySelector("select[name='subject']").value}</subject>
                     <occasion>${article.querySelector("select[name='occasion']").value}</occasion>`;
-                const paragraphs = text.querySelectorAll("textarea");
+                const paragraphs = container.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
                         const paragraph = orphXML.createElement("paragraph");
                         paragraph.innerHTML = para.value;
-                        textElement.appendChild(paragraph);
+                        article.appendChild(paragraph);
                         paraCntr += 1;
                     }
-                    if (paraCntr === 0) {
-                        const paraEl = orphXML.createElement("paragraph")
-                        paraEl.value = "";
-                        textElement.appendChild(paraEl);
-                    }
-                
                 })
+                if (paraCntr === 0) {
+                    const paraEl = orphXML.createElement("paragraph")
+                    paraEl.value = "";
+                    article.appendChild(paraEl);
+                }
             articles.appendChild(article);  
             }         
         })
