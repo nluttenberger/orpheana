@@ -134,22 +134,24 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
                     <title>${container.querySelector("input[name='Title']").value}</title>
                     <subject>${container.querySelector("select[name='subject']").value}</subject>
                     <occasion>${container.querySelector("select[name='occasion']").value}</occasion>`;
+                const text = orphXML.createElement("text");
                 const paragraphs = container.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
                         const paragraph = orphXML.createElement("paragraph");
                         paragraph.innerHTML = para.value;
-                        article.appendChild(paragraph);
+                        text.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 })
                 if (paraCntr === 0) {
                     const paraEl = orphXML.createElement("paragraph")
                     paraEl.value = "";
-                    article.appendChild(paraEl);
+                    text.appendChild(paraEl);
                 }
-            articles.appendChild(article);  
-            }         
+            article.appendChild(text);  
+            }
+            articles.appendChild(article);         
         })
         orph.appendChild(articles);
         return orph;
