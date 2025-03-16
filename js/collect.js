@@ -848,7 +848,7 @@ function collect () {
                 <input type="text" name="Author" value="${vAuthor}"></input>
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="GND" value="${vAuthorGND}"></input>`;
-                const paragraphs = text.querySelectorAll("paragraph");
+                const paragraphs = article.querySelectorAll("paragraph");
                 paragraphs.forEach(paragraph => {
                     const vParagraph = paragraph.textContent;
                     innerContainer.innerHTML += `
