@@ -122,8 +122,8 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         let textElement;
 
         // articles
-        const articles = document.querySelector("articles");
-        const artcles = document.querySelectorAll("article");
+        const articles = document.querySelector("#articles");
+        const artcles = document.querySelectorAll("div.form-container");
         paraCntr = 0;
         artcles.forEach(article => {
             if (!(article.querySelector("input[name='Author']").value === "" && article.querySelector("input[name='GND']").value ==="" && article.querySelector("input[name='Title']").value ==="")) {
