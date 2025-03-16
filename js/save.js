@@ -129,11 +129,11 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
             if (!(container.querySelector("input[name='Author']").value === "" && container.querySelector("input[name='GND']").value ==="" && container.querySelector("input[name='Title']").value ==="")) {
                 article = orphXML.createElement("article");
                 article.innerHTML = `
-                    <author>${article.querySelector("input[name='Author']").value}</author>
-                    <authorGND>${article.querySelector("input[name='GND']").value}</authorGND>
-                    <title>${article.querySelector("input[name='Title']").value}</title>
-                    <subject>${article.querySelector("select[name='subject']").value}</subject>
-                    <occasion>${article.querySelector("select[name='occasion']").value}</occasion>`;
+                    <author>${container.querySelector("input[name='Author']").value}</author>
+                    <authorGND>${container.querySelector("input[name='GND']").value}</authorGND>
+                    <title>${container.querySelector("input[name='Title']").value}</title>
+                    <subject>${container.querySelector("select[name='subject']").value}</subject>
+                    <occasion>${container.querySelector("select[name='occasion']").value}</occasion>`;
                 const paragraphs = container.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
