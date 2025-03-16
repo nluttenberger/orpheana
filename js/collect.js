@@ -773,8 +773,8 @@ function collect () {
         fieldset.setAttribute("id", "articles");
         fieldset.innerHTML = `<legend>Aufsätze im Programmheft</legend>`;
         container = fieldset.querySelector(".form-container");
-        texts = formData.querySelectorAll("articles text");
-        if (texts.length === 0) {
+        articles = formData.querySelectorAll("article");
+        if (articles.length === 0) {
             innerContainer = document.createElement("div");
             innerContainer.classList.add("form-container");
             innerContainer.innerHTML += `
@@ -817,12 +817,12 @@ function collect () {
                     });
                 });
         } else {
-            texts.forEach(text => {
-                const vAuthor = text.querySelector("author").textContent;
-                const vAuthorGND = text.querySelector("authorGND").textContent; 
-                const vTitle = text.querySelector("title").textContent;
-                const vSubject = text.querySelector("subject").textContent;
-                const vOccasion = text.querySelector("occasion").textContent;
+            articles.forEach(article => {
+                const vAuthor = article.querySelector("author").textContent;
+                const vAuthorGND = article.querySelector("authorGND").textContent; 
+                const vTitle = article.querySelector("title").textContent;
+                const vSubject = article.querySelector("subject").textContent;
+                const vOccasion = article.querySelector("occasion").textContent;
                 innerContainer = document.createElement("div");
                 innerContainer.classList.add("form-container");
                 innerContainer.innerHTML += `
@@ -863,7 +863,7 @@ function collect () {
                     btn.addEventListener("click", addParagraph);
                 })
                 addNewText = document.createElement("input");
-                Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Text"});
+                Object.assign(addNewText, {type: "button", name: "add_text", value: "weiterer Aufsatz"});
                 fieldset.appendChild(addNewText);
                 addNewText.addEventListener("click", addText);
                 fieldset.querySelectorAll("select").forEach(select => {

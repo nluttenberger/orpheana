@@ -126,7 +126,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         paraCntr = 0;
         articles.forEach(article => {
             if (!(article.querySelector("input[name='Author']").value === "" && article.querySelector("input[name='GND']").value ==="" && article.querySelector("input[name='Title']").value ==="")) {
-                textElement = orphXML.createElement("text");
+                textElement = orphXML.createElement("article");
                 textElement.innerHTML = `
                     <author>${article.querySelector("input[name='Author']").value}</author>
                     <authorGND>${article.querySelector("input[name='GND']").value}</authorGND>
