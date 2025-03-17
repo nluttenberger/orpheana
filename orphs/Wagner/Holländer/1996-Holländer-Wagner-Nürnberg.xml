@@ -1,82 +1,254 @@
-<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph"><pdo:short>
-            <sOpera>Holländer</sOpera>
-            <sComposer>Wagner</sComposer>
-            <sPlace>Nürnberg</sPlace>
-            <sYear>1996</sYear>
-            <orphID>orph-1e9e4312b720ee6845a4a2fb5631a1dd</orphID>
-            <fimtID>fimt-HollNbg96</fimtID></pdo:short><pdo:performance>
-            <opera>
-                <operaTitle>Der fliegende Holländer</operaTitle>
-                <operaGND>https://explore.gnd.network/gnd/300169752</operaGND>
-            </opera>
-            <composer>
-                <composerName>Richard Wagner</composerName>
-                <composerGND>https://explore.gnd.network/gnd/118594117</composerGND>
-            </composer>
-            <libretto>
-                <librettoName>Richard Wagner</librettoName>
-                <librettoGND>https://explore.gnd.network/gnd/118594117</librettoGND>
-            </libretto>
-            <firstPerformance>1843</firstPerformance>
-            <production>
-                <productionName>Städtische Bühnen Nürnberg</productionName>
-                <productionGND>https://explore.gnd.network/gnd/1004668-9</productionGND>
-            </production>
-            <stage>
-                <stageName>Städtische Bühnen Nürnberg</stageName>
-                <stageGND>https://explore.gnd.network/gnd/1004668-9</stageGND>
-            </stage>
-            <place>
-                <placeName>Nürnberg</placeName>
-                <placeGND>https://explore.gnd.network/gnd/4042742-0</placeGND>
-            </place>
-            <premiere>1996</premiere>
-            <director>
-                <directorName>Petrika Ionesco</directorName>
-                <directorGND>http://viaf.org/viaf/47024553</directorGND>
-            </director>
-            <conductor>
-                <conductorName>Christoph Kurig</conductorName>
-                <conductorGND/>
-            </conductor>
-            <dramatist>
-                <dramatistName/>
-                <dramatistGND/>
-            </dramatist>
-            <orchestra>
-                <orchestraName>Philharmonisches Orchester der Stadt Nürnberg</orchestraName>
-                <orchestraGND>https://explore.gnd.network/gnd/2076085-1</orchestraGND>    
-            </orchestra></pdo:performance><pdo:castList><cast>
-                    <role>Daland</role>
-                    <artist>Heinz-Klaus Ecker</artist>
-                    <artistGND>https://explore.gnd.network/gnd/134593189</artistGND></cast><cast>
-                    <role>Senta</role>
-                    <artist>Elizabeth Whitehouse</artist>
-                    <artistGND>https://explore.gnd.network/gnd/124150659</artistGND></cast><cast>
-                    <role>Erik</role>
-                    <artist>Karl-Heinz Thiemann</artist>
-                    <artistGND>https://explore.gnd.network/gnd/1330471822</artistGND></cast><cast>
-                    <role>Mary</role>
-                    <artist>Christa Puhlmann-Richter</artist>
-                    <artistGND>https://explore.gnd.network/gnd/143060643</artistGND></cast><cast>
-                    <role>Steuermann</role>
-                    <artist>Richard Kindley</artist>
-                    <artistGND>https://explore.gnd.network/gnd/141784768</artistGND></cast><cast>
-                    <role>Holländer</role>
-                    <artist>Michael Burt</artist>
-                    <artistGND>https://explore.gnd.network/gnd/123949653</artistGND></cast></pdo:castList><pdo:articles><article>
-                    <author/>
-                    <authorGND/>
-                    <title>Der fliegende Holländer</title>
-                    <subject>Handlung</subject>
-                    <occasion>dediziert</occasion><text><paragraph>Die Handlung: Seeleute haben vor vielen Jahren ein Bild des fliegenden Holländers in eine norwegische Hafenstadt gebracht und den Bewohnern dessen Geschichte erzählt. Der Holländer wurde - als Strafe für seine Hybris - zur ewigen Verdammnis verurteilt. Nur im Tod kann er Erlösung finden. Alle sieben Jahre darf er an Land gehen, um eine Frau zu finden, die ihn durch ihre Treue von seinem Fluch erlöst. Senta, die Tochter des Seemanns Daland, ist besessen von der Vorstellung, den Holländer zu erlösen. Mary, ihre Ver­traute, sieht voller Besorgnis, wie sich Senta immer mehr in ihrer visionären Welt verliert. Vergeblich versucht Mary, Senta in das Alltagsleben zurückzuführen.</paragraph><paragraph>blubbi</paragraph><paragraph>Erster Akt: Ein gewaltiger Sturm zwingt Daland, unweit seines Heimathafens in der Bucht von Sandwike vor Anker zu gehen. Daland und die erschöpfte Mannschaft begeben sich zur Ruhe, der Steuermann soll Wache halten. Übermüdet und durch merkwürdige Phantombilder verschreckt fällt er in eine Art Hypnose. Ein fremdes Schiff nähert sich, das des fliegenden Holländers. Dieser verflucht sein Schicksal. Als Daland nach dem Rechten sehen will, liegt ein fremdes Schiff neben seiem. Daland ist fasziniert von den Reichtümern des fremden Kapitäns. Als dieser Daland fragt, ob er eine Tochter hat, bietet Daland ihm diese sofort als Frau an. Der Sturm hat sich gelegt. Daland und seine Leute stechen in See, der Holländer will mit seinem schnellen Schiff nachkommen. </paragraph><paragraph>Zweiter Akt: In einer Textilfabrik, die Schiffsbedarf herstellt, arbeiten die Frauen. Nur Senta starrt auf das Bild des Holländers. Sie singt die Ballade, die seine Geschichte erzählt. Der Jäger Erik kommt und berichtet von der Rückkehr Dalands. Erik liebt Senta und will sie heiraten. Aber er ist entsetzt über ihr Verhalten. Voller Angst berichtet er ihr von einem Traum, in dem sie mit dem Holländer entflohen sei. Schließlich kehrt Daland heim und bringt einen fremden Mann mit, den Senta sofort erkennt. Ihre Traumvorstellungen werden ihr zur Gewißheit: sie will den fliegenden Holländer erlösen.</paragraph><paragraph>Dritter Akt: Im Städtchen feiern die Matrosen ausgelassen ihre Heimkehr. Aber unheimliche Stimmen vom Holländer-Schiff verjagen sie. Noch einmal versucht Erik, Senta vor dem Untergang zu retten. Er erinnert sie daran, ihm Treue gelobt zu haben. In ihren Gedanken hört Senta den Holländer, der sie nicht ins Verderben ziehen will und Befehl zum sofortigen Aufbruch gibt. Aber Senta hält ihr Versprechen: durch ihren Tod wird der Holländer erlöst. </paragraph></text></article><article>
-                    <author>Petrika Ionesco</author>
-                    <authorGND>http://viaf.org/viaf/47024553</authorGND>
-                    <title>Notizen zur Konzeption</title>
-                    <subject>Inszenierung</subject>
-                    <occasion>dediziert</occasion><text><paragraph>Senta: Die Verweigerung der anderen vor Sentas Welt. Ihre Art, die Liebe zu verstehen, die Realität zu erleben. Ihre Welt ist: der Mythos und der Tod. Senta bereitet sich auf den Tod vor - Geste von Sieg und Hilfslosigkeit. Senta ist depressiv, besessen und voller Abgründe.</paragraph><paragraph>Senta am Ende zu Eis erstarrt. Sie hat die/ihre Geschichte bis zum Ende gelebt, bis zur »Einfrierung«. Sie stirbt, um wiedergeboren zu werden. Vom Bild bleibt nur noch der Rahmen übrig.</paragraph><paragraph>Mary: Sie ist die erste, die sich Senta verweigert. Sie hat ihr die Geschichte vom Holländer erzählt und jetzt wird ihr klar, was sie damit angerichtet hat (Mord). Mary ist in ihrer Jugend eine potentielle Senta gewesen, die nicht den Mut hatte, sich das Leben zu nehmen. Im Prolog ihr Versuch, Senta zu helfen, daß sie dem Wahn entkommt. Mary zerstört das Bild. </paragraph><paragraph>Erstes Bild: Man darf nicht vergessen, daß wir in einem Hafen sind. Am Anfang und am Ende der Welt. Hängt davon ab, welche »Reisen«, »Erfahrungen« wir machen mußten. Eine Fabrik - Produkte für den Schiffshandel, Segel, Färbeartikel, Verpackungsstoffe. </paragraph><paragraph>Fassaden … Außenwände der Manufaktur. Eine Straße … Um aus der Manufaktur herauszukommen, müssen die Frauen einen kleinen verlassenen Friedhof überqueren. Ein Meditationsort? Im Norden - sagt man - sind die Friedhöfe nachts von den Toten bevölkert, tagsüber von den Familienangehörigen. Deswegen traut sich keiner, nachts in die Friedhöfe einzudringen, um die Toten nicht zu stören.</paragraph><paragraph>Die toten Seemänner auf den Ozeanen, ohne Begräbnis, ins Wasser geworfen, irren umher auf den Friedhöfen der Städte, von denen sie abgefahren sind. Romantisches Bild? Eher ein Ort ohne Entkommen, ein Ort der Verbindung mit der Poesie, mit anderen Dimensionen, ein Ort des Leidens, des Wahnsinns.</paragraph><paragraph>Daland: Sentas »Boss« Daland ist ein Händler. Er handelt sogar mit seiner eigenen Tochter. Mit dem Erstbesten, der Geld hat, mit einem merkwürdigen Fremden. Seine Erscheinung ist seltsam, mit einer seltsamen Rede. Die Begegnung der beiden findet im Niemandsland statt. Der Handel mit dem Teufel? Bizarres Rendezvous. Warum dieser Zufall? </paragraph><paragraph>Der Vater wird von Senta idealisiert, wie jede Vaterfigur. Allmächtig. Er wird sozusagen Sentas »Schlüssel«, um in das Universum des Holländers einzudringen, um sich seine Welt näherzubringen.</paragraph><paragraph>Der Holländer: Der Holländer erscheint mit dem Anker, mumifiziert, wie in einem Kokon. Alle sieben Jahre ... Die Dämonen (seine Mannschaft), aus der Erde erscheinend, helfen ihm, die Erde zu berühren. Er tritt aus einer anderen Dimension heraus. Wird wieder geboren. Der Steuermann ist davor hypnotisiert worden. </paragraph></text></article><article>
-                    <author>Petrika Ionesco</author>
-                    <authorGND>http://viaf.org/viaf/47024553</authorGND>
-                    <title>Gedanken zum Holländer</title>
-                    <subject>Inszenierung</subject>
-                    <occasion>dediziert</occasion><text><paragraph>Romantische Oper? Ein Musikdrama, das die Fundamente des Genres erschüttert. Auf alle Fälle ist der »Fliegende Holländer« das erste Werk der Musikgeschichte, in dem Wagner - nach dem Wort von Thomas Mann - den Mythus in die Oper einführt und die Oper durch den Mythus befreit. Tatsächlich ist diese Oper die Verbindung einer literarischen Enthüllung und einer Gefühlserfahrung, die Wagner selbst auf einer Seereise nach England mit seiner Frau Minna erlebt hatte, einer Emotion, die den »Fliegenden Holländer« von der Legende auf die Ebene erhebt, wo die Träume vor der Realität rangieren. Ist es nicht Sentas Traum, der die Erscheinung des Holländers heraufbeschwört? Ist es nicht dieses Verlangen, das den Traum verklärt und das verwünschte Schiff zu ihr bringt? Wie zahlreich sind heute die Sentas, die an der Wand neben dem Bett die Poster ihrer »Mythus«-Figuren anheften, die heute Elvis, Prince, Kennedy o.ä. heißen ... Ist der Bezug zwischen dem jungen Mädchen und dem Riesenposter an das Phantastische gebunden? Werden diese Stars von der Gesellschaft immer als »verfluchte« Wesen eingestuft? Betrachtet diese die Erotik einer derartigen Verbindung, die stärker als die Natur ist, als einen reinigenden Zustand? Viele Fragen könnte man sich stellen, bevor man sich den unwahrscheinlichen »Paaren« nähert. Es ist verständlich, daß in jener Epoche das Traumbild Sentas, der Mann, von dem sie in ihren langen Nächten träumt, der »Star« jener Zeit, ein finsterer wilder Mann ist, der Gott gelästert hat und sich - verflucht - als ruhelos Umherirrender wiederfindet. Senta will sich für ihn opfern, damit er real werde. Seine Keuschheit wird zur rechten Zeit für einen neuen Pakt schwach. Für den der Entweihung des Täglichen. Verfallener Traum - unerträglich. Der Tod - dieses absolute Mysterium, diese neue Erfahrung von Unbekanntem, sie allein bleibt - glaubwürdig. Die im Irdischen unmögliche Vereinigung ist besiegt. Senta bereitet sich auf den Tod vor, auf die »absolute« Vereinigung. Auf die Vereinigung mit sich selbst, weil sie selbst der fliegende Holländer ist. Sie verkleidet sich mit roten Segeln, die sie an ihren zitternden Körper preßt wie bei einer unheilbringenden Liebkosung. Sie träumt von dieser Liebe, die das Licht inmitten der Finsternis wiederbringt. Eine Finsternis, in der sie auf ihrem hölzernen Bett dahinsegelt wie auf dem phantastischen Schiff. Bisweilen werden die Poster lebendig, und das vor Sehnsucht brennende Wesen nähert sich und umarmt es voller Leidenschaft.</paragraph><paragraph>Der Holländer erscheint wie im Traum, während die Menschheit schläft. Ein Moment der Unaufmerksamkeit: die Mannschaft ruht, der Steuermann träumt vom Festland, in diesem Augenblick erscheint der lrrfahrer der Meere dem Zuschauer. Sein Reich ist das Jenseits, vor dem Tod, in Erwartung des Todes, ein »aufgeschobene«r Toter. Er träumt, der Ruhepunkte beraubt, in der Unendlichkeit des Horizonts. Dies ist eine moderne Form der Hölle: das höllische Gefängnis seines unverletzbaren Schiffes.</paragraph><paragraph>Der Ozean antwortet dem Holländer, der seinen Wunsch nach Macht mit äußerstem Willen gefordert hatte: der Holländer ist durch diesen Dämon verflucht, weil er ihn bezwingen wollte. Der Dämon hat ihn in sein Schiff wie in einen Sarg gesperrt, verdammt zum Leben, was der Holländer nicht mehr wünscht. Deshalb erscheint der Holländer den Menschen wie ein Monster aus dem Chaos der Meere. Ein Moloch, der in regelmäßigen Abständen von jungen Mädchen sein Opfer fordert. Weil er den Ozean besiegen wollte, ist er einem jener »Charon wider Willen« ähnlich geworden, die die jungen Seelen in die Unterwelt bringen.</paragraph><paragraph>Senta belebt einen halbgeheimen Mythus neu, einen mit einem dergestalteten Ende, daß ein geheiligter Raum um das Bild entsteht, das von nun an zum Zentrum der Welt wird. Durch den starken Glauben Sentas wird das Bild lebendig wie eine Gottheit, weil man ihr huldigt. Senta bereitet ihren Selbstmord vor, in Wahrheit: ihr Opfer. Sie will nicht allein sterben. Sie will in den Armen einer Gottheit sterben, für die Ewigkeit.</paragraph><paragraph>Die erste Bestätigung des reellen Planes ihrer Besessenheit ist Erik, der in ihr Unterbewußtsein eingedrungen ist, da sein Traum die erste objektive Bestätigung der Existenz des Holländers ist. Eine verhöhnte Verfolgte, sicher, aber in Sentas Welt ist dies die Realität. Senta wird als erfinderische und halluzinatorische Figur gesehen. Diese Sicht erlaubt den Einbruch des Übernatürlichen in die Realität. Die Pathologie Sentas dient als Unterstützung für das Phantastische. Das Werk ist nicht das einer Neurotikerin, will nicht die objektive Existenz von Phänomenen bestätigen, sondern ihre Glaubwürdigkeit versichern, indem es die Zweideutigkeit aufrecht erhält. Es ist der Glaube Sentas an die Existenz des Holländers, der sie als glaubwürdige Persönlichkeit bestätigt. Sie selbst anerkennt die Legende. In einem anderen Fall wäre das schrecklich. Wagner aber läßt den Zuschauer der gleichen Faszination wie Senta erliegen.</paragraph></text></article></pdo:articles></pdo:orph>
+<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph">
+    <pdo:short>
+        <sOpera>Holländer</sOpera>
+        <sComposer>Wagner</sComposer>
+        <sPlace>Nürnberg</sPlace>
+        <sYear>1996</sYear>
+        <orphID>orph-1e9e4312b720ee6845a4a2fb5631a1dd</orphID>
+        <fimtID>fimt-HollNbg96</fimtID>
+    </pdo:short>
+    <pdo:performance>
+        <opera>
+            <operaTitle>Der fliegende Holländer</operaTitle>
+            <operaGND>https://explore.gnd.network/gnd/300169752</operaGND>
+        </opera>
+        <composer>
+            <composerName>Richard Wagner</composerName>
+            <composerGND>https://explore.gnd.network/gnd/118594117</composerGND>
+        </composer>
+        <libretto>
+            <librettoName>Richard Wagner</librettoName>
+            <librettoGND>https://explore.gnd.network/gnd/118594117</librettoGND>
+        </libretto>
+        <firstPerformance>1843</firstPerformance>
+        <production>
+            <productionName>Städtische Bühnen Nürnberg</productionName>
+            <productionGND>https://explore.gnd.network/gnd/1004668-9</productionGND>
+        </production>
+        <stage>
+            <stageName>Städtische Bühnen Nürnberg</stageName>
+            <stageGND>https://explore.gnd.network/gnd/1004668-9</stageGND>
+        </stage>
+        <place>
+            <placeName>Nürnberg</placeName>
+            <placeGND>https://explore.gnd.network/gnd/4042742-0</placeGND>
+        </place>
+        <premiere>1996</premiere>
+        <director>
+            <directorName>Petrika Ionesco</directorName>
+            <directorGND>http://viaf.org/viaf/47024553</directorGND>
+        </director>
+        <conductor>
+            <conductorName>Christoph Kurig</conductorName>
+            <conductorGND />
+        </conductor>
+        <dramatist>
+            <dramatistName />
+            <dramatistGND />
+        </dramatist>
+        <orchestra>
+            <orchestraName>Philharmonisches Orchester der Stadt Nürnberg</orchestraName>
+            <orchestraGND>https://explore.gnd.network/gnd/2076085-1</orchestraGND>
+        </orchestra>
+    </pdo:performance>
+    <pdo:castList>
+        <cast>
+            <role>Daland</role>
+            <artist>Heinz-Klaus Ecker</artist>
+            <artistGND>https://explore.gnd.network/gnd/134593189</artistGND>
+        </cast>
+        <cast>
+            <role>Senta</role>
+            <artist>Elizabeth Whitehouse</artist>
+            <artistGND>https://explore.gnd.network/gnd/124150659</artistGND>
+        </cast>
+        <cast>
+            <role>Erik</role>
+            <artist>Karl-Heinz Thiemann</artist>
+            <artistGND>https://explore.gnd.network/gnd/1330471822</artistGND>
+        </cast>
+        <cast>
+            <role>Mary</role>
+            <artist>Christa Puhlmann-Richter</artist>
+            <artistGND>https://explore.gnd.network/gnd/143060643</artistGND>
+        </cast>
+        <cast>
+            <role>Steuermann</role>
+            <artist>Richard Kindley</artist>
+            <artistGND>https://explore.gnd.network/gnd/141784768</artistGND>
+        </cast>
+        <cast>
+            <role>Holländer</role>
+            <artist>Michael Burt</artist>
+            <artistGND>https://explore.gnd.network/gnd/123949653</artistGND>
+        </cast>
+    </pdo:castList>
+    <pdo:articles>
+        <article>
+            <author />
+            <authorGND />
+            <title>Der fliegende Holländer</title>
+            <subject>Handlung</subject>
+            <occasion>dediziert</occasion>
+            <text>
+                <paragraph>Die Handlung: Seeleute haben vor vielen Jahren ein Bild des fliegenden
+                    Holländers in eine norwegische Hafenstadt gebracht und den Bewohnern dessen
+                    Geschichte erzählt. Der Holländer wurde - als Strafe für seine Hybris - zur
+                    ewigen Verdammnis verurteilt. Nur im Tod kann er Erlösung finden. Alle sieben
+                    Jahre darf er an Land gehen, um eine Frau zu finden, die ihn durch ihre Treue
+                    von seinem Fluch erlöst. Senta, die Tochter des Seemanns Daland, ist besessen
+                    von der Vorstellung, den Holländer zu erlösen. Mary, ihre Ver­traute, sieht
+                    voller Besorgnis, wie sich Senta immer mehr in ihrer visionären Welt verliert.
+                    Vergeblich versucht Mary, Senta in das Alltagsleben zurückzuführen.</paragraph>
+                <paragraph>blubbi</paragraph>
+                <paragraph>Erster Akt: Ein gewaltiger Sturm zwingt Daland, unweit seines
+                    Heimathafens in der Bucht von Sandwike vor Anker zu gehen. Daland und die
+                    erschöpfte Mannschaft begeben sich zur Ruhe, der Steuermann soll Wache halten.
+                    Übermüdet und durch merkwürdige Phantombilder verschreckt fällt er in eine Art
+                    Hypnose. Ein fremdes Schiff nähert sich, das des fliegenden Holländers. Dieser
+                    verflucht sein Schicksal. Als Daland nach dem Rechten sehen will, liegt ein
+                    fremdes Schiff neben seiem. Daland ist fasziniert von den Reichtümern des
+                    fremden Kapitäns. Als dieser Daland fragt, ob er eine Tochter hat, bietet Daland
+                    ihm diese sofort als Frau an. Der Sturm hat sich gelegt. Daland und seine Leute
+                    stechen in See, der Holländer will mit seinem schnellen Schiff nachkommen. </paragraph>
+                <paragraph>Zweiter Akt: In einer Textilfabrik, die Schiffsbedarf herstellt, arbeiten
+                    die Frauen. Nur Senta starrt auf das Bild des Holländers. Sie singt die Ballade,
+                    die seine Geschichte erzählt. Der Jäger Erik kommt und berichtet von der
+                    Rückkehr Dalands. Erik liebt Senta und will sie heiraten. Aber er ist entsetzt
+                    über ihr Verhalten. Voller Angst berichtet er ihr von einem Traum, in dem sie
+                    mit dem Holländer entflohen sei. Schließlich kehrt Daland heim und bringt einen
+                    fremden Mann mit, den Senta sofort erkennt. Ihre Traumvorstellungen werden ihr
+                    zur Gewißheit: sie will den fliegenden Holländer erlösen.</paragraph>
+                <paragraph>Dritter Akt: Im Städtchen feiern die Matrosen ausgelassen ihre Heimkehr.
+                    Aber unheimliche Stimmen vom Holländer-Schiff verjagen sie. Noch einmal versucht
+                    Erik, Senta vor dem Untergang zu retten. Er erinnert sie daran, ihm Treue gelobt
+                    zu haben. In ihren Gedanken hört Senta den Holländer, der sie nicht ins
+                    Verderben ziehen will und Befehl zum sofortigen Aufbruch gibt. Aber Senta hält
+                    ihr Versprechen: durch ihren Tod wird der Holländer erlöst. </paragraph>
+            </text>
+        </article>
+        <article>
+            <author>Petrika Ionesco</author>
+            <authorGND>http://viaf.org/viaf/47024553</authorGND>
+            <title>Notizen zur Konzeption</title>
+            <subject>Inszenierung</subject>
+            <occasion>dediziert</occasion>
+            <text>
+                <paragraph>Senta: Die Verweigerung der anderen vor Sentas Welt. Ihre Art, die Liebe
+                    zu verstehen, die Realität zu erleben. Ihre Welt ist: der Mythos und der Tod.
+                    Senta bereitet sich auf den Tod vor - Geste von Sieg und Hilfslosigkeit. Senta
+                    ist depressiv, besessen und voller Abgründe.</paragraph>
+                <paragraph>Senta am Ende zu Eis erstarrt. Sie hat die/ihre Geschichte bis zum Ende
+                    gelebt, bis zur »Einfrierung«. Sie stirbt, um wiedergeboren zu werden. Vom Bild
+                    bleibt nur noch der Rahmen übrig.</paragraph>
+                <paragraph>Mary: Sie ist die erste, die sich Senta verweigert. Sie hat ihr die
+                    Geschichte vom Holländer erzählt und jetzt wird ihr klar, was sie damit
+                    angerichtet hat (Mord). Mary ist in ihrer Jugend eine potentielle Senta gewesen,
+                    die nicht den Mut hatte, sich das Leben zu nehmen. Im Prolog ihr Versuch, Senta
+                    zu helfen, daß sie dem Wahn entkommt. Mary zerstört das Bild. </paragraph>
+                <paragraph>Erstes Bild: Man darf nicht vergessen, daß wir in einem Hafen sind. Am
+                    Anfang und am Ende der Welt. Hängt davon ab, welche »Reisen«, »Erfahrungen« wir
+                    machen mußten. Eine Fabrik - Produkte für den Schiffshandel, Segel,
+                    Färbeartikel, Verpackungsstoffe. </paragraph>
+                <paragraph>Fassaden … Außenwände der Manufaktur. Eine Straße … Um aus der Manufaktur
+                    herauszukommen, müssen die Frauen einen kleinen verlassenen Friedhof überqueren.
+                    Ein Meditationsort? Im Norden - sagt man - sind die Friedhöfe nachts von den
+                    Toten bevölkert, tagsüber von den Familienangehörigen. Deswegen traut sich
+                    keiner, nachts in die Friedhöfe einzudringen, um die Toten nicht zu stören.</paragraph>
+                <paragraph>Die toten Seemänner auf den Ozeanen, ohne Begräbnis, ins Wasser geworfen,
+                    irren umher auf den Friedhöfen der Städte, von denen sie abgefahren sind.
+                    Romantisches Bild? Eher ein Ort ohne Entkommen, ein Ort der Verbindung mit der
+                    Poesie, mit anderen Dimensionen, ein Ort des Leidens, des Wahnsinns.</paragraph>
+                <paragraph>Daland: Sentas »Boss« Daland ist ein Händler. Er handelt sogar mit seiner
+                    eigenen Tochter. Mit dem Erstbesten, der Geld hat, mit einem merkwürdigen
+                    Fremden. Seine Erscheinung ist seltsam, mit einer seltsamen Rede. Die Begegnung
+                    der beiden findet im Niemandsland statt. Der Handel mit dem Teufel? Bizarres
+                    Rendezvous. Warum dieser Zufall? </paragraph>
+                <paragraph>Der Vater wird von Senta idealisiert, wie jede Vaterfigur. Allmächtig. Er
+                    wird sozusagen Sentas »Schlüssel«, um in das Universum des Holländers
+                    einzudringen, um sich seine Welt näherzubringen.</paragraph>
+                <paragraph>Der Holländer: Der Holländer erscheint mit dem Anker, mumifiziert, wie in
+                    einem Kokon. Alle sieben Jahre ... Die Dämonen (seine Mannschaft), aus der Erde
+                    erscheinend, helfen ihm, die Erde zu berühren. Er tritt aus einer anderen
+                    Dimension heraus. Wird wieder geboren. Der Steuermann ist davor hypnotisiert
+                    worden. </paragraph>
+            </text>
+        </article>
+        <article>
+            <author>Petrika Ionesco</author>
+            <authorGND>http://viaf.org/viaf/47024553</authorGND>
+            <title>Gedanken zum Holländer</title>
+            <subject>Inszenierung</subject>
+            <occasion>dediziert</occasion>
+            <text>
+                <paragraph>Romantische Oper? Ein Musikdrama, das die Fundamente des Genres
+                    erschüttert. Auf alle Fälle ist der »Fliegende Holländer« das erste Werk der
+                    Musikgeschichte, in dem Wagner - nach dem Wort von Thomas Mann - den Mythus in
+                    die Oper einführt und die Oper durch den Mythus befreit. Tatsächlich ist diese
+                    Oper die Verbindung einer literarischen Enthüllung und einer Gefühlserfahrung,
+                    die Wagner selbst auf einer Seereise nach England mit seiner Frau Minna erlebt
+                    hatte, einer Emotion, die den »Fliegenden Holländer« von der Legende auf die
+                    Ebene erhebt, wo die Träume vor der Realität rangieren. Ist es nicht Sentas
+                    Traum, der die Erscheinung des Holländers heraufbeschwört? Ist es nicht dieses
+                    Verlangen, das den Traum verklärt und das verwünschte Schiff zu ihr bringt? Wie
+                    zahlreich sind heute die Sentas, die an der Wand neben dem Bett die Poster ihrer
+                    »Mythus«-Figuren anheften, die heute Elvis, Prince, Kennedy o.ä. heißen ... Ist
+                    der Bezug zwischen dem jungen Mädchen und dem Riesenposter an das Phantastische
+                    gebunden? Werden diese Stars von der Gesellschaft immer als »verfluchte« Wesen
+                    eingestuft? Betrachtet diese die Erotik einer derartigen Verbindung, die stärker
+                    als die Natur ist, als einen reinigenden Zustand? Viele Fragen könnte man sich
+                    stellen, bevor man sich den unwahrscheinlichen »Paaren« nähert. Es ist
+                    verständlich, daß in jener Epoche das Traumbild Sentas, der Mann, von dem sie in
+                    ihren langen Nächten träumt, der »Star« jener Zeit, ein finsterer wilder Mann
+                    ist, der Gott gelästert hat und sich - verflucht - als ruhelos Umherirrender
+                    wiederfindet. Senta will sich für ihn opfern, damit er real werde. Seine
+                    Keuschheit wird zur rechten Zeit für einen neuen Pakt schwach. Für den der
+                    Entweihung des Täglichen. Verfallener Traum - unerträglich. Der Tod - dieses
+                    absolute Mysterium, diese neue Erfahrung von Unbekanntem, sie allein bleibt -
+                    glaubwürdig. Die im Irdischen unmögliche Vereinigung ist besiegt. Senta bereitet
+                    sich auf den Tod vor, auf die »absolute« Vereinigung. Auf die Vereinigung mit
+                    sich selbst, weil sie selbst der fliegende Holländer ist. Sie verkleidet sich
+                    mit roten Segeln, die sie an ihren zitternden Körper preßt wie bei einer
+                    unheilbringenden Liebkosung. Sie träumt von dieser Liebe, die das Licht inmitten
+                    der Finsternis wiederbringt. Eine Finsternis, in der sie auf ihrem hölzernen
+                    Bett dahinsegelt wie auf dem phantastischen Schiff. Bisweilen werden die Poster
+                    lebendig, und das vor Sehnsucht brennende Wesen nähert sich und umarmt es voller
+                    Leidenschaft.</paragraph>
+                <paragraph>Der Holländer erscheint wie im Traum, während die Menschheit schläft. Ein
+                    Moment der Unaufmerksamkeit: die Mannschaft ruht, der Steuermann träumt vom
+                    Festland, in diesem Augenblick erscheint der lrrfahrer der Meere dem Zuschauer.
+                    Sein Reich ist das Jenseits, vor dem Tod, in Erwartung des Todes, ein
+                    »aufgeschobene«r Toter. Er träumt, der Ruhepunkte beraubt, in der Unendlichkeit
+                    des Horizonts. Dies ist eine moderne Form der Hölle: das höllische Gefängnis
+                    seines unverletzbaren Schiffes.</paragraph>
+                <paragraph>Der Ozean antwortet dem Holländer, der seinen Wunsch nach Macht mit
+                    äußerstem Willen gefordert hatte: der Holländer ist durch diesen Dämon
+                    verflucht, weil er ihn bezwingen wollte. Der Dämon hat ihn in sein Schiff wie in
+                    einen Sarg gesperrt, verdammt zum Leben, was der Holländer nicht mehr wünscht.
+                    Deshalb erscheint der Holländer den Menschen wie ein Monster aus dem Chaos der
+                    Meere. Ein Moloch, der in regelmäßigen Abständen von jungen Mädchen sein Opfer
+                    fordert. Weil er den Ozean besiegen wollte, ist er einem jener »Charon wider
+                    Willen« ähnlich geworden, die die jungen Seelen in die Unterwelt bringen.</paragraph>
+                <paragraph>Senta belebt einen halbgeheimen Mythus neu, einen mit einem
+                    dergestalteten Ende, daß ein geheiligter Raum um das Bild entsteht, das von nun
+                    an zum Zentrum der Welt wird. Durch den starken Glauben Sentas wird das Bild
+                    lebendig wie eine Gottheit, weil man ihr huldigt. Senta bereitet ihren
+                    Selbstmord vor, in Wahrheit: ihr Opfer. Sie will nicht allein sterben. Sie will
+                    in den Armen einer Gottheit sterben, für die Ewigkeit.</paragraph>
+                <paragraph>Die erste Bestätigung des reellen Planes ihrer Besessenheit ist Erik, der
+                    in ihr Unterbewußtsein eingedrungen ist, da sein Traum die erste objektive
+                    Bestätigung der Existenz des Holländers ist. Eine verhöhnte Verfolgte, sicher,
+                    aber in Sentas Welt ist dies die Realität. Senta wird als erfinderische und
+                    halluzinatorische Figur gesehen. Diese Sicht erlaubt den Einbruch des
+                    Übernatürlichen in die Realität. Die Pathologie Sentas dient als Unterstützung
+                    für das Phantastische. Das Werk ist nicht das einer Neurotikerin, will nicht die
+                    objektive Existenz von Phänomenen bestätigen, sondern ihre Glaubwürdigkeit
+                    versichern, indem es die Zweideutigkeit aufrecht erhält. Es ist der Glaube
+                    Sentas an die Existenz des Holländers, der sie als glaubwürdige Persönlichkeit
+                    bestätigt. Sie selbst anerkennt die Legende. In einem anderen Fall wäre das
+                    schrecklich. Wagner aber läßt den Zuschauer der gleichen Faszination wie Senta
+                    erliegen.</paragraph>
+            </text>
+        </article>
+    </pdo:articles>
+</pdo:orph>
