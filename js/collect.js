@@ -651,17 +651,17 @@ function collect () {
         let fieldset;
         let container;
         let addNewText;
-        let texts;
+        let articles;
 
         // get short section data
         const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
         const short = {
-            sOpera:    formData.querySelector("short sOpera").textContent,
-            sComposer: formData.querySelector("short sComposer").textContent, 
-            sPlace:    formData.querySelector("short sPlace").textContent,
-            sYear:     formData.querySelector("short sYear").textContent, 
-            sOrphID:   formData.querySelector("short orphID").textContent,
-            sFimtID:   formData.querySelector("short fimtID").textContent
+            sOpera:    formData.querySelector("sOpera").textContent,
+            sComposer: formData.querySelector("sComposer").textContent, 
+            sPlace:    formData.querySelector("sPlace").textContent,
+            sYear:     formData.querySelector("sYear").textContent, 
+            sOrphID:   formData.querySelector("orphID").textContent,
+            sFimtID:   formData.querySelector("fimtID").textContent
         }
 
         // create outer fieldset for short section data

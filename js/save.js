@@ -51,10 +51,10 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
 
         // short
         short.innerHTML = `
-            <opera>${shortIN.sOpera}</opera>
-            <composer>${shortIN.sComposer}</composer>
-            <place>${shortIN.sPlace}</place>
-            <year>${shortIN.sYear}</year>
+            <sOpera>${shortIN.sOpera}</sOpera>
+            <sComposer>${shortIN.sComposer}</sComposer>
+            <sPlace>${shortIN.sPlace}</sPlace>
+            <sYear>${shortIN.sYear}</sYear>
             <orphID>${shortIN.sOrphID}</orphID>
             <fimtID>${shortIN.sFimtID}</fimtID>`;
         orph.appendChild(short);
