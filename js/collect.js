@@ -600,6 +600,7 @@ function collect () {
                             <option value="Handlung">Handlung</option>
                             <option value="Musik">Musik</option>
                             <option value="Rezeption">Rezeption</option>
+                            <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
                             <option value="anders">anders</option>
                         </select>
                         <select name="occasion">
@@ -787,6 +788,7 @@ function collect () {
                         <option value="Handlung">Handlung</option>
                         <option value="Musik">Musik</option>
                         <option value="Rezeption">Rezeption</option>
+                        <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
                         <option value="anders">anders</option>
                     </select>
                     <select name="occasion">
@@ -835,6 +837,7 @@ function collect () {
                         <option value="Handlung">Handlung</option>
                         <option value="Musik">Musik</option>
                         <option value="Rezeption">Rezeption</option>
+                        <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
                         <option value="anders">anders</option>
                     </select>
                     <select name="occasion">
