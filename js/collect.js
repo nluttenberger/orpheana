@@ -677,7 +677,7 @@ function collect () {
         body.appendChild(orph);
         
         // performance section
-        const vOpera = formData.querySelector("pdo:performance pdo:operaTitle").textContent;
+        const vOpera = formData.querySelector("operaTitle").textContent;
         const vOperaGND = formData.querySelector("pdo:performance pdo:operaGND").textContent;
         const vComposer = formData.querySelector("pdo:performance pdo:composerName").textContent;
         const vComposerGND = formData.querySelector("pdo:performance pdo:composerGND").textContent;
