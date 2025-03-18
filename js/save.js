@@ -166,11 +166,16 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         // cast list
         roles.forEach((role, index) => {
             if (!(roles[index].value === "" && artists[index].value === "" && artistGNDs[index].value === "")) {
-                const cast = orphXML.createElement("cast");
-                cast.innerHTML = `
-                    <role>${roles[index].value}</role>
-                    <artist>${artists[index].value}</artist>
-                    <artistGND>${artistGNDs[index].value}</artistGND>`;
+                const cast = orphXML.createElement("pdo:cast");
+                const roleEl = orphXML.createElement("pdo:role");
+                roleEl.innerHTML = roles[index].value;
+                cast.appendChild(roleEl);
+                const artistEl = orphXML.createElement("pdo:artist");  
+                artistEl.innerHTML = artists[index].value;
+                cast.appendChild(artistEl);
+                const artistGNDel = orphXML.createElement("pdo:artistGND");
+                artistGNDel.innerHTML = artistGNDs[index].value;
+                cast.appendChild(artistGNDel);
                 castList.appendChild(cast);
             }
         });
@@ -185,25 +190,34 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         paraCntr = 0;
         containers.forEach(container => {
             if (!(container.querySelector("input[name='Author']").value === "" && container.querySelector("input[name='GND']").value ==="" && container.querySelector("input[name='Title']").value ==="")) {
-                article = orphXML.createElement("article");
-                article.innerHTML = `
-                    <author>${container.querySelector("input[name='Author']").value}</author>
-                    <authorGND>${container.querySelector("input[name='GND']").value}</authorGND>
-                    <title>${container.querySelector("input[name='Title']").value}</title>
-                    <subject>${container.querySelector("select[name='subject']").value}</subject>
-                    <occasion>${container.querySelector("select[name='occasion']").value}</occasion>`;
-                const text = orphXML.createElement("text");
+                article = orphXML.createElement("pdo:article");
+                const author = orphXML.createElement("pdo:author");
+                author.innerHTML = container.querySelector("input[name='Author']").value;
+                article.appendChild(author);
+                const authorGND = orphXML.createElement("pdo:authorGND");
+                authorGND.innerHTML = container.querySelector("input[name='GND']").value;
+                article.appendChild(authorGND);
+                const title = orphXML.createElement("pdo:title");
+                title.innerHTML = container.querySelector("input[name='Title']").value;
+                article.appendChild(title);
+                const subject = orphXML.createElement("pdo:subject");
+                subject.innerHTML = container.querySelector("select[name='subject']").value;
+                article.appendChild(subject);
+                const occasion = orphXML.createElement("pdo:occasion");
+                occasion.innerHTML = container.querySelector("select[name='occasion']").value;
+                article.appendChild(occasion);
+                const text = orphXML.createElement("pdo:text");
                 const paragraphs = container.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
                     if (!(para.value === "")) {
-                        const paragraph = orphXML.createElement("paragraph");
+                        const paragraph = orphXML.createElement("pdo:paragraph");
                         paragraph.innerHTML = para.value;
                         text.appendChild(paragraph);
                         paraCntr += 1;
                     }
                 })
                 if (paraCntr === 0) {
-                    const paraEl = orphXML.createElement("paragraph")
+                    const paraEl = orphXML.createElement("pdo:paragraph")
                     paraEl.value = "";
                     text.appendChild(paraEl);
                 }
