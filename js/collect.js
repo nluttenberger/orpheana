@@ -734,7 +734,7 @@ function collect () {
         fieldset.setAttribute("id", "cast-list");
         fieldset.innerHTML = `<legend>Besetzung</legend><div class="cast-list-container"></div>`;
         container = fieldset.querySelector(".cast-list-container");
-        const casts = formData.querySelectorAll("pdo:castList pdo:cast");
+        const casts = formData.querySelectorAll("cast");
         if (casts.length === 0) {
             container.innerHTML += `
                 <label>Rolle</label>
@@ -748,9 +748,9 @@ function collect () {
             container.appendChild(addNewCastLine);
         } else {
             casts.forEach(cast => {
-                const vRole = cast.querySelector("pdo:role").textContent;
-                const vArtist = cast.querySelector("pdo:artist").textContent;
-                const vArtistGND = cast.querySelector("pdo:artistGND").textContent;
+                const vRole = cast.querySelector("role").textContent;
+                const vArtist = cast.querySelector("artist").textContent;
+                const vArtistGND = cast.querySelector("artistGND").textContent;
                 container.innerHTML += `
                     <label>Rolle</label>
                     <input type="text" name="role" value="${vRole}"></input>
