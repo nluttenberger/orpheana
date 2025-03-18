@@ -1,10 +1,10 @@
 <pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph"><pdo:short>
-            <sOpera>Holländer</sOpera>
-            <sComposer>Wagner</sComposer>
-            <sPlace>Nürnberg</sPlace>
-            <sYear>1996</sYear>
-            <orphID>orph-1e9e4312b720ee6845a4a2fb5631a1dd</orphID>
-            <fimtID>fimt-HollNbg96</fimtID></pdo:short><pdo:performance>
+            <pdo:sOpera xmlns:pdo="http://orpheana.de/ns/plainDataOrph">Holländer</pdo:sOpera>
+            <pdo:sComposer xmlns:pdo="http://orpheana.de/ns/plainDataOrph">Wagner</pdo:sComposer>
+            <pdo:sPlace xmlns:pdo="http://orpheana.de/ns/plainDataOrph">Nürnberg</pdo:sPlace>
+            <pdo:sYear xmlns:pdo="http://orpheana.de/ns/plainDataOrph">1996</pdo:sYear>
+            <pdo:orphID xmlns:pdo="http://orpheana.de/ns/plainDataOrph">orph-1e9e4312b720ee6845a4a2fb5631a1dd</pdo:orphID>
+            <pdo:fimtID xmlns:pdo="http://orpheana.de/ns/plainDataOrph">fimt-HollNbg96</pdo:fimtID></pdo:short><pdo:performance>
             <opera>
                 <operaTitle>Der fliegende Holländer</operaTitle>
                 <operaGND>https://explore.gnd.network/gnd/300169752</operaGND>
