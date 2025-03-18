@@ -677,28 +677,28 @@ function collect () {
         body.appendChild(orph);
         
         // performance section
-        const vOpera = formData.querySelector("performance operaTitle").textContent;
-        const vOperaGND = formData.querySelector("performance operaGND").textContent;
-        const vComposer = formData.querySelector("performance composerName").textContent;
-        const vComposerGND = formData.querySelector("performance composerGND").textContent;
-        const vLibretto = formData.querySelector("performance librettoName").textContent;
-        const vLibrettoGND = formData.querySelector("performance librettoGND").textContent;
-        const vFirstPerformance = formData.querySelector("performance firstPerformance").textContent;
-        const vProduction = formData.querySelector("performance productionName").textContent;
-        const vProductionGND = formData.querySelector("performance productionGND").textContent;
-        const vStage = formData.querySelector("performance stageName").textContent;
-        const vStageGND = formData.querySelector("performance stageGND").textContent;
-        const vPlace = formData.querySelector("performance placeName").textContent; 
-        const vPlaceGND = formData.querySelector("performance placeGND").textContent;
-        const vPremiere = formData.querySelector("performance premiere").textContent;
-        const vDirector = formData.querySelector("performance directorName").textContent;
-        const vDirectorGND = formData.querySelector("performance directorGND").textContent;
-        const vConductor = formData.querySelector("performance conductorName").textContent;
-        const vConductorGND = formData.querySelector("performance conductorGND").textContent;
-        const vDramatist = formData.querySelector("performance dramatistName").textContent;
-        const vDramatistGND = formData.querySelector("performance dramatistGND").textContent;
-        const vOrchestra = formData.querySelector("performance orchestraName").textContent;
-        const vOrchestraGND = formData.querySelector("performance orchestraGND").textContent;
+        const vOpera = formData.querySelector("pdo:performance pdo:operaTitle").textContent;
+        const vOperaGND = formData.querySelector("pdo:performance pdo:operaGND").textContent;
+        const vComposer = formData.querySelector("pdo:performance pdo:composerName").textContent;
+        const vComposerGND = formData.querySelector("pdo:performance pdo:composerGND").textContent;
+        const vLibretto = formData.querySelector("pdo:performance pdo:librettoName").textContent;
+        const vLibrettoGND = formData.querySelector("pdo:performance pdo:librettoGND").textContent;
+        const vFirstPerformance = formData.querySelector("pdo:performance pdo:firstPerformance").textContent;
+        const vProduction = formData.querySelector("pdo:performance pdo:productionName").textContent;
+        const vProductionGND = formData.querySelector("pdo:performance pdo:productionGND").textContent;
+        const vStage = formData.querySelector("pdo:performance pdo:stageName").textContent;
+        const vStageGND = formData.querySelector("pdo:performance pdo:stageGND").textContent;
+        const vPlace = formData.querySelector("pdo:performance pdo:placeName").textContent; 
+        const vPlaceGND = formData.querySelector("pdo:performance pdo:placeGND").textContent;
+        const vPremiere = formData.querySelector("pdo:performance pdo:premiere").textContent;
+        const vDirector = formData.querySelector("pdo:performance pdo:directorName").textContent;
+        const vDirectorGND = formData.querySelector("pdo:performance pdo:directorGND").textContent;
+        const vConductor = formData.querySelector("pdo:performance pdo:conductorName").textContent;
+        const vConductorGND = formData.querySelector("pdo:performance pdo:conductorGND").textContent;
+        const vDramatist = formData.querySelector("pdo:performance pdo:dramatistName").textContent;
+        const vDramatistGND = formData.querySelector("pdo:performance pdo:dramatistGND").textContent;
+        const vOrchestra = formData.querySelector("pdo:performance pdo:orchestraName").textContent;
+        const vOrchestraGND = formData.querySelector("pdo:performance pdo:orchestraGND").textContent;
         section = 
             { id: "performance", legend: "Aufführung", fields: [
                 { label: "Oper", value: vOpera, name: "opera", gnd: vOperaGND },
@@ -734,7 +734,7 @@ function collect () {
         fieldset.setAttribute("id", "cast-list");
         fieldset.innerHTML = `<legend>Besetzung</legend><div class="cast-list-container"></div>`;
         container = fieldset.querySelector(".cast-list-container");
-        const casts = formData.querySelectorAll("castList cast");
+        const casts = formData.querySelectorAll("pdo:castList pdo:cast");
         if (casts.length === 0) {
             container.innerHTML += `
                 <label>Rolle</label>
@@ -748,9 +748,9 @@ function collect () {
             container.appendChild(addNewCastLine);
         } else {
             casts.forEach(cast => {
-                const vRole = cast.querySelector("role").textContent;
-                const vArtist = cast.querySelector("artist").textContent;
-                const vArtistGND = cast.querySelector("artistGND").textContent;
+                const vRole = cast.querySelector("pdo:role").textContent;
+                const vArtist = cast.querySelector("pdo:artist").textContent;
+                const vArtistGND = cast.querySelector("pdo:artistGND").textContent;
                 container.innerHTML += `
                     <label>Rolle</label>
                     <input type="text" name="role" value="${vRole}"></input>
