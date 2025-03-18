@@ -71,49 +71,96 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         orph.appendChild(short);
 
         // performance
-        performance.innerHTML = `
-            <opera>
-                <operaTitle>${opera}</operaTitle>
-                <operaGND>${operaGND}</operaGND>
-            </opera>
-            <composer>
-                <composerName>${composer}</composerName>
-                <composerGND>${composerGND}</composerGND>
-            </composer>
-            <libretto>
-                <librettoName>${libretto}</librettoName>
-                <librettoGND>${librettoGND}</librettoGND>
-            </libretto>
-            <firstPerformance>${firstPerformance}</firstPerformance>
-            <production>
-                <productionName>${production}</productionName>
-                <productionGND>${productionGND}</productionGND>
-            </production>
-            <stage>
-                <stageName>${stage}</stageName>
-                <stageGND>${stageGND}</stageGND>
-            </stage>
-            <place>
-                <placeName>${place}</placeName>
-                <placeGND>${placeGND}</placeGND>
-            </place>
-            <premiere>${premiere}</premiere>
-            <director>
-                <directorName>${director}</directorName>
-                <directorGND>${directorGND}</directorGND>
-            </director>
-            <conductor>
-                <conductorName>${conductor}</conductorName>
-                <conductorGND>${conductorGND}</conductorGND>
-            </conductor>
-            <dramatist>
-                <dramatistName>${dramatist}</dramatistName>
-                <dramatistGND>${dramatistGND}</dramatistGND>
-            </dramatist>
-            <orchestra>
-                <orchestraName>${orchestra}</orchestraName>
-                <orchestraGND>${orchestraGND}</orchestraGND>    
-            </orchestra>`;
+        const operaEl = orphXML.createElement("pdo:opera");
+        const composerEl = orphXML.createElement("pdo:composer");
+        const librettoEl = orphXML.createElement("pdo:libretto");
+        const productionEl = orphXML.createElement("pdo:production");
+        const stageEl = orphXML.createElement("pdo:stage");
+        const placeEl = orphXML.createElement("pdo:place");
+        const directorEl = orphXML.createElement("pdo:director");
+        const conductorEl = orphXML.createElement("pdo:conductor");
+        const dramatistEl = orphXML.createElement("pdo:dramatist");
+        const orchestraEl = orphXML.createElement("pdo:orchestra");
+
+        const operaTitle = orphXML.createElement("pdo:operaTitle");
+        operaTitle.innerHTML = opera; 
+        operaEl.appendChild(operaTitle);
+        const operaGNDel = orphXML.createElement("pdo:operaGND");
+        operaGNDel.innerHTML = operaGND;
+        operaEl.appendChild(operaGNDel);
+        performance.appendChild(operaEl);
+
+        const composerName = orphXML.createElement("pdo:composerName");
+        composerName.innerHTML = composer; 
+        composerEl.appendChild(composerName);
+        const composerGNDel = orphXML.createElement("pdo:composerGND");
+        composerGNDel.innerHTML = composerGND;
+        composerEl.appendChild(composerGNDel);
+        performance.appendChild(composerEl);
+
+        const librettoName = orphXML.createElement("pdo:librettoName");
+        librettoName.innerHTML = libretto;
+        librettoEl.appendChild(librettoName);
+        const librettoGNDel = orphXML.createElement("pdo:librettoGND");
+        librettoGNDel.innerHTML = librettoGND;
+        librettoEl.appendChild(librettoGNDel); 
+        performance.appendChild(librettoEl);
+
+        const productionName = orphXML.createElement("pdo:productionName");
+        productionName.innerHTML = production;
+        productionEl.appendChild(productionName);
+        const productionGNDel = orphXML.createElement("pdo:productionGND");
+        productionGNDel.innerHTML = productionGND;
+        productionEl.appendChild(productionGNDel);
+        performance.appendChild(productionEl);
+
+        const stageName = orphXML.createElement("pdo:stageName");
+        stageName.innerHTML = stage;
+        stageEl.appendChild(stageName);
+        const stageGNDel = orphXML.createElement("pdo:stageGND");
+        stageGNDel.innerHTML = stageGND;
+        stageEl.appendChild(stageGNDel);
+        performance.appendChild(stageEl);
+
+        const placeName = orphXML.createElement("pdo:placeName");
+        placeName.innerHTML = place;
+        placeEl.appendChild(placeName);
+        const placeGNDel = orphXML.createElement("pdo:placeGND");
+        placeGNDel.innerHTML = placeGND;
+        placeEl.appendChild(placeGNDel);   
+
+        const directorName = orphXML.createElement("pdo:directorName");
+        directorName.innerHTML = director;
+        directorEl.appendChild(directorName);
+        const directorGNDel = orphXML.createElement("pdo:directorGND"); 
+        directorGNDel.innerHTML = directorGND;
+        directorEl.appendChild(directorGNDel);
+        performance.appendChild(directorEl);
+
+        const conductorName = orphXML.createElement("pdo:conductorName");
+        conductorName.innerHTML = conductor;
+        conductorEl.appendChild(conductorName);
+        const conductorGNDel = orphXML.createElement("pdo:conductorGND");
+        conductorGNDel.innerHTML = conductorGND;
+        conductorEl.appendChild(conductorGNDel);
+        performance.appendChild(conductorEl);
+
+        const dramatistName = orphXML.createElement("pdo:dramatistName");
+        dramatistName.innerHTML = dramatist;
+        dramatistEl.appendChild(dramatistName);
+        const dramatistGNDel = orphXML.createElement("pdo:dramatistGND");
+        dramatistGNDel.innerHTML = dramatistGND;
+        dramatistEl.appendChild(dramatistGNDel);
+        performance.appendChild(dramatistEl);
+
+        const orchestraName = orphXML.createElement("pdo:orchestraName");
+        orchestraName.innerHTML = orchestra;
+        orchestraEl.appendChild(orchestraName);
+        const orchestraGNDel = orphXML.createElement("pdo:orchestraGND");
+        orchestraGNDel.innerHTML = orchestraGND;
+        orchestraEl.appendChild(orchestraGNDel);
+        performance.appendChild(orchestraEl);
+
         orph.appendChild(performance);
 
         // cast list
