@@ -50,13 +50,24 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         const articles = orphXML.createElement("pdo:articles");
 
         // short
-        short.innerHTML = `
-            <pdo:sOpera  xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sOpera}</pdo:sOpera>
-            <pdo:sComposer xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sComposer}</pdo:sComposer>
-            <pdo:sPlace xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sPlace}</pdo:sPlace>
-            <pdo:sYear xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sYear}</pdo:sYear>
-            <pdo:orphID xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sOrphID}</pdo:orphID>
-            <pdo:fimtID xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sFimtID}</pdo:fimtID>`;
+        const sOpera = orphXML.createElement("pdo:sOpera");
+        sOpera.innerHTML = shortIN.sOpera;
+        short.appendChild(sOpera);
+        const sComposer = orphXML.createElement("pdo:sComposer");
+        sComposer.innerHTML = shortIN.sComposer;
+        short.appendChild(sComposer);
+        const sPlace = orphXML.createElement("pdo:sPlace"); 
+        sPlace.innerHTML = shortIN.sPlace;
+        short.appendChild(sPlace);  
+        const sYear = orphXML.createElement("pdo:sYear");
+        sYear.innerHTML = shortIN.sYear; 
+        short.appendChild(sYear);
+        const sOrphID = orphXML.createElement("pdo:orphID");
+        sOrphID.innerHTML = shortIN.sOrphID;
+        short.appendChild(sOrphID);
+        const sFimtID = orphXML.createElement("pdo:fimtID");
+        sFimtID.innerHTML = shortIN.sFimtID;
+        short.appendChild(sFimtID);
         orph.appendChild(short);
 
         // performance
