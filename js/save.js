@@ -51,12 +51,12 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
 
         // short
         short.innerHTML = `
-            <pdo:sOpera>${shortIN.sOpera}</pdo:sOpera>
-            <sComposer>${shortIN.sComposer}</sComposer>
-            <sPlace>${shortIN.sPlace}</sPlace>
-            <sYear>${shortIN.sYear}</sYear>
-            <orphID>${shortIN.sOrphID}</orphID>
-            <fimtID>${shortIN.sFimtID}</fimtID>`;
+            <pdo:sOpera  xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sOpera}</pdo:sOpera>
+            <pdo:sComposer xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sComposer}</pdo:sComposer>
+            <pdo:sPlace xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sPlace}</pdo:sPlace>
+            <pdo:sYear xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sYear}</pdo:sYear>
+            <pdo:orphID xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sOrphID}</pdo:orphID>
+            <pdo:fimtID xmlns:pdo="http://orpheana.de/ns/plainDataOrph">${shortIN.sFimtID}</pdo:fimtID>`;
         orph.appendChild(short);
 
         // performance
