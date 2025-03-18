@@ -51,7 +51,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
 
         // short
         short.innerHTML = `
-            <sOpera>${shortIN.sOpera}</sOpera>
+            <pdo:sOpera>${shortIN.sOpera}</pdo:sOpera>
             <sComposer>${shortIN.sComposer}</sComposer>
             <sPlace>${shortIN.sPlace}</sPlace>
             <sYear>${shortIN.sYear}</sYear>
