@@ -1,46 +1,4 @@
-<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph"><pdo:short><pdo:sOpera>Holländer</pdo:sOpera><pdo:sComposer>Wagner</pdo:sComposer><pdo:sPlace>Nürnberg</pdo:sPlace><pdo:sYear>1996</pdo:sYear><pdo:orphID>orph-1e9e4312b720ee6845a4a2fb5631a1dd</pdo:orphID><pdo:fimtID>fimt-HollNbg96</pdo:fimtID></pdo:short><pdo:performance>
-            <opera>
-                <operaTitle>Der fliegende Holländer</operaTitle>
-                <operaGND>https://explore.gnd.network/gnd/300169752</operaGND>
-            </opera>
-            <composer>
-                <composerName>Richard Wagner</composerName>
-                <composerGND>https://explore.gnd.network/gnd/118594117</composerGND>
-            </composer>
-            <libretto>
-                <librettoName>Richard Wagner</librettoName>
-                <librettoGND>https://explore.gnd.network/gnd/118594117</librettoGND>
-            </libretto>
-            <firstPerformance>1843</firstPerformance>
-            <production>
-                <productionName>Städtische Bühnen Nürnberg</productionName>
-                <productionGND>https://explore.gnd.network/gnd/1004668-9</productionGND>
-            </production>
-            <stage>
-                <stageName>Städtische Bühnen Nürnberg</stageName>
-                <stageGND>https://explore.gnd.network/gnd/1004668-9</stageGND>
-            </stage>
-            <place>
-                <placeName>Nürnberg</placeName>
-                <placeGND>https://explore.gnd.network/gnd/4042742-0</placeGND>
-            </place>
-            <premiere>1996</premiere>
-            <director>
-                <directorName>Petrika Ionesco</directorName>
-                <directorGND>http://viaf.org/viaf/47024553</directorGND>
-            </director>
-            <conductor>
-                <conductorName>Christoph Kurig</conductorName>
-                <conductorGND/>
-            </conductor>
-            <dramatist>
-                <dramatistName/>
-                <dramatistGND/>
-            </dramatist>
-            <orchestra>
-                <orchestraName>Philharmonisches Orchester der Stadt Nürnberg</orchestraName>
-                <orchestraGND>https://explore.gnd.network/gnd/2076085-1</orchestraGND>    
-            </orchestra></pdo:performance><pdo:castList><cast>
+<pdo:orph xmlns:pdo="http://orpheana.de/ns/plainDataOrph"><pdo:short><pdo:sOpera>Holländer</pdo:sOpera><pdo:sComposer>Wagner</pdo:sComposer><pdo:sPlace>Nürnberg</pdo:sPlace><pdo:sYear>1996</pdo:sYear><pdo:orphID>orph-1e9e4312b720ee6845a4a2fb5631a1dd</pdo:orphID><pdo:fimtID>fimt-HollNbg96</pdo:fimtID></pdo:short><pdo:performance><pdo:opera><pdo:operaTitle>Der fliegende Holländer</pdo:operaTitle><pdo:operaGND>https://explore.gnd.network/gnd/300169752</pdo:operaGND></pdo:opera><pdo:composer><pdo:composerName>Richard Wagner</pdo:composerName><pdo:composerGND>https://explore.gnd.network/gnd/118594117</pdo:composerGND></pdo:composer><pdo:libretto><pdo:librettoName>Richard Wagner</pdo:librettoName><pdo:librettoGND>https://explore.gnd.network/gnd/118594117</pdo:librettoGND></pdo:libretto><pdo:production><pdo:productionName>Städtische Bühnen Nürnberg</pdo:productionName><pdo:productionGND>https://explore.gnd.network/gnd/1004668-9</pdo:productionGND></pdo:production><pdo:stage><pdo:stageName>Städtische Bühnen Nürnberg</pdo:stageName><pdo:stageGND>https://explore.gnd.network/gnd/1004668-9</pdo:stageGND></pdo:stage><pdo:director><pdo:directorName>Petrika Ionesco</pdo:directorName><pdo:directorGND>http://viaf.org/viaf/47024553</pdo:directorGND></pdo:director><pdo:conductor><pdo:conductorName>Christoph Kurig</pdo:conductorName><pdo:conductorGND/></pdo:conductor><pdo:dramatist><pdo:dramatistName/><pdo:dramatistGND/></pdo:dramatist><pdo:orchestra><pdo:orchestraName>Philharmonisches Orchester der Stadt Nürnberg</pdo:orchestraName><pdo:orchestraGND>https://explore.gnd.network/gnd/2076085-1</pdo:orchestraGND></pdo:orchestra></pdo:performance><pdo:castList><cast>
                     <role>Daland</role>
                     <artist>Heinz-Klaus Ecker</artist>
                     <artistGND>https://explore.gnd.network/gnd/134593189</artistGND></cast><cast>
