@@ -678,27 +678,27 @@ function collect () {
         
         // performance section
         const vOpera = formData.querySelector("operaTitle").textContent;
-        const vOperaGND = formData.querySelector("pdo:performance pdo:operaGND").textContent;
-        const vComposer = formData.querySelector("pdo:performance pdo:composerName").textContent;
-        const vComposerGND = formData.querySelector("pdo:performance pdo:composerGND").textContent;
-        const vLibretto = formData.querySelector("pdo:performance pdo:librettoName").textContent;
-        const vLibrettoGND = formData.querySelector("pdo:performance pdo:librettoGND").textContent;
-        const vFirstPerformance = formData.querySelector("pdo:performance pdo:firstPerformance").textContent;
-        const vProduction = formData.querySelector("pdo:performance pdo:productionName").textContent;
-        const vProductionGND = formData.querySelector("pdo:performance pdo:productionGND").textContent;
-        const vStage = formData.querySelector("pdo:performance pdo:stageName").textContent;
-        const vStageGND = formData.querySelector("pdo:performance pdo:stageGND").textContent;
-        const vPlace = formData.querySelector("pdo:performance pdo:placeName").textContent; 
-        const vPlaceGND = formData.querySelector("pdo:performance pdo:placeGND").textContent;
-        const vPremiere = formData.querySelector("pdo:performance pdo:premiere").textContent;
-        const vDirector = formData.querySelector("pdo:performance pdo:directorName").textContent;
-        const vDirectorGND = formData.querySelector("pdo:performance pdo:directorGND").textContent;
-        const vConductor = formData.querySelector("pdo:performance pdo:conductorName").textContent;
-        const vConductorGND = formData.querySelector("pdo:performance pdo:conductorGND").textContent;
-        const vDramatist = formData.querySelector("pdo:performance pdo:dramatistName").textContent;
-        const vDramatistGND = formData.querySelector("pdo:performance pdo:dramatistGND").textContent;
-        const vOrchestra = formData.querySelector("pdo:performance pdo:orchestraName").textContent;
-        const vOrchestraGND = formData.querySelector("pdo:performance pdo:orchestraGND").textContent;
+        const vOperaGND = formData.querySelector("operaGND").textContent;
+        const vComposer = formData.querySelector("composerName").textContent;
+        const vComposerGND = formData.querySelector("composerGND").textContent;
+        const vLibretto = formData.querySelector("librettoName").textContent;
+        const vLibrettoGND = formData.querySelector("librettoGND").textContent;
+        const vFirstPerformance = formData.querySelector("firstPerformance").textContent;
+        const vProduction = formData.querySelector("productionName").textContent;
+        const vProductionGND = formData.querySelector("productionGND").textContent;
+        const vStage = formData.querySelector("stageName").textContent;
+        const vStageGND = formData.querySelector("stageGND").textContent;
+        const vPlace = formData.querySelector("placeName").textContent; 
+        const vPlaceGND = formData.querySelector("placeGND").textContent;
+        const vPremiere = formData.querySelector("premiere").textContent;
+        const vDirector = formData.querySelector("directorName").textContent;
+        const vDirectorGND = formData.querySelector("directorGND").textContent;
+        const vConductor = formData.querySelector("conductorName").textContent;
+        const vConductorGND = formData.querySelector("conductorGND").textContent;
+        const vDramatist = formData.querySelector("dramatistName").textContent;
+        const vDramatistGND = formData.querySelector("dramatistGND").textContent;
+        const vOrchestra = formData.querySelector("orchestraName").textContent;
+        const vOrchestraGND = formData.querySelector("orchestraGND").textContent;
         section = 
             { id: "performance", legend: "Aufführung", fields: [
                 { label: "Oper", value: vOpera, name: "opera", gnd: vOperaGND },
