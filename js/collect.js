@@ -595,19 +595,22 @@ function collect () {
                     <input type="text" name="Title" value=""></input>
                     <p class="right-text">
                         <select name="subject">
-                            <option value="" selected disabled hidden>Gegenstand</option>
+                            <option value="" selected disabled hidden>Inhalt</option>
                             <option value="Inszenierung">Inszenierung</option>
                             <option value="Handlung">Handlung</option>
                             <option value="Musik">Musik</option>
                             <option value="Rezeption">Rezeption</option>
                             <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
-                            <option value="anders">anders</option>
+                            <option value="anderer">anderer</option>
                         </select>
                         <select name="occasion">
-                            <option value="" selected disabled hidden>Entstehung</option>
-                            <option value="dediziert">dediziert</option>
-                            <option value="historisch">historisch</option>
-                            <option value="anders">anders</option>
+                            <option value="" selected disabled hidden>Genre</option>
+                            <option value="Aufsatz">Aufsatz</option>
+                            <option value="Monographie">Monographie</option>
+                            <option value="Biographie">Biographie</option>
+                            <option value="Brief">Brief</option>
+                            <option value="Motto">Motto</option>
+                            <option value="anderes">anderes</option>
                         </select>
                     </p>
                     <label>Autor</label>
@@ -784,25 +787,31 @@ function collect () {
                 <input type="text" name="Title" value=""></input>
                 <p class="right-text">
                     <select name="subject">
-                        <option value="" selected disabled hidden>Gegenstand</option>
-                        <option value="Inszenierung">Inszenierung</option>
-                        <option value="Handlung">Handlung</option>
-                        <option value="Musik">Musik</option>
-                        <option value="Rezeption">Rezeption</option>
-                        <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
-                        <option value="anders">anders</option>
-                    </select>
-                    <select name="occasion">
-                        <option value="" selected disabled hidden>Entstehung</option>
-                        <option value="dediziert">dediziert</option>
-                        <option value="historisch">historisch</option>
-                        <option value="anders">anders</option>
-                    </select>
+                            <option value="" selected disabled hidden>Inhalt</option>
+                            <option value="Inszenierung">Inszenierung</option>
+                            <option value="Handlung">Handlung</option>
+                            <option value="Musik">Musik</option>
+                            <option value="Rezeption">Rezeption</option>
+                            <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
+                            <option value="anderer">anderer</option>
+                        </select>
+                        <select name="occasion">
+                            <option value="" selected disabled hidden>Genre</option>
+                            <option value="Aufsatz">Aufsatz</option>
+                            <option value="Monographie">Monographie</option>
+                            <option value="Biographie">Biographie</option>
+                            <option value="Brief">Brief</option>
+                            <option value="Motto">Motto</option>
+                            <option value="anderes">anderes</option>
+                        </select>
                 </p>
                 <label>Autor</label>
                 <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
                 <input type="text" name="GND" value=""></input>
+                <label>Quelle</label>
+                <input type="text" name="source" value=""></input>
+                <p class="right-text"></p>
                 <label>Absatz</label>
                 <textarea class="full-text"></textarea>`;
                 const addNewPara = document.createElement("input");
@@ -833,25 +842,31 @@ function collect () {
                 <input type="text" name="Title" value="${vTitle}"></input>
                 <p class="right-text">
                     <select name="subject">
-                        <option value="" selected disabled hidden>Gegenstand</option>
-                        <option value="Inszenierung">Inszenierung</option>
-                        <option value="Handlung">Handlung</option>
-                        <option value="Musik">Musik</option>
-                        <option value="Rezeption">Rezeption</option>
-                        <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
-                        <option value="anders">anders</option>
-                    </select>
-                    <select name="occasion">
-                        <option value="" selected disabled hidden>Entstehung</option>
-                        <option value="dediziert">dediziert</option>
-                        <option value="historisch">historisch</option>
-                        <option value="anders">anders</option>
-                    </select>
+                            <option value="" selected disabled hidden>Inhalt</option>
+                            <option value="Inszenierung">Inszenierung</option>
+                            <option value="Handlung">Handlung</option>
+                            <option value="Musik">Musik</option>
+                            <option value="Rezeption">Rezeption</option>
+                            <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
+                            <option value="anderer">anderer</option>
+                        </select>
+                        <select name="occasion">
+                            <option value="" selected disabled hidden>Genre</option>
+                            <option value="Aufsatz">Aufsatz</option>
+                            <option value="Monographie">Monographie</option>
+                            <option value="Biographie">Biographie</option>
+                            <option value="Brief">Brief</option>
+                            <option value="Motto">Motto</option>
+                            <option value="anderes">anderes</option>
+                        </select>
                 </p>
                 <label>Autor</label>
                 <input type="text" name="Author" value="${vAuthor}"></input>
                 <label class="GND-label">GND-ID</label>
-                <input type="text" name="GND" value="${vAuthorGND}"></input>`;
+                <input type="text" name="GND" value="${vAuthorGND}"></input>
+                <label>Quelle</label>
+                <input type="text" name="source" value=""></input>
+                <p class="right-text"></p>`;
                 const paragraphs = article.querySelectorAll("paragraph");
                 paragraphs.forEach(paragraph => {
                     const vParagraph = paragraph.textContent;
