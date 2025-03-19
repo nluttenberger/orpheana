@@ -655,7 +655,7 @@ function collect () {
         let articles;
 
         // get short section data
-        console.log(XMLdata);
+        //console.log(XMLdata); 
         const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
         const short = {
             sOpera:    formData.querySelector("sOpera").textContent,
