@@ -74,9 +74,11 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         const operaEl = orphXML.createElement("pdo:opera");
         const composerEl = orphXML.createElement("pdo:composer");
         const librettoEl = orphXML.createElement("pdo:libretto");
+        const firstPerformanceEl = orphXML.createElement("pdo:firstPerformance");
         const productionEl = orphXML.createElement("pdo:production");
         const stageEl = orphXML.createElement("pdo:stage");
         const placeEl = orphXML.createElement("pdo:place");
+        const premiereEl = orphXML.createElement("pdo:premiere");
         const directorEl = orphXML.createElement("pdo:director");
         const conductorEl = orphXML.createElement("pdo:conductor");
         const dramatistEl = orphXML.createElement("pdo:dramatist");
@@ -106,6 +108,9 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         librettoEl.appendChild(librettoGNDel); 
         performance.appendChild(librettoEl);
 
+        firstPerformanceEL.innerHTML = firstPerformance;
+        performance.appendChild(firstPerformanceEl);
+
         const productionName = orphXML.createElement("pdo:productionName");
         productionName.innerHTML = production;
         productionEl.appendChild(productionName);
@@ -127,7 +132,11 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         placeEl.appendChild(placeName);
         const placeGNDel = orphXML.createElement("pdo:placeGND");
         placeGNDel.innerHTML = placeGND;
-        placeEl.appendChild(placeGNDel);   
+        placeEl.appendChild(placeGNDel); 
+        performance.appendChild(placeEl);
+
+        premiereEl.innerHTML = premiere;
+        performance.appendChild(premiereEl);
 
         const directorName = orphXML.createElement("pdo:directorName");
         directorName.innerHTML = director;
@@ -251,6 +260,6 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         }
     })
     .catch((error) => {
-        console.error('Error while saving recipe: ', error);
+        console.error('Error while saving orph: ', error);
     })
 }

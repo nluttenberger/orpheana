@@ -655,6 +655,7 @@ function collect () {
         let articles;
 
         // get short section data
+        console.log(XMLdata);
         const formData = new DOMParser().parseFromString(XMLdata, "text/xml");  
         const short = {
             sOpera:    formData.querySelector("sOpera").textContent,
@@ -891,7 +892,7 @@ function collect () {
         });
         body.appendChild(orph);
 
-        // add event listener to opera input field
+        // add event listener to opera input field in short section
         document.querySelector("input[name='opera']").addEventListener("change", function() {
             const op = document.querySelector("input[name='opera']").value;
             const idx = operas.findIndex (opera => opera[0] === op);
