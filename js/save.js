@@ -240,6 +240,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
     
     // build update object and url 
     const xmlString = new XMLSerializer().serializeToString(createOrph(short));
+    console.log (xmlString);
     const update = {
         'message': 'update',
         'content': utf8_to_b64(xmlString),
