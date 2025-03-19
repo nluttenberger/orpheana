@@ -108,7 +108,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         librettoEl.appendChild(librettoGNDel); 
         performance.appendChild(librettoEl);
 
-        firstPerformanceEL.innerHTML = firstPerformance;
+        firstPerformanceEl.innerHTML = firstPerformance;
         performance.appendChild(firstPerformanceEl);
 
         const productionName = orphXML.createElement("pdo:productionName");
