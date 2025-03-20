@@ -617,6 +617,9 @@ function collect () {
                     <input type="text" name="Author" value=""></input>
                     <label class="GND-label">GND-ID</label>
                     <input type="text" name="GND" value=""></input>
+                    <label>Quelle</label>
+                    <input type="text" name="source" value=""></input>
+                    <p class="right-text"></p>
                     <label>Absatz</label>
                     <textarea class="full-text"></textarea>`;
             cont.classList.add("form-container");
