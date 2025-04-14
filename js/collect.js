@@ -635,6 +635,9 @@ function collect () {
                         <option value="anders">anders</option>
                     </select>
                 </p>
+                <label>Artikel ID</label>
+                <input type="text" name="articleID" value=""></input>
+                <p class="right-text"></p>
                 <label>Autor</label>
                 <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
@@ -852,6 +855,9 @@ function collect () {
                         <option value="anders">anders</option>
                     </select>
                 </p>
+                <label>Artikel ID</label>
+                <input type="text" name="articleID" value=""></input>
+                <p class="right-text"></p>
                 <label>Autor</label>
                 <input type="text" name="Author" value=""></input>
                 <label class="GND-label">GND-ID</label>
@@ -877,6 +883,7 @@ function collect () {
                 });
         } else {
             articles.forEach(article => {
+                const vArticleID = article.querySelector("articleID").textContent;
                 const vAuthor = article.querySelector("author").textContent;
                 const vAuthorGND = article.querySelector("authorGND").textContent; 
                 const vTitle = article.querySelector("title").textContent;
@@ -931,6 +938,9 @@ function collect () {
                         <option value="anders">anders</option>
                     </select>
                 </p>
+                <label>Artikel ID</label>
+                <input type="text" name="articleID" value="${vArticleID}"></input>
+                <p class="right-text"></p>
                 <label>Autor</label>
                 <input type="text" name="Author" value="${vAuthor}"></input>
                 <label class="GND-label">GND-ID</label>
