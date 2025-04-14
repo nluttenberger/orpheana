@@ -881,7 +881,9 @@ function collect () {
                 const vAuthorGND = article.querySelector("authorGND").textContent; 
                 const vTitle = article.querySelector("title").textContent;
                 const vSubject = article.querySelector("subject").textContent;
-                const vOccasion = article.querySelector("occasion").textContent;
+                const vOrigin = article.querySelector("origin").textContent;
+                const vkindOfText = article.querySelector("kindOfText").textContent;
+                const vrelationOfAuthor = article.querySelector("relationOfAuthor").textContent;
                 innerContainer = document.createElement("div");
                 innerContainer.classList.add("form-container");
                 innerContainer.innerHTML += `
@@ -960,9 +962,10 @@ function collect () {
                     })
                 }); 
                 console.log(vSubject);
-                console.log(vOccasion);
                 innerContainer.querySelector("select[name='subject']").value = vSubject;
-                innerContainer.querySelector("select[name='occasion']").value = vOccasion;
+                innerContainer.querySelector("select[name='origin']").value = vOrigin;
+                innerContainer.querySelector("select[name='kindOfText']").value = vkindOfText;
+                innerContainer.querySelector("select[name='relationOfAuthor']").value = vrelationOfAuthor;
             });  
         }
         orph.appendChild(fieldset);
