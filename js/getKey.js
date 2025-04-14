@@ -3,7 +3,7 @@
 function getKey () {
   let pwd = document.getElementById('pwd').value;
   if (pwd.length<12 || pwd.length>12) {
-    alert('Der Freischaltcode hat 12 Zeichen.')
+    alert('Der Autorenschlüssel hat 12 Zeichen.')
     document.getElementById('pwd').value = '';
     return;
   }
