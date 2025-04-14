@@ -591,37 +591,59 @@ function collect () {
         function addText(clicked) {
             const cont = document .createElement("div");
             cont.innerHTML += `
-                    <label>Titel</label>
-                    <input type="text" name="Title" value=""></input>
-                    <p class="right-text">
-                        <select name="subject">
-                            <option value="" selected disabled hidden>Inhalt</option>
-                            <option value="Inszenierung">Inszenierung</option>
-                            <option value="Handlung">Handlung</option>
-                            <option value="Musik">Musik</option>
-                            <option value="Rezeption">Rezeption</option>
-                            <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
-                            <option value="anderer">anderer</option>
-                        </select>
-                        <select name="occasion">
-                            <option value="" selected disabled hidden>Genre</option>
-                            <option value="Aufsatz">Aufsatz</option>
-                            <option value="Monographie">Monographie</option>
-                            <option value="Biographie">Biographie</option>
-                            <option value="Brief">Brief</option>
-                            <option value="Motto">Motto</option>
-                            <option value="anderes">anderes</option>
-                        </select>
-                    </p>
-                    <label>Autor</label>
-                    <input type="text" name="Author" value=""></input>
-                    <label class="GND-label">GND-ID</label>
-                    <input type="text" name="GND" value=""></input>
-                    <label>Quelle</label>
-                    <input type="text" name="source" value=""></input>
-                    <p class="right-text"></p>
-                    <label>Absatz</label>
-                    <textarea class="full-text"></textarea>`;
+                <label>Titel</label>
+                <input type="text" name="Title" value=""></input>
+                <p class="right-text">
+                    <select name="subject">
+                        <option value="" selected disabled hidden>Gegenstand</option>
+                        <option value="Inszenierung">Inszenierung</option>
+                        <option value="Handlung">Handlung</option>
+                        <option value="Musik">Musik</option>
+                        <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
+                        <option value="Deutung">Deutung</option>
+                        <option value="Rezeption">Rezeption</option>
+                        <option value="Aufführungspraxis">Aufführungspraxis</option>
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="origin">
+                        <option value="" selected disabled hidden>Entstehung</option>
+                        <option value="zur_Aufführung">zur Aufführung</option>
+                        <option value="historisch">historisch</option
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="kindOfText">
+                        <option value="" selected disabled hidden>Textsorte</option>
+                        <option value="Aufsatz">Aufsatz</option>
+                        <option value="Tagebuch">Tagebuch</option>
+                        <option value="Zeitung">Zeitung</option>
+                        <option value="Monographie">Monographie</option>
+                        <option value="Biographie">Biographie</option>
+                        <option value="Brief">Brief</option>
+                        <option value="Motto">Motto</option>
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="relationOfAuthor">
+                        <option value="" selected disabled hidden>Autorenbeziehung</option>
+                        <option value="Komponist">Komponist</option>
+                        <option value="Librettist">Librettist</option>
+                        <option value="Regisseur">Regisseur</option>
+                        <option value="Dirigent">Dirigent</option>
+                        <option value="Chorleiter">Chorleiter</option>
+                        <option value="Musikwissenschaftler">Musikwissenschaftler</option>
+                        <option value="Philologe">Philologe</option>
+                        <option value="Philosoph">Philosoph</option>
+                        <option value="anders">anders</option>
+                    </select>
+                </p>
+                <label>Autor</label>
+                <input type="text" name="Author" value=""></input>
+                <label class="GND-label">GND-ID</label>
+                <input type="text" name="GND" value=""></input>
+                <label>Quelle</label>
+                <input type="text" name="source" value=""></input>
+                <p class="right-text"></p>
+                <label>Absatz</label>
+                <textarea class="full-text"></textarea>`;
             cont.classList.add("form-container");
             const buttonPara = document.createElement("input");
             buttonPara.setAttribute("type", "button");
@@ -790,23 +812,45 @@ function collect () {
                 <input type="text" name="Title" value=""></input>
                 <p class="right-text">
                     <select name="subject">
-                            <option value="" selected disabled hidden>Inhalt</option>
-                            <option value="Inszenierung">Inszenierung</option>
-                            <option value="Handlung">Handlung</option>
-                            <option value="Musik">Musik</option>
-                            <option value="Rezeption">Rezeption</option>
-                            <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
-                            <option value="anderer">anderer</option>
-                        </select>
-                        <select name="occasion">
-                            <option value="" selected disabled hidden>Genre</option>
-                            <option value="Aufsatz">Aufsatz</option>
-                            <option value="Monographie">Monographie</option>
-                            <option value="Biographie">Biographie</option>
-                            <option value="Brief">Brief</option>
-                            <option value="Motto">Motto</option>
-                            <option value="anderes">anderes</option>
-                        </select>
+                        <option value="" selected disabled hidden>Gegenstand</option>
+                        <option value="Inszenierung">Inszenierung</option>
+                        <option value="Handlung">Handlung</option>
+                        <option value="Musik">Musik</option>
+                        <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
+                        <option value="Deutung">Deutung</option>
+                        <option value="Rezeption">Rezeption</option>
+                        <option value="Aufführungspraxis">Aufführungspraxis</option>
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="origin">
+                        <option value="" selected disabled hidden>Entstehung</option>
+                        <option value="zur_Aufführung">zur Aufführung</option>
+                        <option value="historisch">historisch</option
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="kindOfText">
+                        <option value="" selected disabled hidden>Textsorte</option>
+                        <option value="Aufsatz">Aufsatz</option>
+                        <option value="Tagebuch">Tagebuch</option>
+                        <option value="Zeitung">Zeitung</option>
+                        <option value="Monographie">Monographie</option>
+                        <option value="Biographie">Biographie</option>
+                        <option value="Brief">Brief</option>
+                        <option value="Motto">Motto</option>
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="relationOfAuthor">
+                        <option value="" selected disabled hidden>Autorenbeziehung</option>
+                        <option value="Komponist">Komponist</option>
+                        <option value="Librettist">Librettist</option>
+                        <option value="Regisseur">Regisseur</option>
+                        <option value="Dirigent">Dirigent</option>
+                        <option value="Chorleiter">Chorleiter</option>
+                        <option value="Musikwissenschaftler">Musikwissenschaftler</option>
+                        <option value="Philologe">Philologe</option>
+                        <option value="Philosoph">Philosoph</option>
+                        <option value="anders">anders</option>
+                    </select>
                 </p>
                 <label>Autor</label>
                 <input type="text" name="Author" value=""></input>
@@ -845,23 +889,45 @@ function collect () {
                 <input type="text" name="Title" value="${vTitle}"></input>
                 <p class="right-text">
                     <select name="subject">
-                            <option value="" selected disabled hidden>Inhalt</option>
-                            <option value="Inszenierung">Inszenierung</option>
-                            <option value="Handlung">Handlung</option>
-                            <option value="Musik">Musik</option>
-                            <option value="Rezeption">Rezeption</option>
-                            <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
-                            <option value="anderer">anderer</option>
-                        </select>
-                        <select name="occasion">
-                            <option value="" selected disabled hidden>Genre</option>
-                            <option value="Aufsatz">Aufsatz</option>
-                            <option value="Monographie">Monographie</option>
-                            <option value="Biographie">Biographie</option>
-                            <option value="Brief">Brief</option>
-                            <option value="Motto">Motto</option>
-                            <option value="anderes">anderes</option>
-                        </select>
+                        <option value="" selected disabled hidden>Gegenstand</option>
+                        <option value="Inszenierung">Inszenierung</option>
+                        <option value="Handlung">Handlung</option>
+                        <option value="Musik">Musik</option>
+                        <option value="Entstehungsgeschichte">Entstehungsgeschichte</option>
+                        <option value="Deutung">Deutung</option>
+                        <option value="Rezeption">Rezeption</option>
+                        <option value="Aufführungspraxis">Aufführungspraxis</option>
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="origin">
+                        <option value="" selected disabled hidden>Entstehung</option>
+                        <option value="zur_Aufführung">zur Aufführung</option>
+                        <option value="historisch">historisch</option
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="kindOfText">
+                        <option value="" selected disabled hidden>Textsorte</option>
+                        <option value="Aufsatz">Aufsatz</option>
+                        <option value="Tagebuch">Tagebuch</option>
+                        <option value="Zeitung">Zeitung</option>
+                        <option value="Monographie">Monographie</option>
+                        <option value="Biographie">Biographie</option>
+                        <option value="Brief">Brief</option>
+                        <option value="Motto">Motto</option>
+                        <option value="anders">anders</option>
+                    </select>
+                    <select name="relationOfAuthor">
+                        <option value="" selected disabled hidden>Autorenbeziehung</option>
+                        <option value="Komponist">Komponist</option>
+                        <option value="Librettist">Librettist</option>
+                        <option value="Regisseur">Regisseur</option>
+                        <option value="Dirigent">Dirigent</option>
+                        <option value="Chorleiter">Chorleiter</option>
+                        <option value="Musikwissenschaftler">Musikwissenschaftler</option>
+                        <option value="Philologe">Philologe</option>
+                        <option value="Philosoph">Philosoph</option>
+                        <option value="anders">anders</option>
+                    </select>
                 </p>
                 <label>Autor</label>
                 <input type="text" name="Author" value="${vAuthor}"></input>
