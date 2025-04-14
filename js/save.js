@@ -200,6 +200,9 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         containers.forEach(container => {
             if (!(container.querySelector("input[name='Author']").value === "" && container.querySelector("input[name='GND']").value ==="" && container.querySelector("input[name='Title']").value ==="")) {
                 article = orphXML.createElement("orph:article");
+                const articleID = orphXML.createElement("orph:articleID");
+                articleID.innerHTML = container.querySelector("input[name='articleID']").value;
+                article.appendChild(articleID);
                 const author = orphXML.createElement("orph:author");
                 author.innerHTML = container.querySelector("input[name='Author']").value;
                 article.appendChild(author);
