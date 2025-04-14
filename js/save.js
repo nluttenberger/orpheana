@@ -212,9 +212,15 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
                 const subject = orphXML.createElement("orph:subject");
                 subject.innerHTML = container.querySelector("select[name='subject']").value;
                 article.appendChild(subject);
-                const occasion = orphXML.createElement("orph:occasion");
-                occasion.innerHTML = container.querySelector("select[name='occasion']").value;
-                article.appendChild(occasion);
+                const origin = orphXML.createElement("orph:origin");
+                origin.innerHTML = container.querySelector("select[name='origin']").value;
+                article.appendChild(origin);
+                const kindOfText = orphXML.createElement("orph:kindOfText");
+                kindOfText.innerHTML = container.querySelector("select[name='kindOfText']").value;
+                article.appendChild(kindOfText);
+                const relationOfAuthor = orphXML.createElement("orph:relationOfAuthor");
+                relationOfAuthor.innerHTML = container.querySelector("select[name='relationOfAuthor']").value;
+                article.appendChild(relationOfAuthor);
                 const text = orphXML.createElement("orph:text");
                 const paragraphs = container.querySelectorAll("textarea");
                 paragraphs.forEach((para, index) => {
