@@ -31,7 +31,7 @@ function register() {
     // init XML parser and collect input into XML elements
     const parser = new DOMParser();
     const xml = parser.parseFromString(`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><orph:orph xmlns:orph="http://orpheana.de/ns/orph"></orph:orph>`, "text/xml");
-    const orph = xml.querySelector("orph");
+    const orph = xml.querySelector("orph:orph");
 
     // short section
     const short = xml.createElement("orph:short");
