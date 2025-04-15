@@ -46,10 +46,10 @@ function register() {
 
     const performance = xml.createElement("performance");
     const castList = xml.createElement("castList");
-    const stagingRelated = xml.createElement("stagingRelated");
-    const storyRelated = xml.createElement("storyRelated");
-    const musicRelated = xml.createElement("musicRelated");
-    const historic = xml.createElement("historic");
+    const articles = xml.createElement("articles");
+    const images = xml.createElement("images");
+    const misc = xml.createElement("misc");
+    
 
     // performance section
     performance.innerHTML = `
@@ -104,19 +104,22 @@ function register() {
     orph.appendChild(performance);
 
     // castList section
+    castList.innerHTML = `
+        <cast>
+            <role></role>
+            <artist></artist>
+            <artistGND></artistGND>
+        </cast>`;
     orph.appendChild(castList);
 
-    // stagingRelated texts section
-    orph.appendChild(stagingRelated);
+    // articles section
+    orph.appendChild(articles);
 
-    // storyRelated texts section
-    orph.appendChild(storyRelated);
+    // images section
+    orph.appendChild(images);
 
-    // musicRelated texts section
-    orph.appendChild(musicRelated);
-
-    // historic section
-    orph.appendChild(historic);
+    // misc section
+    orph.appendChild(misc);
 
     // serialize flat orph for GitHub repository
     const xmlString = new XMLSerializer().serializeToString(xml);           
@@ -173,7 +176,6 @@ function createForm() {
     let section;
     let fieldset;
     let container;
-    let addNewText
     
     // show short block
     section = 
