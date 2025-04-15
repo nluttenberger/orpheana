@@ -36,10 +36,10 @@ function register() {
     // short section
     const short = xml.createElement("short");
     short.innerHTML = `
-        <opera>${opera}</opera>
-        <composer>${composer}</composer>
-        <place>${place}</place>
-        <year>${year}</year>
+        <sOpera>${opera}</sOpera>
+        <sComposer>${composer}</sComposer>
+        <sPlace>${place}</sPlace>
+        <sYear>${year}</sYear>
         <fimtID>${fimtID}</fimtID>
         <orphID>${orphID}</orphID>`;
     orph.appendChild(short);
@@ -49,7 +49,6 @@ function register() {
     const articles = xml.createElement("articles");
     const images = xml.createElement("images");
     const misc = xml.createElement("misc");
-    
 
     // performance section
     performance.innerHTML = `
