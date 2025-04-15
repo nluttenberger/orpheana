@@ -886,7 +886,7 @@ function collect () {
                 const vArticleID = article.querySelector("articleID").textContent;
                 const vAuthor = article.querySelector("author").textContent;
                 const vAuthorGND = article.querySelector("authorGND").textContent; 
-                const vTitle = article.querySelector("title").textContent;
+                const vTitle = article.querySelector("title").textContent.replace(/\\\"/g, "&quot;");
                 const vSubject = article.querySelector("subject").textContent;
                 const vOrigin = article.querySelector("origin").textContent;
                 const vkindOfText = article.querySelector("kindOfText").textContent;
