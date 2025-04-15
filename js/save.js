@@ -42,7 +42,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         const parser = new DOMParser();
         let orphXML = parser.parseFromString(
             '<?xml version="1.0" encoding="UTF-8"?> \n' +
-            '<orph:orph xmlns:orph="http://orpheana.de/ns/orph" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://orpheana.de/ns/orph ../03 tools/orphSchema.xsd"></orph:orph>', 'text/xml');    
+            '<orph:orph xmlns:orph="http://orpheana.de/ns/orph" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://orpheana.de/ns/orph ../../../../03%20tools/orphSchema.xsd"></orph:orph>', 'text/xml');    
         const orph = orphXML.querySelector("orph");   
         const short = orphXML.createElement("orph:short");
         const performance = orphXML.createElement("orph:performance");
