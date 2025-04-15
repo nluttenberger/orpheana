@@ -103,12 +103,6 @@ function register() {
     orph.appendChild(performance);
 
     // castList section
-    castList.innerHTML = `
-        <cast>
-            <role></role>
-            <artist></artist>
-            <artistGND></artistGND>
-        </cast>`;
     orph.appendChild(castList);
 
     // articles section
