@@ -30,76 +30,76 @@ function register() {
 
     // init XML parser and collect input into XML elements
     const parser = new DOMParser();
-    const xml = parser.parseFromString(`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><orph></orph>`, "text/xml");
+    const xml = parser.parseFromString(`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><orph:orph xmlns:orph="http://orpheana.de/ns/orph"></orph:orph>`, "text/xml");
     const orph = xml.querySelector("orph");
 
     // short section
-    const short = xml.createElement("short");
+    const short = xml.createElement("orph:short");
     short.innerHTML = `
-        <sOpera>${opera}</sOpera>
-        <sComposer>${composer}</sComposer>
-        <sPlace>${place}</sPlace>
-        <sYear>${year}</sYear>
-        <fimtID>${fimtID}</fimtID>
-        <orphID>${orphID}</orphID>`;
+        <orph:sOpera>${opera}</orph:sOpera>
+        <orph:sComposer>${composer}</orph:sComposer>
+        <orph:sPlace>${place}</orph:sPlace>
+        <orph:sYear>${year}</orph:sYear>
+        <orph:fimtID>${fimtID}</orph:fimtID>
+        <orph:orphID>${orphID}</orph:orphID>`;
     orph.appendChild(short);
 
-    const performance = xml.createElement("performance");
-    const castList = xml.createElement("castList");
-    const articles = xml.createElement("articles");
-    const images = xml.createElement("images");
-    const misc = xml.createElement("misc");
+    const performance = xml.createElement("orph:performance");
+    const castList = xml.createElement("orph:castList");
+    const articles = xml.createElement("orph:articles");
+    const images = xml.createElement("orph:images");
+    const misc = xml.createElement("orph:misc");
 
     // performance section
     performance.innerHTML = `
-        <opera>
-            <operaTitle></operaTitle>
-            <operaGND></operaGND>
-        </opera>
-        <composer>
-            <composerName></composerName>
-            <composerGND></composerGND>
-        </composer>
-        <libretto>
-            <librettoName></librettoName>
-            <librettoGND></librettoGND>
-        </libretto>
-        <firstPerformance>
-            <firstPerformanceDate></firstPerformanceDate>
-            <firstPerformanceGND></firstPerformanceGND>
-        </firstPerformance>
-        <production>
-            <productionName></productionName>
-            <productionGND></productionGND>
-        </production>
-        <stage>
-            <stageName></stageName>
-            <stageGND></stageGND>
-        </stage>
-        <place>
-            <placeName></placeName>
-            <placeGND></placeGND>
-        </place>
-        <premiere> 
-            <premiereDate></premiereDate>
-            <premiereGND></premiereGND>
-        </premiere>
-        <director>
-            <directorName></directorName>
-            <directorGND></directorGND>
-        </director>
-        <conductor>
-            <conductorName></conductorName>
-            <conductorGND></conductorGND>
-        </conductor>
-        <dramatist>
-            <dramatistName></dramatistName>
-            <dramatistGND></dramatistGND>
-        </dramatist>
-        <orchestra>
-            <orchestraName></orchestraName>
-            <orchestraGND></orchestraGND>    
-        </orchestra>`;
+        <orph:opera>
+            <orph:operaTitle></orph:operaTitle>
+            <orph:operaGND></orph:operaGND>
+        </orph:opera>
+        <orph:composer>
+            <orph:composerName></orph:composerName>
+            <orph:composerGND></orph:composerGND>
+        </orph:composer>
+        <orph:libretto>
+            <orph:librettoName></orph:librettoName>
+            <orph:librettoGND></orph:librettoGND>
+        </orph:libretto>
+        <orph:firstPerformance>
+            <orph:firstPerformanceDate></orph:firstPerformanceDate>
+            <orph:firstPerformanceGND></orph:firstPerformanceGND>
+        </orph:firstPerformance>
+        <orph:production>
+            <orph:productionName></orph:productionName>
+            <orph:productionGND></orph:productionGND>
+        </orph:production>
+        <orph:stage>
+            <orph:stageName></orph:stageName>
+            <orph:stageGND></orph:stageGND>
+        </orph:stage>
+        <orph:place>
+            <orph:placeName></orph:placeName>
+            <orph:placeGND></orph:placeGND>
+        </orph:place>
+        <orph:premiere> 
+            <orph:premiereDate></orph:premiereDate>
+            <orph:premiereGND></orph:premiereGND>
+        </orph:premiere>
+        <orph:director>
+            <orph:directorName></orph:directorName>
+            <orph:directorGND></orph:directorGND>
+        </orph:director>
+        <orph:conductor>
+            <orph:conductorName></orph:conductorName>
+            <orph:conductorGND></orph:conductorGND>
+        </orph:conductor>
+        <orph:dramatist>
+            <orph:dramatistName></orph:dramatistName>
+            <orph:dramatistGND></orph:dramatistGND>
+        </orph:dramatist>
+        <orph:orchestra>
+            <orph:orchestraName></orph:orchestraName>
+            <orph:orchestraGND></orph:orchestraGND>    
+        </orph:orchestra>`;
     orph.appendChild(performance);
 
     // castList section
