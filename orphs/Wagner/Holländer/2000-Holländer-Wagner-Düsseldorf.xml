@@ -70,11 +70,14 @@
     </orph:castList>
     <orph:articles>
         <orph:article>
+            <orph:articleID>preliminary</orph:articleID>
             <orph:author>Manfred Frank</orph:author>
             <orph:authorGND>https://explore.gnd.network/gnd/118722689</orph:authorGND>
             <orph:title>Der Ahasver des kapitalistischen Zeitalters</orph:title>
-            <orph:subject>anderer</orph:subject>
-            <orph:occasion>anderes</orph:occasion>
+            <orph:subject>Handlung</orph:subject>
+            <orph:origin>zur_Aufführung</orph:origin>
+            <orph:kindOfText>Aufsatz</orph:kindOfText>
+            <orph:relationOfAuthor>Musikwissenschaftler</orph:relationOfAuthor>
             <orph:text>
                 <orph:paragraph>Ohne Zweifel ist die Sage vom 'Fliegenden Holländer' das Werk von Seeleuten 'geringerer Klasse', wie eine der frühesten Quellen (aus dem Jahr 1822) charakteristisch vermutet: Sie zeigt einen Konflikt an zwischen den Wertüberzeugungen der Mannschaft und dem heroischen Individuum des Führers oder Kapitäns, der - auf der Höhe des naturwissenschaftlichen knowing how seiner Epoche - sich aus den Fesseln einer theozentrisch beengten Weltordnung freimacht und diesen Frevel in exemplarischer Schuldverbüßung zu sühnen hat. Es ist eine recht spannende, manchmal fast kriminalistische Recherche, wonach die Holländer-Sage an die Kapumseglung der Portugiesen und also die kolonialistische Erzwingung des Seewegs nach Vorderindien anknüpft. Nicht nur der geografische Ort (das Kap) und seine besondere meteorologische Exposition sprechen dafür (diese Erinnerung geht mit der Zeit verloren: Bei Heinrich Heine und Richard Wagner ist es nur noch 'ein Kap', irgendeines also): sondern vor allem der Umstand, dass spätestens im 17. Jahrhundert - der großen Zeit des holländischen Kolonialismus - eine Quellenverschmelzung stattgefunden hat: In der Retrospektive wird nämlich dem Vasco da Gama, auf dessen Flotte ein verheerender Sturm und daraufhin eine schlimme Meuterei ausgebrochen war, zugeschrieben, dass er Gott verflucht und damit das Schicksal seines physischen und geistlichen Scheiterns auf sich gezogen habe. Dies entspricht natürlich nicht der historischen Realität, die nach und nach poetisch und textuell umgestürzt wurde.</orph:paragraph>
                 <orph:paragraph>Früh schon ist die Gestalt Vascos durch die des Bartolomeo Diaz überformt worden, der tatsächlich am Kap in Stürmen ums Leben kam; und dessen Name ist in holländischer Zeit durch allerlei Namen von Kapitänen abgelöst worden, die den alten Gott des Mittelalters im Namen der Autonomie neuzeitlicher Vernunft herausfordern: z.B. Van der Decken, Barend Fokke, Van Straten usw.</orph:paragraph>
@@ -90,11 +93,14 @@
             </orph:text>
         </orph:article>
         <orph:article>
+            <orph:articleID>preliminary</orph:articleID>
             <orph:author>Adolf Dresen</orph:author>
             <orph:authorGND>https://explore.gnd.network/gnd/11817732X</orph:authorGND>
             <orph:title>Liebe und Erlösung - Zu Wagners "Fliegendem Holländer"</orph:title>
             <orph:subject>Handlung</orph:subject>
-            <orph:occasion>Aufsatz</orph:occasion>
+            <orph:origin>zur_Aufführung</orph:origin>
+            <orph:kindOfText>Aufsatz</orph:kindOfText>
+            <orph:relationOfAuthor>Musikwissenschaftler</orph:relationOfAuthor>
             <orph:text>
                 <orph:paragraph>"Bei bösem Wind und Sturmeswut / umsegeln wollt er einst ein Kap; / er flucht und schwur mit tollem Mut:/ 'In Ewigkeit lass ich nicht ab!' / Hui! Und Satan hört's!.../ Hui! Nahm ihn beim Wort!.../ Hui! Und verdammt zieht er nun durch das Meer ohne Rast, ohne Ruh!" - so singt die Seemannstochter Senta die Ballade vom Fliegenden Holländer. In Geld und Muff ihres Bürgerheims wünscht sie sich den herbei, der das alles hinter sich ließ, den anrüchig Vogelfreien, den Empörer aus dem großen Geschlecht der Luzifer, Prometheus, Faust, der sich mit dem Himmel selbst anlegte und der nun verdammt ist, eine Warnung für die Frommen. Der Grusel aber enthält die Lockung des Verbotenen, des Verstoßes gegen die Saturiertheit, der Rebellion gegen Ruhe und Wohlstand. Und dann realisiert sich der Traum. Der Holländer steht in der Tür, Gegenbild eines Liebhabers nahezu, erinnernd eher an den Helden, den das Bürgermädchen Polly in Brechts Dreigroschenoper besingt: "Und als er nicht nett war... Und als er nicht wusste, was sich bei einer Dame schickt...", ein finsterer Mann von ungebrochenem Trotz. Wie Sisyphus geht er zum tausendsten Mal an Land, zahlt das nötige Geld und wundert sich nicht mehr, dass er die treue Frau dafür nicht haben kann.</orph:paragraph>
                 <orph:paragraph>Diesmal aber kommt es anders. "Die düstre Glut, die ich da fühle brennen,/ soll ich Unseliger sie Liebe nennen?", fragt er sich überrascht und glaubt es sich selbst nicht: ,"Ach nein, die Sehnsucht ist es nach dem Heil,/ Würd' es durch solchen Engel mir zuteil." Das Mädchen soll nicht geliebt, es soll das Vehikel der Erlösung sein, das Mittel zum höheren Zweck des Mannes und dessen Opfer in einer patriarchalischen Welt. Ist es ein Wunder, dass das tausendmal scheiterte? "Erst benehmen sie sich wie die Schweine, dann wollen sie erlöst sein", spottet Gottfried Benn. Das Larmoyante solcher "Erlösung" fällt besonders in die Augen, wenn man es mit Beethovens Satz vergleicht: "Ich will dem Schicksal in den Rachen greifen." Inzwischen aber hat die soziale Restauration die Revolution eingeholt. Wagner hatte 1848 in Dresden auf den Barrikaden gestanden und fliehen müssen. Er hatte seine "frühere enge Lage" verlassen und war nach Paris gegangen, wohin aus ähnlichen Gründen auch Heinrich Heine und Karl Marx flohen. Er kam schließlich wieder - doch "wie ich in Paris enttäuscht worden war, sollte ich es nun in Deutschland werden". Häusliche Enge oder unsichere Fremde, falsche Heimat oder Heimatlosigkeit, Ruhelosigkeit oder Kleinbürgermuff ist die falsche Alternative.</orph:paragraph>
