@@ -34,6 +34,7 @@ function register() {
         '<?xml version="1.0" encoding="UTF-8"?> \n' +
         '<orph:orph xmlns:orph="http://orpheana.de/ns/orph" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://orpheana.de/ns/orph ../../../../03%20tools/orphSchema.xsd"></orph:orph>', 'text/xml'); 
     const orph = xml.querySelector("orph");
+    console.log(orph);
 
     // short section
     const short = xml.createElement("orph:short");
