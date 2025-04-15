@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<orph><short>
+<orph>
+    <short>
         <sOpera>Lodengrün</sOpera>
         <sComposer>Wagner</sComposer>
         <sPlace>Pusemuckel</sPlace>
         <sYear>1888</sYear>
         <fimtID>fimr-Puse</fimtID>
-        <orphID>orph-ba212c07283e506251f9ffbf73b7bb66</orphID></short><performance>
+        <orphID>orph-ba212c07283e506251f9ffbf73b7bb66</orphID>
+    </short>
+    <performance>
         <opera>
             <operaTitle/>
             <operaGND/>
@@ -34,7 +37,7 @@
             <placeName/>
             <placeGND/>
         </place>
-        <premiere> 
+        <premiere>
             <premiereDate/>
             <premiereGND/>
         </premiere>
@@ -52,10 +55,17 @@
         </dramatist>
         <orchestra>
             <orchestraName/>
-            <orchestraGND/>    
-        </orchestra></performance><castList>
+            <orchestraGND/>
+        </orchestra>
+    </performance>
+    <castList>
         <cast>
             <role/>
             <artist/>
             <artistGND/>
-        </cast></castList><articles/><images/><misc/></orph>
+        </cast>
+    </castList>
+    <articles/>
+    <images/>
+    <misc/>
+</orph>
