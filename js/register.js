@@ -38,13 +38,24 @@ function register() {
 
     // short section
     const short = xml.createElement("orph:short");
-    short.innerHTML = `
-        <orph:sOpera>${opera}</orph:sOpera>
-        <orph:sComposer>${composer}</orph:sComposer>
-        <orph:sPlace>${place}</orph:sPlace>
-        <orph:sYear>${year}</orph:sYear>
-        <orph:fimtID>${fimtID}</orph:fimtID>
-        <orph:orphID>${orphID}</orph:orphID>`;
+    const sOpera = orphXML.createElement("orph:sOpera");
+    sOpera.innerHTML = `${sOpera}`;
+    short.appendChild(sOpera);
+    const sComposer = orphXML.createElement("orph:sComposer");
+    sComposer.innerHTML = `${sComposer}`;
+    short.appendChild(sComposer);
+    const sPlace = orphXML.createElement("orph:sPlace"); 
+    sPlace.innerHTML = `${sPlace}`;
+    short.appendChild(sPlace);  
+    const sYear = orphXML.createElement("orph:sYear");
+    sYear.innerHTML = `${sYear}`; 
+    short.appendChild(sYear);
+    const sOrphID = orphXML.createElement("orph:orphID");
+    sOrphID.innerHTML = `${orphID}`;
+    short.appendChild(sOrphID);
+    const sFimtID = orphXML.createElement("orph:fimtID");
+    sFimtID.innerHTML = `${fimtID}`;
+    short.appendChild(sFimtID);
     orph.appendChild(short);
 
     const performance = xml.createElement("orph:performance");
