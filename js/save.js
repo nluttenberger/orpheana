@@ -210,7 +210,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
                 authorGND.innerHTML = container.querySelector("input[name='GND']").value;
                 article.appendChild(authorGND);
                 const title = orphXML.createElement("orph:title");
-                title.innerHTML = container.querySelector("input[name='Title']").value;
+                title.innerHTML = container.querySelector("input[name='Title']").value.replace(/\"/g, "\\\"");
                 article.appendChild(title);
                 const subject = orphXML.createElement("orph:subject");
                 subject.innerHTML = container.querySelector("select[name='subject']").value;
