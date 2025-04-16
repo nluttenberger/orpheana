@@ -11,18 +11,18 @@ function register() {
     }
 
     // check if all text input is provided
-    const opera = document.querySelector("input[name='s-opera']").value;
-    const composer = document.querySelector("input[name='s-composer']").value;
-    const place = document.querySelector("input[name='s-place']").value;
-    const year = document.querySelector("input[name='s-year']").value;
+    const op = document.querySelector("input[name='s-opera']").value;
+    const comp = document.querySelector("input[name='s-composer']").value;
+    const pl = document.querySelector("input[name='s-place']").value;
+    const yr = document.querySelector("input[name='s-year']").value;
     const fimtID = document.querySelector("input[name='s-fimtID']").value;
-    if (opera === "" || composer === "" || place === "" || year === "") {
+    if (op === "" || comp === "" || pl === "" || yr === "") {
         alert("Bitte alle Angaben machen");
         return;
     }
 
     // compute MD5 hash value for year-opera-composer-place string
-    const hash = opera + composer + place + year;
+    const hash = op + comp + pl + yr;
     const hashValue = CryptoJS.MD5(hash).toString();
 
     // set orph-ID
@@ -34,10 +34,9 @@ function register() {
         '<?xml version="1.0" encoding="UTF-8"?> \n' +
         '<orph:orph xmlns:orph="http://orpheana.de/ns/orph" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://orpheana.de/ns/orph ../../../../03%20tools/orphSchema.xsd"></orph:orph>', 'text/xml'); 
     const orphXML = xml.querySelector("orph");
-    console.log(orphXML);
 
     // short section
-    const short = xml.createElement("orph:short");
+    const short = orphXML.createElement("orph:short");
     const sOpera = orphXML.createElement("orph:sOpera");
     sOpera.innerHTML = `${sOpera}`;
     short.appendChild(sOpera);
@@ -58,18 +57,11 @@ function register() {
     short.appendChild(sFimtID);
     orph.appendChild(short);
 
-    const performance = xml.createElement("orph:performance");
-    const castList = xml.createElement("orph:castList");
-    const articles = xml.createElement("orph:articles");
-    const images = xml.createElement("orph:images");
-    const misc = xml.createElement("orph:misc");
-
     // performance section
+    const performance = orphXML.createElement("orph:performance");
+    performance = orphXML.createElement("orph:performance"); 
+
     performance.innerHTML = `
-        <orph:opera>
-            <orph:operaTitle></orph:operaTitle>
-            <orph:operaGND></orph:operaGND>
-        </orph:opera>
         <orph:composer>
             <orph:composerName></orph:composerName>
             <orph:composerGND></orph:composerGND>
@@ -114,18 +106,30 @@ function register() {
             <orph:orchestraName></orph:orchestraName>
             <orph:orchestraGND></orph:orchestraGND>    
         </orph:orchestra>`;
-    orph.appendChild(performance);
 
+        const opera = orphXML.createElement("orph:opera");
+        const operaTitle = orphXML.createElement("orph:operaTitle");
+        const operaGND = orphXML.createElement("orph:operaGND");
+        opera.appendChild(operaTitle);
+        opera.appendChild(operaGND); 
+        performance.appendChild(opera);
+
+    orph.appendChild(performance);
+    
     // castList section
+    const castList = orphXML.createElement("orph:castList");
     orph.appendChild(castList);
 
     // articles section
+    const articles = orphXML.createElement("orph:articles");
     orph.appendChild(articles);
 
     // images section
+    const images = orphXML.createElement("orph:images");
     orph.appendChild(images);
 
     // misc section
+    const misc = orphXML.createElement("orph:misc");
     orph.appendChild(misc);
 
     // serialize flat orph for GitHub repository
