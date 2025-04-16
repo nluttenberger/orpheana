@@ -30,10 +30,10 @@ function register() {
 
     // init XML parser and collect input into XML elements
     const parser = new DOMParser();
-    const xml = parser.parseFromString(
+    const orphXML = parser.parseFromString(
         '<?xml version="1.0" encoding="UTF-8"?> \n' +
         '<orph:orph xmlns:orph="http://orpheana.de/ns/orph" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://orpheana.de/ns/orph ../../../../03%20tools/orphSchema.xsd"></orph:orph>', 'text/xml'); 
-    const orphXML = xml.querySelector("orph");
+    const orph = orphXML.querySelector("orph");
 
     // short section
     const short = orphXML.createElement("orph:short");
