@@ -59,7 +59,6 @@ function register() {
 
     // performance section
     const performance = orphXML.createElement("orph:performance");
-    performance = orphXML.createElement("orph:performance"); 
 
     performance.innerHTML = `
         <orph:composer>
