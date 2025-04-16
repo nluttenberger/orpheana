@@ -42,16 +42,16 @@ function register() {
     // short section
     const short = orphXML.createElement("orph:short");
     const sOpera = orphXML.createElement("orph:sOpera");
-    sOpera.innerHTML = `${sOpera}`;
+    sOpera.innerHTML = `${op}`;
     short.appendChild(sOpera);
     const sComposer = orphXML.createElement("orph:sComposer");
-    sComposer.innerHTML = `${sComposer}`;
+    sComposer.innerHTML = `${comp}`;
     short.appendChild(sComposer);
     const sPlace = orphXML.createElement("orph:sPlace"); 
-    sPlace.innerHTML = `${sPlace}`;
+    sPlace.innerHTML = `${pl}`;
     short.appendChild(sPlace);  
     const sYear = orphXML.createElement("orph:sYear");
-    sYear.innerHTML = `${sYear}`; 
+    sYear.innerHTML = `${yr}`; 
     short.appendChild(sYear);
     const sOrphID = orphXML.createElement("orph:orphID");
     sOrphID.innerHTML = `${orphID}`;
