@@ -30,9 +30,13 @@ function register() {
 
     // init XML parser and collect input into XML elements
     const parser = new DOMParser();
+
     const orphXML = parser.parseFromString(
         '<?xml version="1.0" encoding="UTF-8"?> \n' +
-        '<orph:orph xmlns:orph="http://orpheana.de/ns/orph" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://orpheana.de/ns/orph ../../../../03%20tools/orphSchema.xsd"></orph:orph>', 'text/xml'); 
+        '<orph:orph xmlns:orph="http://orpheana.de/ns/orph" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" \n' +
+        'xsi:schemaLocation="http://orpheana.de/ns/orph file:///C:/Users/nlutt/Documents/Orpheana/03%20tools/orphSchema.xsd"> \n' + 
+        '</orph:orph>', 'text/xml'); 
+
     const orph = orphXML.querySelector("orph");
 
     // short section
@@ -59,52 +63,6 @@ function register() {
 
     // performance section
     const performance = orphXML.createElement("orph:performance");
-
-    /*performance.innerHTML = `
-        <orph:composer>
-            <orph:composerName></orph:composerName>
-            <orph:composerGND></orph:composerGND>
-        </orph:composer>
-        <orph:libretto>
-            <orph:librettoName></orph:librettoName>
-            <orph:librettoGND></orph:librettoGND>
-        </orph:libretto>
-        <orph:firstPerformance>
-            <orph:firstPerformanceDate></orph:firstPerformanceDate>
-            <orph:firstPerformanceGND></orph:firstPerformanceGND>
-        </orph:firstPerformance>
-        <orph:production>
-            <orph:productionName></orph:productionName>
-            <orph:productionGND></orph:productionGND>
-        </orph:production>
-        <orph:stage>
-            <orph:stageName></orph:stageName>
-            <orph:stageGND></orph:stageGND>
-        </orph:stage>
-        <orph:place>
-            <orph:placeName></orph:placeName>
-            <orph:placeGND></orph:placeGND>
-        </orph:place>
-        <orph:premiere> 
-            <orph:premiereDate></orph:premiereDate>
-            <orph:premiereGND></orph:premiereGND>
-        </orph:premiere>
-        <orph:director>
-            <orph:directorName></orph:directorName>
-            <orph:directorGND></orph:directorGND>
-        </orph:director>
-        <orph:conductor>
-            <orph:conductorName></orph:conductorName>
-            <orph:conductorGND></orph:conductorGND>
-        </orph:conductor>
-        <orph:dramatist>
-            <orph:dramatistName></orph:dramatistName>
-            <orph:dramatistGND></orph:dramatistGND>
-        </orph:dramatist>
-        <orph:orchestra>
-            <orph:orchestraName></orph:orchestraName>
-            <orph:orchestraGND></orph:orchestraGND>    
-        </orph:orchestra>`;*/
 
     const opera = orphXML.createElement("orph:opera");
     const operaTitle = orphXML.createElement("orph:operaTitle");
@@ -222,7 +180,7 @@ function register() {
         'message': 'just created',
         'content': b64orph
     }
-    const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${composer}/${opera}/${fn}`;
+    const urlStr = `https://api.github.com/repos/nluttenberger/orpheana/contents/orphs/${comp}/${op}/${fn}`;
 
     // upload and commit 
     fetch (urlStr,{
