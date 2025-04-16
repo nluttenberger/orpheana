@@ -60,7 +60,7 @@ function register() {
     // performance section
     const performance = orphXML.createElement("orph:performance");
 
-    performance.innerHTML = `
+    /*performance.innerHTML = `
         <orph:composer>
             <orph:composerName></orph:composerName>
             <orph:composerGND></orph:composerGND>
@@ -104,14 +104,14 @@ function register() {
         <orph:orchestra>
             <orph:orchestraName></orph:orchestraName>
             <orph:orchestraGND></orph:orchestraGND>    
-        </orph:orchestra>`;
+        </orph:orchestra>`;*/
 
-        const opera = orphXML.createElement("orph:opera");
-        const operaTitle = orphXML.createElement("orph:operaTitle");
-        const operaGND = orphXML.createElement("orph:operaGND");
-        opera.appendChild(operaTitle);
-        opera.appendChild(operaGND); 
-        performance.appendChild(opera);
+    const opera = orphXML.createElement("orph:opera");
+    const operaTitle = orphXML.createElement("orph:operaTitle");
+    const operaGND = orphXML.createElement("orph:operaGND");
+    opera.appendChild(operaTitle);
+    opera.appendChild(operaGND); 
+    performance.appendChild(opera);
 
     orph.appendChild(performance);
     
