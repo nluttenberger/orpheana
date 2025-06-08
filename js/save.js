@@ -202,7 +202,7 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         const containers = arts.querySelectorAll("div.form-container");
         paraCntr = 0;
         containers.forEach(container => {
-            if (!(container.querySelector("input[name='Author']").value === "" && container.querySelector("input[name='GND']").value ==="" && container.querySelector("input[name='Title']").value ==="")) {
+            //if (!(container.querySelector("input[name='Author']").value === "" && container.querySelector("input[name='GND']").value ==="" && container.querySelector("input[name='Title']").value ==="")) {
                 article = orphXML.createElement("orph:article");
                 const articleID = orphXML.createElement("orph:articleID");
                 articleID.innerHTML = container.querySelector("input[name='articleID']").value;
@@ -243,10 +243,10 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
                     paraEl.value = "";
                     text.appendChild(paraEl);
                 }
-            article.appendChild(text);  
-            }
+                article.appendChild(text);  
+            })
             articles.appendChild(article);         
-        })
+        }
         orph.appendChild(articles);
         return orph;
     }
