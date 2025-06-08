@@ -203,50 +203,49 @@ function save (short,gitName,gitPath,gitSHA,hdrs) {
         paraCntr = 0;
         containers.forEach(container => {
             //if (!(container.querySelector("input[name='Author']").value === "" && container.querySelector("input[name='GND']").value ==="" && container.querySelector("input[name='Title']").value ==="")) {
-                article = orphXML.createElement("orph:article");
-                const articleID = orphXML.createElement("orph:articleID");
-                articleID.innerHTML = container.querySelector("input[name='articleID']").value;
-                article.appendChild(articleID);
-                const author = orphXML.createElement("orph:author");
-                author.innerHTML = container.querySelector("input[name='Author']").value;
-                article.appendChild(author);
-                const authorGND = orphXML.createElement("orph:authorGND");
-                authorGND.innerHTML = container.querySelector("input[name='GND']").value;
-                article.appendChild(authorGND);
-                const title = orphXML.createElement("orph:title");
-                title.innerHTML = container.querySelector("input[name='Title']").value.replace(/\"/g, "\\\"");
-                article.appendChild(title);
-                const subject = orphXML.createElement("orph:subject");
-                subject.innerHTML = container.querySelector("select[name='subject']").value;
-                article.appendChild(subject);
-                const origin = orphXML.createElement("orph:origin");
-                origin.innerHTML = container.querySelector("select[name='origin']").value;
-                article.appendChild(origin);
-                const kindOfText = orphXML.createElement("orph:kindOfText");
-                kindOfText.innerHTML = container.querySelector("select[name='kindOfText']").value;
-                article.appendChild(kindOfText);
-                const relationOfAuthor = orphXML.createElement("orph:relationOfAuthor");
-                relationOfAuthor.innerHTML = container.querySelector("select[name='relationOfAuthor']").value;
-                article.appendChild(relationOfAuthor);
-                const text = orphXML.createElement("orph:text");
-                const paragraphs = container.querySelectorAll("textarea");
-                paragraphs.forEach((para, index) => {
-                    if (!(para.value === "")) {
-                        const paragraph = orphXML.createElement("orph:paragraph");
-                        paragraph.innerHTML = para.value;
-                        text.appendChild(paragraph);
-                        paraCntr += 1;
-                    }
-                })
-                if (paraCntr === 0) {
-                    const paraEl = orphXML.createElement("orph:paragraph")
-                    paraEl.value = "";
-                    text.appendChild(paraEl);
+            article = orphXML.createElement("orph:article");
+            const articleID = orphXML.createElement("orph:articleID");
+            articleID.innerHTML = container.querySelector("input[name='articleID']").value;
+            article.appendChild(articleID);
+            const author = orphXML.createElement("orph:author");
+            author.innerHTML = container.querySelector("input[name='Author']").value;
+            article.appendChild(author);
+            const authorGND = orphXML.createElement("orph:authorGND");
+            authorGND.innerHTML = container.querySelector("input[name='GND']").value;
+            article.appendChild(authorGND);
+            const title = orphXML.createElement("orph:title");
+            title.innerHTML = container.querySelector("input[name='Title']").value.replace(/\"/g, "\\\"");
+            article.appendChild(title);
+            const subject = orphXML.createElement("orph:subject");
+            subject.innerHTML = container.querySelector("select[name='subject']").value;
+            article.appendChild(subject);
+            const origin = orphXML.createElement("orph:origin");
+            origin.innerHTML = container.querySelector("select[name='origin']").value;
+            article.appendChild(origin);
+            const kindOfText = orphXML.createElement("orph:kindOfText");
+            kindOfText.innerHTML = container.querySelector("select[name='kindOfText']").value;
+            article.appendChild(kindOfText);
+            const relationOfAuthor = orphXML.createElement("orph:relationOfAuthor");
+            relationOfAuthor.innerHTML = container.querySelector("select[name='relationOfAuthor']").value;
+            article.appendChild(relationOfAuthor);
+            const text = orphXML.createElement("orph:text");
+            const paragraphs = container.querySelectorAll("textarea");
+            paragraphs.forEach((para, index) => {
+                if (!(para.value === "")) {
+                    const paragraph = orphXML.createElement("orph:paragraph");
+                    paragraph.innerHTML = para.value;
+                    text.appendChild(paragraph);
+                    paraCntr += 1;
                 }
-                article.appendChild(text);  
             })
+            if (paraCntr === 0) {
+                const paraEl = orphXML.createElement("orph:paragraph")
+                paraEl.value = "";
+                text.appendChild(paraEl);
+            }
+            article.appendChild(text);    
             articles.appendChild(article);         
-        }
+        })
         orph.appendChild(articles);
         return orph;
     }
